@@ -1,0 +1,1206 @@
+02-21@20:50:30 INFO  (Logging.scala:60)     - Running Spark version 3.4.0
+02-21@20:50:30 WARN  (NativeCodeLoader.java:60)     - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+02-21@20:50:30 INFO  (Logging.scala:60)     - ==============================================================
+02-21@20:50:30 INFO  (Logging.scala:60)     - No custom resources configured for spark.driver.
+02-21@20:50:30 INFO  (Logging.scala:60)     - ==============================================================
+02-21@20:50:30 INFO  (Logging.scala:60)     - Submitted application: RDD TriangleCount Program
+02-21@20:50:30 INFO  (Logging.scala:60)     - Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+02-21@20:50:30 INFO  (Logging.scala:60)     - Limiting resource is cpu
+02-21@20:50:30 INFO  (Logging.scala:60)     - Added ResourceProfile id: 0
+02-21@20:50:30 INFO  (Logging.scala:60)     - Changing view acls to: vboxuser
+02-21@20:50:30 INFO  (Logging.scala:60)     - Changing modify acls to: vboxuser
+02-21@20:50:30 INFO  (Logging.scala:60)     - Changing view acls groups to: 
+02-21@20:50:30 INFO  (Logging.scala:60)     - Changing modify acls groups to: 
+02-21@20:50:30 INFO  (Logging.scala:60)     - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vboxuser; groups with view permissions: EMPTY; users with modify permissions: vboxuser; groups with modify permissions: EMPTY
+02-21@20:50:30 INFO  (Logging.scala:60)     - Successfully started service 'sparkDriver' on port 44041.
+02-21@20:50:30 INFO  (Logging.scala:60)     - Registering MapOutputTracker
+02-21@20:50:30 INFO  (Logging.scala:60)     - Registering BlockManagerMaster
+02-21@20:50:30 INFO  (Logging.scala:60)     - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+02-21@20:50:30 INFO  (Logging.scala:60)     - BlockManagerMasterEndpoint up
+02-21@20:50:30 INFO  (Logging.scala:60)     - Registering BlockManagerMasterHeartbeat
+02-21@20:50:31 INFO  (Logging.scala:60)     - Created local directory at /tmp/blockmgr-e9a58fe8-f294-4f22-a52e-9abd1dffd5d2
+02-21@20:50:31 INFO  (Logging.scala:60)     - MemoryStore started with capacity 434.4 MiB
+02-21@20:50:31 INFO  (Logging.scala:60)     - Registering OutputCommitCoordinator
+02-21@20:50:31 INFO  (     Log.java:170)     - Logging initialized @4289ms to org.sparkproject.jetty.util.log.Slf4jLog
+02-21@20:50:31 INFO  (Logging.scala:60)     - Start Jetty 0.0.0.0:4040 for SparkUI
+02-21@20:50:31 INFO  (  Server.java:375)     - jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-post-Ubuntu-0ubuntu122.04
+02-21@20:50:31 INFO  (  Server.java:415)     - Started @4435ms
+02-21@20:50:31 INFO  (AbstractConnector.java:333)     - Started ServerConnector@5524b72f{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+02-21@20:50:31 INFO  (Logging.scala:60)     - Successfully started service 'SparkUI' on port 4040.
+02-21@20:50:31 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@75a118e6{/,null,AVAILABLE,@Spark}
+02-21@20:50:31 INFO  (Logging.scala:60)     - Added JAR file:/media/sf_K_DRIVE/hw-3-kokomocha/spark-repRDD.jar at spark://10.0.2.15:44041/jars/spark-repRDD.jar with timestamp 1708566630207
+02-21@20:50:31 INFO  (Logging.scala:60)     - Starting executor ID driver on host 10.0.2.15
+02-21@20:50:31 INFO  (Logging.scala:60)     - Starting executor with user classpath (userClassPathFirst = false): ''
+02-21@20:50:31 INFO  (Logging.scala:60)     - Fetching spark://10.0.2.15:44041/jars/spark-repRDD.jar with timestamp 1708566630207
+02-21@20:50:31 INFO  (TransportClientFactory.java:306)     - Successfully created connection to /10.0.2.15:44041 after 63 ms (0 ms spent in bootstraps)
+02-21@20:50:31 INFO  (Logging.scala:60)     - Fetching spark://10.0.2.15:44041/jars/spark-repRDD.jar to /tmp/spark-9421b073-3118-45be-a94f-8f16b32e87f6/userFiles-60dc13c4-f702-4c76-a6e6-e0ab303a1dde/fetchFileTemp15250986077431599199.tmp
+02-21@20:50:31 INFO  (Logging.scala:60)     - Adding file:/tmp/spark-9421b073-3118-45be-a94f-8f16b32e87f6/userFiles-60dc13c4-f702-4c76-a6e6-e0ab303a1dde/spark-repRDD.jar to class loader
+02-21@20:50:31 INFO  (Logging.scala:60)     - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35013.
+02-21@20:50:31 INFO  (NettyBlockTransferService.scala:83)     - Server created on 10.0.2.15:35013
+02-21@20:50:31 INFO  (Logging.scala:60)     - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+02-21@20:50:31 INFO  (Logging.scala:60)     - Registering BlockManager BlockManagerId(driver, 10.0.2.15, 35013, None)
+02-21@20:50:31 INFO  (Logging.scala:60)     - Registering block manager 10.0.2.15:35013 with 434.4 MiB RAM, BlockManagerId(driver, 10.0.2.15, 35013, None)
+02-21@20:50:31 INFO  (Logging.scala:60)     - Registered BlockManager BlockManagerId(driver, 10.0.2.15, 35013, None)
+02-21@20:50:31 INFO  (Logging.scala:60)     - Initialized BlockManager: BlockManagerId(driver, 10.0.2.15, 35013, None)
+02-21@20:50:32 INFO  (ContextHandler.java:1159)     - Stopped o.s.j.s.ServletContextHandler@75a118e6{/,null,STOPPED,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@1ee47d9e{/jobs,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@5dc0ff7d{/jobs/json,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@13dbed9e{/jobs/job,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@2b38b1f{/jobs/job/json,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@51ab1ee3{/stages,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@3003e580{/stages/json,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@30839e44{/stages/stage,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@1945113f{/stages/stage/json,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@697173d9{/stages/pool,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@3d90eeb3{/stages/pool/json,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@7fb53256{/storage,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@27329d2a{/storage/json,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@2f894ad9{/storage/rdd,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@6993c8df{/storage/rdd/json,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@326e0b8e{/environment,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@41184371{/environment/json,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@76a805b7{/executors,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@167381c7{/executors/json,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@56382bc9{/executors/threadDump,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@53ed80d3{/executors/threadDump/json,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@7c51782d{/static,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@b0a1231{/,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@4694f434{/api,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@31142d58{/jobs/job/kill,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@1192b58e{/stages/stage/kill,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@235d659c{/metrics/json,null,AVAILABLE,@Spark}
+02-21@20:50:32 INFO  (Logging.scala:60)     - Block broadcast_0 stored as values in memory (estimated size 308.9 KiB, free 434.1 MiB)
+02-21@20:50:32 INFO  (Logging.scala:60)     - Block broadcast_0_piece0 stored as bytes in memory (estimated size 51.6 KiB, free 434.0 MiB)
+02-21@20:50:32 INFO  (Logging.scala:60)     - Added broadcast_0_piece0 in memory on 10.0.2.15:35013 (size: 51.6 KiB, free: 434.3 MiB)
+02-21@20:50:32 INFO  (Logging.scala:60)     - Created broadcast 0 from textFile at triangle_repRDD.scala:26
+02-21@20:50:32 INFO  (FileInputFormat.java:266)     - Total input files to process : 1
+02-21@20:50:33 INFO  (Logging.scala:60)     - Starting job: collect at triangle_repRDD.scala:31
+02-21@20:50:33 INFO  (Logging.scala:60)     - Registering RDD 4 (filter at triangle_repRDD.scala:29) as input to shuffle 0
+02-21@20:50:33 INFO  (Logging.scala:60)     - Got job 0 (collect at triangle_repRDD.scala:31) with 40 output partitions
+02-21@20:50:33 INFO  (Logging.scala:60)     - Final stage: ResultStage 1 (collect at triangle_repRDD.scala:31)
+02-21@20:50:33 INFO  (Logging.scala:60)     - Parents of final stage: List(ShuffleMapStage 0)
+02-21@20:50:33 INFO  (Logging.scala:60)     - Missing parents: List(ShuffleMapStage 0)
+02-21@20:50:33 INFO  (Logging.scala:60)     - Submitting ShuffleMapStage 0 (MapPartitionsRDD[4] at filter at triangle_repRDD.scala:29), which has no missing parents
+02-21@20:50:33 INFO  (Logging.scala:60)     - Block broadcast_1 stored as values in memory (estimated size 8.0 KiB, free 434.0 MiB)
+02-21@20:50:33 INFO  (Logging.scala:60)     - Block broadcast_1_piece0 stored as bytes in memory (estimated size 4.3 KiB, free 434.0 MiB)
+02-21@20:50:33 INFO  (Logging.scala:60)     - Added broadcast_1_piece0 in memory on 10.0.2.15:35013 (size: 4.3 KiB, free: 434.3 MiB)
+02-21@20:50:33 INFO  (Logging.scala:60)     - Created broadcast 1 from broadcast at DAGScheduler.scala:1535
+02-21@20:50:33 INFO  (Logging.scala:60)     - Submitting 40 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[4] at filter at triangle_repRDD.scala:29) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+02-21@20:50:33 INFO  (Logging.scala:60)     - Adding task set 0.0 with 40 tasks resource profile 0
+02-21@20:50:33 INFO  (Logging.scala:60)     - Starting task 0.0 in stage 0.0 (TID 0) (10.0.2.15, executor driver, partition 0, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:50:33 INFO  (Logging.scala:60)     - Starting task 1.0 in stage 0.0 (TID 1) (10.0.2.15, executor driver, partition 1, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:50:33 INFO  (Logging.scala:60)     - Starting task 2.0 in stage 0.0 (TID 2) (10.0.2.15, executor driver, partition 2, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:50:33 INFO  (Logging.scala:60)     - Starting task 3.0 in stage 0.0 (TID 3) (10.0.2.15, executor driver, partition 3, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:50:33 INFO  (Logging.scala:60)     - Running task 2.0 in stage 0.0 (TID 2)
+02-21@20:50:33 INFO  (Logging.scala:60)     - Running task 3.0 in stage 0.0 (TID 3)
+02-21@20:50:33 INFO  (Logging.scala:60)     - Running task 0.0 in stage 0.0 (TID 0)
+02-21@20:50:33 INFO  (Logging.scala:60)     - Running task 1.0 in stage 0.0 (TID 1)
+02-21@20:50:33 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:100663296+33554432
+02-21@20:50:33 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:0+33554432
+02-21@20:50:33 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:67108864+33554432
+02-21@20:50:33 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:33554432+33554432
+02-21@20:50:35 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 0.0 (TID 3). 1252 bytes result sent to driver
+02-21@20:50:35 INFO  (Logging.scala:60)     - Starting task 4.0 in stage 0.0 (TID 4) (10.0.2.15, executor driver, partition 4, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:50:35 INFO  (Logging.scala:60)     - Running task 4.0 in stage 0.0 (TID 4)
+02-21@20:50:35 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:134217728+33554432
+02-21@20:50:35 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 0.0 (TID 3) in 2577 ms on 10.0.2.15 (executor driver) (1/40)
+02-21@20:50:36 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 0.0 (TID 1). 1252 bytes result sent to driver
+02-21@20:50:36 INFO  (Logging.scala:60)     - Starting task 5.0 in stage 0.0 (TID 5) (10.0.2.15, executor driver, partition 5, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:50:36 INFO  (Logging.scala:60)     - Running task 5.0 in stage 0.0 (TID 5)
+02-21@20:50:36 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 0.0 (TID 1) in 2956 ms on 10.0.2.15 (executor driver) (2/40)
+02-21@20:50:36 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:167772160+33554432
+02-21@20:50:36 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 0.0 (TID 2). 1209 bytes result sent to driver
+02-21@20:50:36 INFO  (Logging.scala:60)     - Starting task 6.0 in stage 0.0 (TID 6) (10.0.2.15, executor driver, partition 6, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:50:36 INFO  (Logging.scala:60)     - Running task 6.0 in stage 0.0 (TID 6)
+02-21@20:50:36 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:201326592+33554432
+02-21@20:50:36 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 0.0 (TID 2) in 3050 ms on 10.0.2.15 (executor driver) (3/40)
+02-21@20:50:36 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 0.0 (TID 0). 1252 bytes result sent to driver
+02-21@20:50:36 INFO  (Logging.scala:60)     - Starting task 7.0 in stage 0.0 (TID 7) (10.0.2.15, executor driver, partition 7, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:50:36 INFO  (Logging.scala:60)     - Running task 7.0 in stage 0.0 (TID 7)
+02-21@20:50:36 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 0.0 (TID 0) in 3308 ms on 10.0.2.15 (executor driver) (4/40)
+02-21@20:50:36 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:234881024+33554432
+02-21@20:50:37 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 0.0 (TID 5). 1209 bytes result sent to driver
+02-21@20:50:37 INFO  (Logging.scala:60)     - Starting task 8.0 in stage 0.0 (TID 8) (10.0.2.15, executor driver, partition 8, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:50:37 INFO  (Logging.scala:60)     - Running task 8.0 in stage 0.0 (TID 8)
+02-21@20:50:37 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 0.0 (TID 5) in 1371 ms on 10.0.2.15 (executor driver) (5/40)
+02-21@20:50:37 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:268435456+33554432
+02-21@20:50:37 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 0.0 (TID 6). 1209 bytes result sent to driver
+02-21@20:50:37 INFO  (Logging.scala:60)     - Starting task 9.0 in stage 0.0 (TID 9) (10.0.2.15, executor driver, partition 9, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:50:37 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 0.0 (TID 6) in 1366 ms on 10.0.2.15 (executor driver) (6/40)
+02-21@20:50:37 INFO  (Logging.scala:60)     - Running task 9.0 in stage 0.0 (TID 9)
+02-21@20:50:37 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:301989888+33554432
+02-21@20:50:37 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 0.0 (TID 7). 1209 bytes result sent to driver
+02-21@20:50:37 INFO  (Logging.scala:60)     - Starting task 10.0 in stage 0.0 (TID 10) (10.0.2.15, executor driver, partition 10, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:50:37 INFO  (Logging.scala:60)     - Running task 10.0 in stage 0.0 (TID 10)
+02-21@20:50:37 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 0.0 (TID 7) in 1229 ms on 10.0.2.15 (executor driver) (7/40)
+02-21@20:50:37 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:335544320+33554432
+02-21@20:50:38 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 0.0 (TID 4). 1209 bytes result sent to driver
+02-21@20:50:38 INFO  (Logging.scala:60)     - Starting task 11.0 in stage 0.0 (TID 11) (10.0.2.15, executor driver, partition 11, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:50:38 INFO  (Logging.scala:60)     - Running task 11.0 in stage 0.0 (TID 11)
+02-21@20:50:38 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 0.0 (TID 4) in 2157 ms on 10.0.2.15 (executor driver) (8/40)
+02-21@20:50:38 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:369098752+33554432
+02-21@20:50:38 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 0.0 (TID 8). 1209 bytes result sent to driver
+02-21@20:50:38 INFO  (Logging.scala:60)     - Starting task 12.0 in stage 0.0 (TID 12) (10.0.2.15, executor driver, partition 12, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:50:38 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 0.0 (TID 8) in 1308 ms on 10.0.2.15 (executor driver) (9/40)
+02-21@20:50:38 INFO  (Logging.scala:60)     - Running task 12.0 in stage 0.0 (TID 12)
+02-21@20:50:38 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:402653184+33554432
+02-21@20:50:43 INFO  (Logging.scala:60)     - Finished task 9.0 in stage 0.0 (TID 9). 1209 bytes result sent to driver
+02-21@20:50:43 INFO  (Logging.scala:60)     - Starting task 13.0 in stage 0.0 (TID 13) (10.0.2.15, executor driver, partition 13, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:50:43 INFO  (Logging.scala:60)     - Running task 13.0 in stage 0.0 (TID 13)
+02-21@20:50:43 INFO  (Logging.scala:60)     - Finished task 9.0 in stage 0.0 (TID 9) in 5706 ms on 10.0.2.15 (executor driver) (10/40)
+02-21@20:50:43 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:436207616+33554432
+02-21@20:50:47 INFO  (Logging.scala:60)     - Finished task 10.0 in stage 0.0 (TID 10). 1252 bytes result sent to driver
+02-21@20:50:47 INFO  (Logging.scala:60)     - Starting task 14.0 in stage 0.0 (TID 14) (10.0.2.15, executor driver, partition 14, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:50:47 INFO  (Logging.scala:60)     - Running task 14.0 in stage 0.0 (TID 14)
+02-21@20:50:47 INFO  (Logging.scala:60)     - Finished task 10.0 in stage 0.0 (TID 10) in 9623 ms on 10.0.2.15 (executor driver) (11/40)
+02-21@20:50:47 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:469762048+33554432
+02-21@20:50:48 INFO  (Logging.scala:60)     - Finished task 11.0 in stage 0.0 (TID 11). 1209 bytes result sent to driver
+02-21@20:50:48 INFO  (Logging.scala:60)     - Starting task 15.0 in stage 0.0 (TID 15) (10.0.2.15, executor driver, partition 15, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:50:48 INFO  (Logging.scala:60)     - Running task 15.0 in stage 0.0 (TID 15)
+02-21@20:50:48 INFO  (Logging.scala:60)     - Finished task 11.0 in stage 0.0 (TID 11) in 10543 ms on 10.0.2.15 (executor driver) (12/40)
+02-21@20:50:48 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:503316480+33554432
+02-21@20:50:53 INFO  (Logging.scala:60)     - Finished task 12.0 in stage 0.0 (TID 12). 1209 bytes result sent to driver
+02-21@20:50:53 INFO  (Logging.scala:60)     - Starting task 16.0 in stage 0.0 (TID 16) (10.0.2.15, executor driver, partition 16, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:50:53 INFO  (Logging.scala:60)     - Finished task 12.0 in stage 0.0 (TID 12) in 14262 ms on 10.0.2.15 (executor driver) (13/40)
+02-21@20:50:53 INFO  (Logging.scala:60)     - Running task 16.0 in stage 0.0 (TID 16)
+02-21@20:50:53 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:536870912+33554432
+02-21@20:50:59 INFO  (Logging.scala:60)     - Finished task 13.0 in stage 0.0 (TID 13). 1252 bytes result sent to driver
+02-21@20:50:59 INFO  (Logging.scala:60)     - Starting task 17.0 in stage 0.0 (TID 17) (10.0.2.15, executor driver, partition 17, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:50:59 INFO  (Logging.scala:60)     - Finished task 13.0 in stage 0.0 (TID 13) in 16218 ms on 10.0.2.15 (executor driver) (14/40)
+02-21@20:50:59 INFO  (Logging.scala:60)     - Running task 17.0 in stage 0.0 (TID 17)
+02-21@20:50:59 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:570425344+33554432
+02-21@20:51:03 INFO  (Logging.scala:60)     - Finished task 14.0 in stage 0.0 (TID 14). 1252 bytes result sent to driver
+02-21@20:51:03 INFO  (Logging.scala:60)     - Starting task 18.0 in stage 0.0 (TID 18) (10.0.2.15, executor driver, partition 18, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:51:03 INFO  (Logging.scala:60)     - Finished task 14.0 in stage 0.0 (TID 14) in 16242 ms on 10.0.2.15 (executor driver) (15/40)
+02-21@20:51:03 INFO  (Logging.scala:60)     - Running task 18.0 in stage 0.0 (TID 18)
+02-21@20:51:03 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:603979776+33554432
+02-21@20:51:04 INFO  (Logging.scala:60)     - Finished task 15.0 in stage 0.0 (TID 15). 1209 bytes result sent to driver
+02-21@20:51:04 INFO  (Logging.scala:60)     - Starting task 19.0 in stage 0.0 (TID 19) (10.0.2.15, executor driver, partition 19, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:51:04 INFO  (Logging.scala:60)     - Running task 19.0 in stage 0.0 (TID 19)
+02-21@20:51:04 INFO  (Logging.scala:60)     - Finished task 15.0 in stage 0.0 (TID 15) in 16251 ms on 10.0.2.15 (executor driver) (16/40)
+02-21@20:51:04 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:637534208+33554432
+02-21@20:51:09 INFO  (Logging.scala:60)     - Finished task 16.0 in stage 0.0 (TID 16). 1209 bytes result sent to driver
+02-21@20:51:09 INFO  (Logging.scala:60)     - Starting task 20.0 in stage 0.0 (TID 20) (10.0.2.15, executor driver, partition 20, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:51:09 INFO  (Logging.scala:60)     - Finished task 16.0 in stage 0.0 (TID 16) in 15822 ms on 10.0.2.15 (executor driver) (17/40)
+02-21@20:51:09 INFO  (Logging.scala:60)     - Running task 20.0 in stage 0.0 (TID 20)
+02-21@20:51:09 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:671088640+33554432
+02-21@20:51:15 INFO  (Logging.scala:60)     - Finished task 17.0 in stage 0.0 (TID 17). 1209 bytes result sent to driver
+02-21@20:51:15 INFO  (Logging.scala:60)     - Starting task 21.0 in stage 0.0 (TID 21) (10.0.2.15, executor driver, partition 21, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:51:15 INFO  (Logging.scala:60)     - Running task 21.0 in stage 0.0 (TID 21)
+02-21@20:51:15 INFO  (Logging.scala:60)     - Finished task 17.0 in stage 0.0 (TID 17) in 15497 ms on 10.0.2.15 (executor driver) (18/40)
+02-21@20:51:15 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:704643072+33554432
+02-21@20:51:18 INFO  (Logging.scala:60)     - Finished task 19.0 in stage 0.0 (TID 19). 1209 bytes result sent to driver
+02-21@20:51:18 INFO  (Logging.scala:60)     - Starting task 22.0 in stage 0.0 (TID 22) (10.0.2.15, executor driver, partition 22, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:51:18 INFO  (Logging.scala:60)     - Finished task 19.0 in stage 0.0 (TID 19) in 13612 ms on 10.0.2.15 (executor driver) (19/40)
+02-21@20:51:18 INFO  (Logging.scala:60)     - Running task 22.0 in stage 0.0 (TID 22)
+02-21@20:51:18 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:738197504+33554432
+02-21@20:51:18 INFO  (Logging.scala:60)     - Finished task 18.0 in stage 0.0 (TID 18). 1209 bytes result sent to driver
+02-21@20:51:18 INFO  (Logging.scala:60)     - Starting task 23.0 in stage 0.0 (TID 23) (10.0.2.15, executor driver, partition 23, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:51:18 INFO  (Logging.scala:60)     - Running task 23.0 in stage 0.0 (TID 23)
+02-21@20:51:18 INFO  (Logging.scala:60)     - Finished task 18.0 in stage 0.0 (TID 18) in 14971 ms on 10.0.2.15 (executor driver) (20/40)
+02-21@20:51:18 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:771751936+33554432
+02-21@20:51:22 INFO  (Logging.scala:60)     - Finished task 23.0 in stage 0.0 (TID 23). 1080 bytes result sent to driver
+02-21@20:51:22 INFO  (Logging.scala:60)     - Starting task 24.0 in stage 0.0 (TID 24) (10.0.2.15, executor driver, partition 24, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:51:22 INFO  (Logging.scala:60)     - Running task 24.0 in stage 0.0 (TID 24)
+02-21@20:51:22 INFO  (Logging.scala:60)     - Finished task 23.0 in stage 0.0 (TID 23) in 3942 ms on 10.0.2.15 (executor driver) (21/40)
+02-21@20:51:22 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:805306368+33554432
+02-21@20:51:23 INFO  (Logging.scala:60)     - Finished task 22.0 in stage 0.0 (TID 22). 1209 bytes result sent to driver
+02-21@20:51:23 INFO  (Logging.scala:60)     - Starting task 25.0 in stage 0.0 (TID 25) (10.0.2.15, executor driver, partition 25, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:51:23 INFO  (Logging.scala:60)     - Finished task 22.0 in stage 0.0 (TID 22) in 4835 ms on 10.0.2.15 (executor driver) (22/40)
+02-21@20:51:23 INFO  (Logging.scala:60)     - Running task 25.0 in stage 0.0 (TID 25)
+02-21@20:51:23 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:838860800+33554432
+02-21@20:51:23 INFO  (Logging.scala:60)     - Finished task 20.0 in stage 0.0 (TID 20). 1209 bytes result sent to driver
+02-21@20:51:23 INFO  (Logging.scala:60)     - Starting task 26.0 in stage 0.0 (TID 26) (10.0.2.15, executor driver, partition 26, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:51:23 INFO  (Logging.scala:60)     - Finished task 20.0 in stage 0.0 (TID 20) in 14405 ms on 10.0.2.15 (executor driver) (23/40)
+02-21@20:51:23 INFO  (Logging.scala:60)     - Running task 26.0 in stage 0.0 (TID 26)
+02-21@20:51:23 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:872415232+33554432
+02-21@20:51:24 INFO  (Logging.scala:60)     - Finished task 24.0 in stage 0.0 (TID 24). 1080 bytes result sent to driver
+02-21@20:51:24 INFO  (Logging.scala:60)     - Starting task 27.0 in stage 0.0 (TID 27) (10.0.2.15, executor driver, partition 27, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:51:24 INFO  (Logging.scala:60)     - Finished task 24.0 in stage 0.0 (TID 24) in 1686 ms on 10.0.2.15 (executor driver) (24/40)
+02-21@20:51:24 INFO  (Logging.scala:60)     - Running task 27.0 in stage 0.0 (TID 27)
+02-21@20:51:24 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:905969664+33554432
+02-21@20:51:29 INFO  (Logging.scala:60)     - Finished task 21.0 in stage 0.0 (TID 21). 1209 bytes result sent to driver
+02-21@20:51:29 INFO  (Logging.scala:60)     - Starting task 28.0 in stage 0.0 (TID 28) (10.0.2.15, executor driver, partition 28, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:51:29 INFO  (Logging.scala:60)     - Finished task 21.0 in stage 0.0 (TID 21) in 13995 ms on 10.0.2.15 (executor driver) (25/40)
+02-21@20:51:29 INFO  (Logging.scala:60)     - Running task 28.0 in stage 0.0 (TID 28)
+02-21@20:51:29 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:939524096+33554432
+02-21@20:51:34 INFO  (Logging.scala:60)     - Finished task 25.0 in stage 0.0 (TID 25). 1080 bytes result sent to driver
+02-21@20:51:34 INFO  (Logging.scala:60)     - Starting task 29.0 in stage 0.0 (TID 29) (10.0.2.15, executor driver, partition 29, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:51:34 INFO  (Logging.scala:60)     - Finished task 25.0 in stage 0.0 (TID 25) in 11699 ms on 10.0.2.15 (executor driver) (26/40)
+02-21@20:51:34 INFO  (Logging.scala:60)     - Running task 29.0 in stage 0.0 (TID 29)
+02-21@20:51:34 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:973078528+33554432
+02-21@20:51:35 INFO  (Logging.scala:60)     - Finished task 26.0 in stage 0.0 (TID 26). 1080 bytes result sent to driver
+02-21@20:51:35 INFO  (Logging.scala:60)     - Starting task 30.0 in stage 0.0 (TID 30) (10.0.2.15, executor driver, partition 30, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:51:35 INFO  (Logging.scala:60)     - Running task 30.0 in stage 0.0 (TID 30)
+02-21@20:51:35 INFO  (Logging.scala:60)     - Finished task 26.0 in stage 0.0 (TID 26) in 11812 ms on 10.0.2.15 (executor driver) (27/40)
+02-21@20:51:35 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1006632960+33554432
+02-21@20:51:35 INFO  (Logging.scala:60)     - Finished task 27.0 in stage 0.0 (TID 27). 1080 bytes result sent to driver
+02-21@20:51:35 INFO  (Logging.scala:60)     - Starting task 31.0 in stage 0.0 (TID 31) (10.0.2.15, executor driver, partition 31, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:51:35 INFO  (Logging.scala:60)     - Finished task 27.0 in stage 0.0 (TID 27) in 11365 ms on 10.0.2.15 (executor driver) (28/40)
+02-21@20:51:35 INFO  (Logging.scala:60)     - Running task 31.0 in stage 0.0 (TID 31)
+02-21@20:51:35 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1040187392+33554432
+02-21@20:51:39 INFO  (Logging.scala:60)     - Finished task 28.0 in stage 0.0 (TID 28). 1080 bytes result sent to driver
+02-21@20:51:39 INFO  (Logging.scala:60)     - Starting task 32.0 in stage 0.0 (TID 32) (10.0.2.15, executor driver, partition 32, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:51:39 INFO  (Logging.scala:60)     - Finished task 28.0 in stage 0.0 (TID 28) in 9911 ms on 10.0.2.15 (executor driver) (29/40)
+02-21@20:51:39 INFO  (Logging.scala:60)     - Running task 32.0 in stage 0.0 (TID 32)
+02-21@20:51:39 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1073741824+33554432
+02-21@20:51:44 INFO  (Logging.scala:60)     - Finished task 29.0 in stage 0.0 (TID 29). 1080 bytes result sent to driver
+02-21@20:51:44 INFO  (Logging.scala:60)     - Starting task 33.0 in stage 0.0 (TID 33) (10.0.2.15, executor driver, partition 33, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:51:44 INFO  (Logging.scala:60)     - Finished task 29.0 in stage 0.0 (TID 29) in 9848 ms on 10.0.2.15 (executor driver) (30/40)
+02-21@20:51:44 INFO  (Logging.scala:60)     - Running task 33.0 in stage 0.0 (TID 33)
+02-21@20:51:44 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1107296256+33554432
+02-21@20:51:45 INFO  (Logging.scala:60)     - Finished task 30.0 in stage 0.0 (TID 30). 1080 bytes result sent to driver
+02-21@20:51:45 INFO  (Logging.scala:60)     - Starting task 34.0 in stage 0.0 (TID 34) (10.0.2.15, executor driver, partition 34, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:51:45 INFO  (Logging.scala:60)     - Running task 34.0 in stage 0.0 (TID 34)
+02-21@20:51:45 INFO  (Logging.scala:60)     - Finished task 30.0 in stage 0.0 (TID 30) in 10491 ms on 10.0.2.15 (executor driver) (31/40)
+02-21@20:51:45 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1140850688+33554432
+02-21@20:51:48 INFO  (Logging.scala:60)     - Finished task 31.0 in stage 0.0 (TID 31). 1123 bytes result sent to driver
+02-21@20:51:48 INFO  (Logging.scala:60)     - Starting task 35.0 in stage 0.0 (TID 35) (10.0.2.15, executor driver, partition 35, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:51:48 INFO  (Logging.scala:60)     - Running task 35.0 in stage 0.0 (TID 35)
+02-21@20:51:48 INFO  (Logging.scala:60)     - Finished task 31.0 in stage 0.0 (TID 31) in 13381 ms on 10.0.2.15 (executor driver) (32/40)
+02-21@20:51:48 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1174405120+33554432
+02-21@20:51:54 INFO  (Logging.scala:60)     - Finished task 32.0 in stage 0.0 (TID 32). 1123 bytes result sent to driver
+02-21@20:51:54 INFO  (Logging.scala:60)     - Starting task 36.0 in stage 0.0 (TID 36) (10.0.2.15, executor driver, partition 36, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:51:54 INFO  (Logging.scala:60)     - Finished task 32.0 in stage 0.0 (TID 32) in 15570 ms on 10.0.2.15 (executor driver) (33/40)
+02-21@20:51:54 INFO  (Logging.scala:60)     - Running task 36.0 in stage 0.0 (TID 36)
+02-21@20:51:54 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1207959552+33554432
+02-21@20:52:00 INFO  (Logging.scala:60)     - Finished task 33.0 in stage 0.0 (TID 33). 1080 bytes result sent to driver
+02-21@20:52:00 INFO  (Logging.scala:60)     - Starting task 37.0 in stage 0.0 (TID 37) (10.0.2.15, executor driver, partition 37, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:52:00 INFO  (Logging.scala:60)     - Finished task 33.0 in stage 0.0 (TID 33) in 15313 ms on 10.0.2.15 (executor driver) (34/40)
+02-21@20:52:00 INFO  (Logging.scala:60)     - Running task 37.0 in stage 0.0 (TID 37)
+02-21@20:52:00 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1241513984+33554432
+02-21@20:52:00 INFO  (Logging.scala:60)     - Finished task 34.0 in stage 0.0 (TID 34). 1080 bytes result sent to driver
+02-21@20:52:00 INFO  (Logging.scala:60)     - Starting task 38.0 in stage 0.0 (TID 38) (10.0.2.15, executor driver, partition 38, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:52:00 INFO  (Logging.scala:60)     - Running task 38.0 in stage 0.0 (TID 38)
+02-21@20:52:00 INFO  (Logging.scala:60)     - Finished task 34.0 in stage 0.0 (TID 34) in 14686 ms on 10.0.2.15 (executor driver) (35/40)
+02-21@20:52:00 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1275068416+33554432
+02-21@20:52:03 INFO  (Logging.scala:60)     - Finished task 35.0 in stage 0.0 (TID 35). 1080 bytes result sent to driver
+02-21@20:52:03 INFO  (Logging.scala:60)     - Starting task 39.0 in stage 0.0 (TID 39) (10.0.2.15, executor driver, partition 39, PROCESS_LOCAL, 7421 bytes) 
+02-21@20:52:03 INFO  (Logging.scala:60)     - Finished task 35.0 in stage 0.0 (TID 35) in 14052 ms on 10.0.2.15 (executor driver) (36/40)
+02-21@20:52:03 INFO  (Logging.scala:60)     - Running task 39.0 in stage 0.0 (TID 39)
+02-21@20:52:03 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1308622848+10658977
+02-21@20:52:07 INFO  (Logging.scala:60)     - Finished task 39.0 in stage 0.0 (TID 39). 1080 bytes result sent to driver
+02-21@20:52:07 INFO  (Logging.scala:60)     - Finished task 39.0 in stage 0.0 (TID 39) in 4896 ms on 10.0.2.15 (executor driver) (37/40)
+02-21@20:52:08 INFO  (Logging.scala:60)     - Finished task 36.0 in stage 0.0 (TID 36). 1080 bytes result sent to driver
+02-21@20:52:08 INFO  (Logging.scala:60)     - Finished task 36.0 in stage 0.0 (TID 36) in 13896 ms on 10.0.2.15 (executor driver) (38/40)
+02-21@20:52:11 INFO  (Logging.scala:60)     - Finished task 37.0 in stage 0.0 (TID 37). 1080 bytes result sent to driver
+02-21@20:52:11 INFO  (Logging.scala:60)     - Finished task 37.0 in stage 0.0 (TID 37) in 11498 ms on 10.0.2.15 (executor driver) (39/40)
+02-21@20:52:11 INFO  (Logging.scala:60)     - Finished task 38.0 in stage 0.0 (TID 38). 1080 bytes result sent to driver
+02-21@20:52:11 INFO  (Logging.scala:60)     - Finished task 38.0 in stage 0.0 (TID 38) in 11313 ms on 10.0.2.15 (executor driver) (40/40)
+02-21@20:52:11 INFO  (Logging.scala:60)     - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+02-21@20:52:11 INFO  (Logging.scala:60)     - ShuffleMapStage 0 (filter at triangle_repRDD.scala:29) finished in 98.627 s
+02-21@20:52:11 INFO  (Logging.scala:60)     - looking for newly runnable stages
+02-21@20:52:11 INFO  (Logging.scala:60)     - running: Set()
+02-21@20:52:11 INFO  (Logging.scala:60)     - waiting: Set(ResultStage 1)
+02-21@20:52:11 INFO  (Logging.scala:60)     - failed: Set()
+02-21@20:52:11 INFO  (Logging.scala:60)     - Submitting ResultStage 1 (ShuffledRDD[5] at groupByKey at triangle_repRDD.scala:31), which has no missing parents
+02-21@20:52:11 INFO  (Logging.scala:60)     - Block broadcast_2 stored as values in memory (estimated size 8.9 KiB, free 434.0 MiB)
+02-21@20:52:11 INFO  (Logging.scala:60)     - Block broadcast_2_piece0 stored as bytes in memory (estimated size 4.7 KiB, free 434.0 MiB)
+02-21@20:52:11 INFO  (Logging.scala:60)     - Added broadcast_2_piece0 in memory on 10.0.2.15:35013 (size: 4.7 KiB, free: 434.3 MiB)
+02-21@20:52:11 INFO  (Logging.scala:60)     - Created broadcast 2 from broadcast at DAGScheduler.scala:1535
+02-21@20:52:11 INFO  (Logging.scala:60)     - Submitting 40 missing tasks from ResultStage 1 (ShuffledRDD[5] at groupByKey at triangle_repRDD.scala:31) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+02-21@20:52:11 INFO  (Logging.scala:60)     - Adding task set 1.0 with 40 tasks resource profile 0
+02-21@20:52:11 INFO  (Logging.scala:60)     - Starting task 0.0 in stage 1.0 (TID 40) (10.0.2.15, executor driver, partition 0, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:11 INFO  (Logging.scala:60)     - Starting task 1.0 in stage 1.0 (TID 41) (10.0.2.15, executor driver, partition 1, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:11 INFO  (Logging.scala:60)     - Starting task 2.0 in stage 1.0 (TID 42) (10.0.2.15, executor driver, partition 2, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:11 INFO  (Logging.scala:60)     - Starting task 3.0 in stage 1.0 (TID 43) (10.0.2.15, executor driver, partition 3, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:11 INFO  (Logging.scala:60)     - Running task 1.0 in stage 1.0 (TID 41)
+02-21@20:52:11 INFO  (Logging.scala:60)     - Running task 2.0 in stage 1.0 (TID 42)
+02-21@20:52:11 INFO  (Logging.scala:60)     - Running task 0.0 in stage 1.0 (TID 40)
+02-21@20:52:11 INFO  (Logging.scala:60)     - Running task 3.0 in stage 1.0 (TID 43)
+02-21@20:52:11 INFO  (Logging.scala:60)     - Getting 6 (15.0 KiB) non-empty blocks including 6 (15.0 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:11 INFO  (Logging.scala:60)     - Getting 12 (34.6 KiB) non-empty blocks including 12 (34.6 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:11 INFO  (Logging.scala:60)     - Getting 6 (17.8 KiB) non-empty blocks including 6 (17.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:11 INFO  (Logging.scala:60)     - Started 0 remote fetches in 33 ms
+02-21@20:52:11 INFO  (Logging.scala:60)     - Started 0 remote fetches in 32 ms
+02-21@20:52:11 INFO  (Logging.scala:60)     - Getting 5 (19.3 KiB) non-empty blocks including 5 (19.3 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:11 INFO  (Logging.scala:60)     - Started 0 remote fetches in 26 ms
+02-21@20:52:11 INFO  (Logging.scala:60)     - Started 0 remote fetches in 24 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 1.0 (TID 41). 56892 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 1.0 (TID 42). 102051 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 1.0 (TID 40). 46075 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 1.0 (TID 43). 58410 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 4.0 in stage 1.0 (TID 44) (10.0.2.15, executor driver, partition 4, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 5.0 in stage 1.0 (TID 45) (10.0.2.15, executor driver, partition 5, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 6.0 in stage 1.0 (TID 46) (10.0.2.15, executor driver, partition 6, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 6.0 in stage 1.0 (TID 46)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 4.0 in stage 1.0 (TID 44)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 7.0 in stage 1.0 (TID 47) (10.0.2.15, executor driver, partition 7, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 5.0 in stage 1.0 (TID 45)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 7.0 in stage 1.0 (TID 47)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 1.0 (TID 40) in 377 ms on 10.0.2.15 (executor driver) (1/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 1.0 (TID 41) in 375 ms on 10.0.2.15 (executor driver) (2/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 1.0 (TID 43) in 374 ms on 10.0.2.15 (executor driver) (3/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 6 (20.9 KiB) non-empty blocks including 6 (20.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 1.0 (TID 42) in 378 ms on 10.0.2.15 (executor driver) (4/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 2 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 1 (9.2 KiB) non-empty blocks including 1 (9.2 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 6 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 5 (26.2 KiB) non-empty blocks including 5 (26.2 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 4 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 9 (16.8 KiB) non-empty blocks including 9 (16.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 13 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 1.0 (TID 44). 64536 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 8.0 in stage 1.0 (TID 48) (10.0.2.15, executor driver, partition 8, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 8.0 in stage 1.0 (TID 48)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 1.0 (TID 44) in 132 ms on 10.0.2.15 (executor driver) (5/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 7 (20.0 KiB) non-empty blocks including 7 (20.0 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 1 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 1.0 (TID 45). 32974 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 9.0 in stage 1.0 (TID 49) (10.0.2.15, executor driver, partition 9, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 1.0 (TID 45) in 167 ms on 10.0.2.15 (executor driver) (6/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 9.0 in stage 1.0 (TID 49)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 1.0 (TID 47). 71546 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 6 (23.0 KiB) non-empty blocks including 6 (23.0 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 5 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 1.0 (TID 46). 51926 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 10.0 in stage 1.0 (TID 50) (10.0.2.15, executor driver, partition 10, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 10.0 in stage 1.0 (TID 50)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 1.0 (TID 46) in 196 ms on 10.0.2.15 (executor driver) (7/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 7 (18.4 KiB) non-empty blocks including 7 (18.4 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 1.0 (TID 48). 66061 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 3 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 11.0 in stage 1.0 (TID 51) (10.0.2.15, executor driver, partition 11, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 11.0 in stage 1.0 (TID 51)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 1.0 (TID 48) in 129 ms on 10.0.2.15 (executor driver) (8/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 6 (23.1 KiB) non-empty blocks including 6 (23.1 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 2 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 12.0 in stage 1.0 (TID 52) (10.0.2.15, executor driver, partition 12, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 12.0 in stage 1.0 (TID 52)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 1.0 (TID 47) in 242 ms on 10.0.2.15 (executor driver) (9/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 5 (13.1 KiB) non-empty blocks including 5 (13.1 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 9 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 9.0 in stage 1.0 (TID 49). 71490 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 13.0 in stage 1.0 (TID 53) (10.0.2.15, executor driver, partition 13, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 13.0 in stage 1.0 (TID 53)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 9.0 in stage 1.0 (TID 49) in 134 ms on 10.0.2.15 (executor driver) (10/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 9 (36.7 KiB) non-empty blocks including 9 (36.7 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 1 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 10.0 in stage 1.0 (TID 50). 55919 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 14.0 in stage 1.0 (TID 54) (10.0.2.15, executor driver, partition 14, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 10.0 in stage 1.0 (TID 50) in 154 ms on 10.0.2.15 (executor driver) (11/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 14.0 in stage 1.0 (TID 54)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 6 (18.8 KiB) non-empty blocks including 6 (18.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 3 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 11.0 in stage 1.0 (TID 51). 66427 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 15.0 in stage 1.0 (TID 55) (10.0.2.15, executor driver, partition 15, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 11.0 in stage 1.0 (TID 51) in 194 ms on 10.0.2.15 (executor driver) (12/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 15.0 in stage 1.0 (TID 55)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 5 (10.4 KiB) non-empty blocks including 5 (10.4 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 1 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 13.0 in stage 1.0 (TID 53). 109439 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 16.0 in stage 1.0 (TID 56) (10.0.2.15, executor driver, partition 16, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 16.0 in stage 1.0 (TID 56)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 13.0 in stage 1.0 (TID 53) in 132 ms on 10.0.2.15 (executor driver) (13/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 6 (20.8 KiB) non-empty blocks including 6 (20.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 1 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 12.0 in stage 1.0 (TID 52). 43919 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 17.0 in stage 1.0 (TID 57) (10.0.2.15, executor driver, partition 17, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 17.0 in stage 1.0 (TID 57)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 12.0 in stage 1.0 (TID 52) in 217 ms on 10.0.2.15 (executor driver) (14/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 10 (18.6 KiB) non-empty blocks including 10 (18.6 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 2 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 16.0 in stage 1.0 (TID 56). 63446 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 18.0 in stage 1.0 (TID 58) (10.0.2.15, executor driver, partition 18, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 16.0 in stage 1.0 (TID 56) in 73 ms on 10.0.2.15 (executor driver) (15/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 18.0 in stage 1.0 (TID 58)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 6 (16.0 KiB) non-empty blocks including 6 (16.0 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 15.0 in stage 1.0 (TID 55). 36882 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 1 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 19.0 in stage 1.0 (TID 59) (10.0.2.15, executor driver, partition 19, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 15.0 in stage 1.0 (TID 55) in 123 ms on 10.0.2.15 (executor driver) (16/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 19.0 in stage 1.0 (TID 59)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 8 (17.7 KiB) non-empty blocks including 8 (17.7 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 1 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 14.0 in stage 1.0 (TID 54). 60544 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 20.0 in stage 1.0 (TID 60) (10.0.2.15, executor driver, partition 20, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 18.0 in stage 1.0 (TID 58). 50876 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 21.0 in stage 1.0 (TID 61) (10.0.2.15, executor driver, partition 21, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 21.0 in stage 1.0 (TID 61)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 20.0 in stage 1.0 (TID 60)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 18.0 in stage 1.0 (TID 58) in 72 ms on 10.0.2.15 (executor driver) (17/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 4 (11.7 KiB) non-empty blocks including 4 (11.7 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 6 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 14.0 in stage 1.0 (TID 54) in 239 ms on 10.0.2.15 (executor driver) (18/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 17.0 in stage 1.0 (TID 57). 61498 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 19.0 in stage 1.0 (TID 59). 55763 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 22.0 in stage 1.0 (TID 62) (10.0.2.15, executor driver, partition 22, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 23.0 in stage 1.0 (TID 63) (10.0.2.15, executor driver, partition 23, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 22.0 in stage 1.0 (TID 62)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 5 (18.4 KiB) non-empty blocks including 5 (18.4 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 4 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 17.0 in stage 1.0 (TID 57) in 133 ms on 10.0.2.15 (executor driver) (19/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 23.0 in stage 1.0 (TID 63)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 21.0 in stage 1.0 (TID 61). 38598 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 4 (14.4 KiB) non-empty blocks including 4 (14.4 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 4 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 5 (11.3 KiB) non-empty blocks including 5 (11.3 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 24.0 in stage 1.0 (TID 64) (10.0.2.15, executor driver, partition 24, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 21 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 20.0 in stage 1.0 (TID 60). 54656 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 24.0 in stage 1.0 (TID 64)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 19.0 in stage 1.0 (TID 59) in 129 ms on 10.0.2.15 (executor driver) (20/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 20.0 in stage 1.0 (TID 60) in 88 ms on 10.0.2.15 (executor driver) (21/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 25.0 in stage 1.0 (TID 65) (10.0.2.15, executor driver, partition 25, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 21.0 in stage 1.0 (TID 61) in 101 ms on 10.0.2.15 (executor driver) (22/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 25.0 in stage 1.0 (TID 65)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 23.0 in stage 1.0 (TID 63). 46180 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 5 (11.4 KiB) non-empty blocks including 5 (11.4 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 4 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 5 (23.7 KiB) non-empty blocks including 5 (23.7 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 7 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 26.0 in stage 1.0 (TID 66) (10.0.2.15, executor driver, partition 26, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 26.0 in stage 1.0 (TID 66)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 23.0 in stage 1.0 (TID 63) in 88 ms on 10.0.2.15 (executor driver) (23/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 3 (11.8 KiB) non-empty blocks including 3 (11.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 6 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 22.0 in stage 1.0 (TID 62). 38303 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 27.0 in stage 1.0 (TID 67) (10.0.2.15, executor driver, partition 27, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 22.0 in stage 1.0 (TID 62) in 106 ms on 10.0.2.15 (executor driver) (24/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 27.0 in stage 1.0 (TID 67)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 4 (10.8 KiB) non-empty blocks including 4 (10.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 3 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 24.0 in stage 1.0 (TID 64). 72918 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 28.0 in stage 1.0 (TID 68) (10.0.2.15, executor driver, partition 28, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 25.0 in stage 1.0 (TID 65). 39720 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 24.0 in stage 1.0 (TID 64) in 98 ms on 10.0.2.15 (executor driver) (25/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 28.0 in stage 1.0 (TID 68)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 29.0 in stage 1.0 (TID 69) (10.0.2.15, executor driver, partition 29, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 25.0 in stage 1.0 (TID 65) in 62 ms on 10.0.2.15 (executor driver) (26/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 29.0 in stage 1.0 (TID 69)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 5 (16.0 KiB) non-empty blocks including 5 (16.0 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 1 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 3 (10.9 KiB) non-empty blocks including 3 (10.9 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 1 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 27.0 in stage 1.0 (TID 67). 36086 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 30.0 in stage 1.0 (TID 70) (10.0.2.15, executor driver, partition 30, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 27.0 in stage 1.0 (TID 67) in 47 ms on 10.0.2.15 (executor driver) (27/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 26.0 in stage 1.0 (TID 66). 38310 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 30.0 in stage 1.0 (TID 70)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 31.0 in stage 1.0 (TID 71) (10.0.2.15, executor driver, partition 31, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 26.0 in stage 1.0 (TID 66) in 79 ms on 10.0.2.15 (executor driver) (28/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 31.0 in stage 1.0 (TID 71)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 4 (13.0 KiB) non-empty blocks including 4 (13.0 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 3 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 28.0 in stage 1.0 (TID 68). 50274 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 32.0 in stage 1.0 (TID 72) (10.0.2.15, executor driver, partition 32, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 32.0 in stage 1.0 (TID 72)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 28.0 in stage 1.0 (TID 68) in 70 ms on 10.0.2.15 (executor driver) (29/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 5 (12.6 KiB) non-empty blocks including 5 (12.6 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 2 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 8 (22.1 KiB) non-empty blocks including 8 (22.1 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 1 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 29.0 in stage 1.0 (TID 69). 37012 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 33.0 in stage 1.0 (TID 73) (10.0.2.15, executor driver, partition 33, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 33.0 in stage 1.0 (TID 73)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 29.0 in stage 1.0 (TID 69) in 89 ms on 10.0.2.15 (executor driver) (30/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 31.0 in stage 1.0 (TID 71). 44007 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 5 (12.5 KiB) non-empty blocks including 5 (12.5 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 34.0 in stage 1.0 (TID 74) (10.0.2.15, executor driver, partition 34, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 34.0 in stage 1.0 (TID 74)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 31.0 in stage 1.0 (TID 71) in 75 ms on 10.0.2.15 (executor driver) (31/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 6 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 32.0 in stage 1.0 (TID 72). 64861 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 35.0 in stage 1.0 (TID 75) (10.0.2.15, executor driver, partition 35, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 35.0 in stage 1.0 (TID 75)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 32.0 in stage 1.0 (TID 72) in 44 ms on 10.0.2.15 (executor driver) (32/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 30.0 in stage 1.0 (TID 70). 43175 bytes result sent to driver
+02-21@20:52:12 INFO  (Logging.scala:60)     - Starting task 36.0 in stage 1.0 (TID 76) (10.0.2.15, executor driver, partition 36, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 5 (15.4 KiB) non-empty blocks including 5 (15.4 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Getting 2 (11.1 KiB) non-empty blocks including 2 (11.1 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 2 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Finished task 30.0 in stage 1.0 (TID 70) in 96 ms on 10.0.2.15 (executor driver) (33/40)
+02-21@20:52:12 INFO  (Logging.scala:60)     - Started 0 remote fetches in 2 ms
+02-21@20:52:12 INFO  (Logging.scala:60)     - Running task 36.0 in stage 1.0 (TID 76)
+02-21@20:52:13 INFO  (Logging.scala:60)     - Getting 5 (13.4 KiB) non-empty blocks including 5 (13.4 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:13 INFO  (Logging.scala:60)     - Started 0 remote fetches in 17 ms
+02-21@20:52:13 INFO  (Logging.scala:60)     - Finished task 34.0 in stage 1.0 (TID 74). 48444 bytes result sent to driver
+02-21@20:52:13 INFO  (Logging.scala:60)     - Finished task 33.0 in stage 1.0 (TID 73). 41283 bytes result sent to driver
+02-21@20:52:13 INFO  (Logging.scala:60)     - Finished task 35.0 in stage 1.0 (TID 75). 36961 bytes result sent to driver
+02-21@20:52:13 INFO  (Logging.scala:60)     - Starting task 37.0 in stage 1.0 (TID 77) (10.0.2.15, executor driver, partition 37, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:13 INFO  (Logging.scala:60)     - Running task 37.0 in stage 1.0 (TID 77)
+02-21@20:52:13 INFO  (Logging.scala:60)     - Starting task 38.0 in stage 1.0 (TID 78) (10.0.2.15, executor driver, partition 38, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:13 INFO  (Logging.scala:60)     - Running task 38.0 in stage 1.0 (TID 78)
+02-21@20:52:13 INFO  (Logging.scala:60)     - Starting task 39.0 in stage 1.0 (TID 79) (10.0.2.15, executor driver, partition 39, NODE_LOCAL, 7181 bytes) 
+02-21@20:52:13 INFO  (Logging.scala:60)     - Running task 39.0 in stage 1.0 (TID 79)
+02-21@20:52:13 INFO  (Logging.scala:60)     - Getting 5 (10.2 KiB) non-empty blocks including 5 (10.2 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:13 INFO  (Logging.scala:60)     - Finished task 33.0 in stage 1.0 (TID 73) in 114 ms on 10.0.2.15 (executor driver) (34/40)
+02-21@20:52:13 INFO  (Logging.scala:60)     - Getting 7 (17.7 KiB) non-empty blocks including 7 (17.7 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:13 INFO  (Logging.scala:60)     - Started 0 remote fetches in 7 ms
+02-21@20:52:13 INFO  (Logging.scala:60)     - Getting 4 (13.4 KiB) non-empty blocks including 4 (13.4 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-21@20:52:13 INFO  (Logging.scala:60)     - Started 0 remote fetches in 9 ms
+02-21@20:52:13 INFO  (Logging.scala:60)     - Finished task 35.0 in stage 1.0 (TID 75) in 99 ms on 10.0.2.15 (executor driver) (35/40)
+02-21@20:52:13 INFO  (Logging.scala:60)     - Started 0 remote fetches in 6 ms
+02-21@20:52:13 INFO  (Logging.scala:60)     - Finished task 34.0 in stage 1.0 (TID 74) in 113 ms on 10.0.2.15 (executor driver) (36/40)
+02-21@20:52:13 INFO  (Logging.scala:60)     - Finished task 36.0 in stage 1.0 (TID 76). 43296 bytes result sent to driver
+02-21@20:52:13 INFO  (Logging.scala:60)     - Finished task 36.0 in stage 1.0 (TID 76) in 110 ms on 10.0.2.15 (executor driver) (37/40)
+02-21@20:52:13 INFO  (Logging.scala:60)     - Finished task 37.0 in stage 1.0 (TID 77). 57736 bytes result sent to driver
+02-21@20:52:13 INFO  (Logging.scala:60)     - Finished task 39.0 in stage 1.0 (TID 79). 43955 bytes result sent to driver
+02-21@20:52:13 INFO  (Logging.scala:60)     - Finished task 37.0 in stage 1.0 (TID 77) in 72 ms on 10.0.2.15 (executor driver) (38/40)
+02-21@20:52:13 INFO  (Logging.scala:60)     - Finished task 39.0 in stage 1.0 (TID 79) in 56 ms on 10.0.2.15 (executor driver) (39/40)
+02-21@20:52:13 INFO  (Logging.scala:60)     - Finished task 38.0 in stage 1.0 (TID 78). 36408 bytes result sent to driver
+02-21@20:52:13 INFO  (Logging.scala:60)     - Finished task 38.0 in stage 1.0 (TID 78) in 71 ms on 10.0.2.15 (executor driver) (40/40)
+02-21@20:52:13 INFO  (Logging.scala:60)     - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+02-21@20:52:13 INFO  (Logging.scala:60)     - ResultStage 1 (collect at triangle_repRDD.scala:31) finished in 1.366 s
+02-21@20:52:13 INFO  (Logging.scala:60)     - Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+02-21@20:52:13 INFO  (Logging.scala:60)     - Killing all running tasks in stage 1: Stage finished
+02-21@20:52:13 INFO  (Logging.scala:60)     - Job 0 finished: collect at triangle_repRDD.scala:31, took 100.119725 s
+02-21@20:52:13 INFO  (Logging.scala:60)     - Block broadcast_3 stored as values in memory (estimated size 3.0 MiB, free 431.0 MiB)
+02-21@20:52:13 INFO  (Logging.scala:60)     - Block broadcast_3_piece0 stored as bytes in memory (estimated size 599.4 KiB, free 430.4 MiB)
+02-21@20:52:13 INFO  (Logging.scala:60)     - Added broadcast_3_piece0 in memory on 10.0.2.15:35013 (size: 599.4 KiB, free: 433.8 MiB)
+02-21@20:52:13 INFO  (Logging.scala:60)     - Created broadcast 3 from broadcast at triangle_repRDD.scala:31
+02-21@20:52:13 INFO  (Logging.scala:60)     - Starting job: count at triangle_repRDD.scala:49
+02-21@20:52:13 INFO  (Logging.scala:60)     - Got job 1 (count at triangle_repRDD.scala:49) with 40 output partitions
+02-21@20:52:13 INFO  (Logging.scala:60)     - Final stage: ResultStage 2 (count at triangle_repRDD.scala:49)
+02-21@20:52:13 INFO  (Logging.scala:60)     - Parents of final stage: List()
+02-21@20:52:13 INFO  (Logging.scala:60)     - Missing parents: List()
+02-21@20:52:13 INFO  (Logging.scala:60)     - Submitting ResultStage 2 (MapPartitionsRDD[9] at filter at triangle_repRDD.scala:46), which has no missing parents
+02-21@20:52:13 INFO  (Logging.scala:60)     - Block broadcast_4 stored as values in memory (estimated size 7.0 KiB, free 430.4 MiB)
+02-21@20:52:13 INFO  (Logging.scala:60)     - Block broadcast_4_piece0 stored as bytes in memory (estimated size 3.5 KiB, free 430.4 MiB)
+02-21@20:52:13 INFO  (Logging.scala:60)     - Added broadcast_4_piece0 in memory on 10.0.2.15:35013 (size: 3.5 KiB, free: 433.8 MiB)
+02-21@20:52:13 INFO  (Logging.scala:60)     - Created broadcast 4 from broadcast at DAGScheduler.scala:1535
+02-21@20:52:13 INFO  (Logging.scala:60)     - Submitting 40 missing tasks from ResultStage 2 (MapPartitionsRDD[9] at filter at triangle_repRDD.scala:46) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+02-21@20:52:13 INFO  (Logging.scala:60)     - Adding task set 2.0 with 40 tasks resource profile 0
+02-21@20:52:13 INFO  (Logging.scala:60)     - Starting task 0.0 in stage 2.0 (TID 80) (10.0.2.15, executor driver, partition 0, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:52:13 INFO  (Logging.scala:60)     - Starting task 1.0 in stage 2.0 (TID 81) (10.0.2.15, executor driver, partition 1, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:52:13 INFO  (Logging.scala:60)     - Starting task 2.0 in stage 2.0 (TID 82) (10.0.2.15, executor driver, partition 2, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:52:13 INFO  (Logging.scala:60)     - Starting task 3.0 in stage 2.0 (TID 83) (10.0.2.15, executor driver, partition 3, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:52:13 INFO  (Logging.scala:60)     - Running task 0.0 in stage 2.0 (TID 80)
+02-21@20:52:13 INFO  (Logging.scala:60)     - Running task 3.0 in stage 2.0 (TID 83)
+02-21@20:52:13 INFO  (Logging.scala:60)     - Running task 2.0 in stage 2.0 (TID 82)
+02-21@20:52:13 INFO  (Logging.scala:60)     - Running task 1.0 in stage 2.0 (TID 81)
+02-21@20:52:13 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:0+33554432
+02-21@20:52:13 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:33554432+33554432
+02-21@20:52:13 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:100663296+33554432
+02-21@20:52:13 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:67108864+33554432
+02-21@20:52:13 INFO  (Logging.scala:60)     - Removed broadcast_2_piece0 on 10.0.2.15:35013 in memory (size: 4.7 KiB, free: 433.8 MiB)
+02-21@20:52:18 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 2.0 (TID 83). 1016 bytes result sent to driver
+02-21@20:52:18 INFO  (Logging.scala:60)     - Starting task 4.0 in stage 2.0 (TID 84) (10.0.2.15, executor driver, partition 4, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:52:18 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 2.0 (TID 83) in 4945 ms on 10.0.2.15 (executor driver) (1/40)
+02-21@20:52:18 INFO  (Logging.scala:60)     - Running task 4.0 in stage 2.0 (TID 84)
+02-21@20:52:18 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:134217728+33554432
+02-21@20:52:20 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 2.0 (TID 82). 1016 bytes result sent to driver
+02-21@20:52:20 INFO  (Logging.scala:60)     - Starting task 5.0 in stage 2.0 (TID 85) (10.0.2.15, executor driver, partition 5, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:52:20 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 2.0 (TID 82) in 6777 ms on 10.0.2.15 (executor driver) (2/40)
+02-21@20:52:20 INFO  (Logging.scala:60)     - Running task 5.0 in stage 2.0 (TID 85)
+02-21@20:52:20 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:167772160+33554432
+02-21@20:52:22 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 2.0 (TID 80). 1016 bytes result sent to driver
+02-21@20:52:22 INFO  (Logging.scala:60)     - Starting task 6.0 in stage 2.0 (TID 86) (10.0.2.15, executor driver, partition 6, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:52:22 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 2.0 (TID 80) in 9460 ms on 10.0.2.15 (executor driver) (3/40)
+02-21@20:52:22 INFO  (Logging.scala:60)     - Running task 6.0 in stage 2.0 (TID 86)
+02-21@20:52:22 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:201326592+33554432
+02-21@20:52:23 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 2.0 (TID 81). 1016 bytes result sent to driver
+02-21@20:52:23 INFO  (Logging.scala:60)     - Starting task 7.0 in stage 2.0 (TID 87) (10.0.2.15, executor driver, partition 7, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:52:23 INFO  (Logging.scala:60)     - Running task 7.0 in stage 2.0 (TID 87)
+02-21@20:52:23 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 2.0 (TID 81) in 10491 ms on 10.0.2.15 (executor driver) (4/40)
+02-21@20:52:23 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:234881024+33554432
+02-21@20:52:25 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 2.0 (TID 84). 1016 bytes result sent to driver
+02-21@20:52:25 INFO  (Logging.scala:60)     - Starting task 8.0 in stage 2.0 (TID 88) (10.0.2.15, executor driver, partition 8, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:52:25 INFO  (Logging.scala:60)     - Running task 8.0 in stage 2.0 (TID 88)
+02-21@20:52:25 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 2.0 (TID 84) in 7545 ms on 10.0.2.15 (executor driver) (5/40)
+02-21@20:52:25 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:268435456+33554432
+02-21@20:52:33 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 2.0 (TID 85). 1016 bytes result sent to driver
+02-21@20:52:33 INFO  (Logging.scala:60)     - Starting task 9.0 in stage 2.0 (TID 89) (10.0.2.15, executor driver, partition 9, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:52:33 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 2.0 (TID 85) in 13514 ms on 10.0.2.15 (executor driver) (6/40)
+02-21@20:52:33 INFO  (Logging.scala:60)     - Running task 9.0 in stage 2.0 (TID 89)
+02-21@20:52:33 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:301989888+33554432
+02-21@20:52:35 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 2.0 (TID 87). 1016 bytes result sent to driver
+02-21@20:52:35 INFO  (Logging.scala:60)     - Starting task 10.0 in stage 2.0 (TID 90) (10.0.2.15, executor driver, partition 10, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:52:35 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 2.0 (TID 87) in 11829 ms on 10.0.2.15 (executor driver) (7/40)
+02-21@20:52:35 INFO  (Logging.scala:60)     - Running task 10.0 in stage 2.0 (TID 90)
+02-21@20:52:35 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:335544320+33554432
+02-21@20:52:37 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 2.0 (TID 86). 1016 bytes result sent to driver
+02-21@20:52:37 INFO  (Logging.scala:60)     - Starting task 11.0 in stage 2.0 (TID 91) (10.0.2.15, executor driver, partition 11, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:52:37 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 2.0 (TID 86) in 14512 ms on 10.0.2.15 (executor driver) (8/40)
+02-21@20:52:37 INFO  (Logging.scala:60)     - Running task 11.0 in stage 2.0 (TID 91)
+02-21@20:52:37 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:369098752+33554432
+02-21@20:52:38 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 2.0 (TID 88). 1016 bytes result sent to driver
+02-21@20:52:38 INFO  (Logging.scala:60)     - Starting task 12.0 in stage 2.0 (TID 92) (10.0.2.15, executor driver, partition 12, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:52:38 INFO  (Logging.scala:60)     - Running task 12.0 in stage 2.0 (TID 92)
+02-21@20:52:38 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 2.0 (TID 88) in 12243 ms on 10.0.2.15 (executor driver) (9/40)
+02-21@20:52:38 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:402653184+33554432
+02-21@20:52:42 INFO  (Logging.scala:60)     - Finished task 9.0 in stage 2.0 (TID 89). 1016 bytes result sent to driver
+02-21@20:52:42 INFO  (Logging.scala:60)     - Starting task 13.0 in stage 2.0 (TID 93) (10.0.2.15, executor driver, partition 13, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:52:42 INFO  (Logging.scala:60)     - Finished task 9.0 in stage 2.0 (TID 89) in 9042 ms on 10.0.2.15 (executor driver) (10/40)
+02-21@20:52:42 INFO  (Logging.scala:60)     - Running task 13.0 in stage 2.0 (TID 93)
+02-21@20:52:42 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:436207616+33554432
+02-21@20:52:42 INFO  (Logging.scala:60)     - Finished task 10.0 in stage 2.0 (TID 90). 1016 bytes result sent to driver
+02-21@20:52:42 INFO  (Logging.scala:60)     - Starting task 14.0 in stage 2.0 (TID 94) (10.0.2.15, executor driver, partition 14, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:52:42 INFO  (Logging.scala:60)     - Finished task 10.0 in stage 2.0 (TID 90) in 7273 ms on 10.0.2.15 (executor driver) (11/40)
+02-21@20:52:42 INFO  (Logging.scala:60)     - Running task 14.0 in stage 2.0 (TID 94)
+02-21@20:52:42 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:469762048+33554432
+02-21@20:52:45 INFO  (Logging.scala:60)     - Finished task 11.0 in stage 2.0 (TID 91). 1016 bytes result sent to driver
+02-21@20:52:45 INFO  (Logging.scala:60)     - Starting task 15.0 in stage 2.0 (TID 95) (10.0.2.15, executor driver, partition 15, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:52:45 INFO  (Logging.scala:60)     - Finished task 11.0 in stage 2.0 (TID 91) in 8427 ms on 10.0.2.15 (executor driver) (12/40)
+02-21@20:52:45 INFO  (Logging.scala:60)     - Running task 15.0 in stage 2.0 (TID 95)
+02-21@20:52:45 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:503316480+33554432
+02-21@20:52:49 INFO  (Logging.scala:60)     - Finished task 15.0 in stage 2.0 (TID 95). 1016 bytes result sent to driver
+02-21@20:52:49 INFO  (Logging.scala:60)     - Starting task 16.0 in stage 2.0 (TID 96) (10.0.2.15, executor driver, partition 16, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:52:49 INFO  (Logging.scala:60)     - Running task 16.0 in stage 2.0 (TID 96)
+02-21@20:52:49 INFO  (Logging.scala:60)     - Finished task 15.0 in stage 2.0 (TID 95) in 3533 ms on 10.0.2.15 (executor driver) (13/40)
+02-21@20:52:49 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:536870912+33554432
+02-21@20:52:52 INFO  (Logging.scala:60)     - Finished task 12.0 in stage 2.0 (TID 92). 1016 bytes result sent to driver
+02-21@20:52:52 INFO  (Logging.scala:60)     - Starting task 17.0 in stage 2.0 (TID 97) (10.0.2.15, executor driver, partition 17, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:52:52 INFO  (Logging.scala:60)     - Finished task 12.0 in stage 2.0 (TID 92) in 14715 ms on 10.0.2.15 (executor driver) (14/40)
+02-21@20:52:52 INFO  (Logging.scala:60)     - Running task 17.0 in stage 2.0 (TID 97)
+02-21@20:52:52 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:570425344+33554432
+02-21@20:52:59 INFO  (Logging.scala:60)     - Finished task 16.0 in stage 2.0 (TID 96). 1016 bytes result sent to driver
+02-21@20:52:59 INFO  (Logging.scala:60)     - Starting task 18.0 in stage 2.0 (TID 98) (10.0.2.15, executor driver, partition 18, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:52:59 INFO  (Logging.scala:60)     - Finished task 16.0 in stage 2.0 (TID 96) in 10567 ms on 10.0.2.15 (executor driver) (15/40)
+02-21@20:52:59 INFO  (Logging.scala:60)     - Finished task 17.0 in stage 2.0 (TID 97). 1016 bytes result sent to driver
+02-21@20:52:59 INFO  (Logging.scala:60)     - Running task 18.0 in stage 2.0 (TID 98)
+02-21@20:52:59 INFO  (Logging.scala:60)     - Starting task 19.0 in stage 2.0 (TID 99) (10.0.2.15, executor driver, partition 19, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:52:59 INFO  (Logging.scala:60)     - Running task 19.0 in stage 2.0 (TID 99)
+02-21@20:52:59 INFO  (Logging.scala:60)     - Finished task 17.0 in stage 2.0 (TID 97) in 7064 ms on 10.0.2.15 (executor driver) (16/40)
+02-21@20:52:59 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:603979776+33554432
+02-21@20:52:59 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:637534208+33554432
+02-21@20:53:03 INFO  (Logging.scala:60)     - Finished task 13.0 in stage 2.0 (TID 93). 1016 bytes result sent to driver
+02-21@20:53:03 INFO  (Logging.scala:60)     - Starting task 20.0 in stage 2.0 (TID 100) (10.0.2.15, executor driver, partition 20, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:53:03 INFO  (Logging.scala:60)     - Finished task 13.0 in stage 2.0 (TID 93) in 20519 ms on 10.0.2.15 (executor driver) (17/40)
+02-21@20:53:03 INFO  (Logging.scala:60)     - Running task 20.0 in stage 2.0 (TID 100)
+02-21@20:53:03 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:671088640+33554432
+02-21@20:53:06 INFO  (Logging.scala:60)     - Finished task 14.0 in stage 2.0 (TID 94). 1016 bytes result sent to driver
+02-21@20:53:06 INFO  (Logging.scala:60)     - Starting task 21.0 in stage 2.0 (TID 101) (10.0.2.15, executor driver, partition 21, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:53:06 INFO  (Logging.scala:60)     - Finished task 14.0 in stage 2.0 (TID 94) in 23919 ms on 10.0.2.15 (executor driver) (18/40)
+02-21@20:53:06 INFO  (Logging.scala:60)     - Running task 21.0 in stage 2.0 (TID 101)
+02-21@20:53:06 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:704643072+33554432
+02-21@20:53:09 INFO  (Logging.scala:60)     - Finished task 18.0 in stage 2.0 (TID 98). 1016 bytes result sent to driver
+02-21@20:53:09 INFO  (Logging.scala:60)     - Starting task 22.0 in stage 2.0 (TID 102) (10.0.2.15, executor driver, partition 22, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:53:09 INFO  (Logging.scala:60)     - Finished task 18.0 in stage 2.0 (TID 98) in 9600 ms on 10.0.2.15 (executor driver) (19/40)
+02-21@20:53:09 INFO  (Logging.scala:60)     - Running task 22.0 in stage 2.0 (TID 102)
+02-21@20:53:09 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:738197504+33554432
+02-21@20:53:15 INFO  (Logging.scala:60)     - Finished task 20.0 in stage 2.0 (TID 100). 1016 bytes result sent to driver
+02-21@20:53:15 INFO  (Logging.scala:60)     - Starting task 23.0 in stage 2.0 (TID 103) (10.0.2.15, executor driver, partition 23, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:53:15 INFO  (Logging.scala:60)     - Finished task 20.0 in stage 2.0 (TID 100) in 12635 ms on 10.0.2.15 (executor driver) (20/40)
+02-21@20:53:15 INFO  (Logging.scala:60)     - Running task 23.0 in stage 2.0 (TID 103)
+02-21@20:53:15 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:771751936+33554432
+02-21@20:53:17 INFO  (Logging.scala:60)     - Finished task 19.0 in stage 2.0 (TID 99). 1016 bytes result sent to driver
+02-21@20:53:17 INFO  (Logging.scala:60)     - Starting task 24.0 in stage 2.0 (TID 104) (10.0.2.15, executor driver, partition 24, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:53:17 INFO  (Logging.scala:60)     - Finished task 19.0 in stage 2.0 (TID 99) in 17558 ms on 10.0.2.15 (executor driver) (21/40)
+02-21@20:53:17 INFO  (Logging.scala:60)     - Running task 24.0 in stage 2.0 (TID 104)
+02-21@20:53:17 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:805306368+33554432
+02-21@20:53:19 INFO  (Logging.scala:60)     - Finished task 21.0 in stage 2.0 (TID 101). 1016 bytes result sent to driver
+02-21@20:53:19 INFO  (Logging.scala:60)     - Starting task 25.0 in stage 2.0 (TID 105) (10.0.2.15, executor driver, partition 25, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:53:19 INFO  (Logging.scala:60)     - Running task 25.0 in stage 2.0 (TID 105)
+02-21@20:53:19 INFO  (Logging.scala:60)     - Finished task 21.0 in stage 2.0 (TID 101) in 12274 ms on 10.0.2.15 (executor driver) (22/40)
+02-21@20:53:19 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:838860800+33554432
+02-21@20:53:25 INFO  (Logging.scala:60)     - Finished task 23.0 in stage 2.0 (TID 103). 1016 bytes result sent to driver
+02-21@20:53:25 INFO  (Logging.scala:60)     - Starting task 26.0 in stage 2.0 (TID 106) (10.0.2.15, executor driver, partition 26, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:53:25 INFO  (Logging.scala:60)     - Finished task 23.0 in stage 2.0 (TID 103) in 9661 ms on 10.0.2.15 (executor driver) (23/40)
+02-21@20:53:25 INFO  (Logging.scala:60)     - Running task 26.0 in stage 2.0 (TID 106)
+02-21@20:53:25 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:872415232+33554432
+02-21@20:53:26 INFO  (Logging.scala:60)     - Finished task 24.0 in stage 2.0 (TID 104). 1016 bytes result sent to driver
+02-21@20:53:26 INFO  (Logging.scala:60)     - Starting task 27.0 in stage 2.0 (TID 107) (10.0.2.15, executor driver, partition 27, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:53:26 INFO  (Logging.scala:60)     - Finished task 24.0 in stage 2.0 (TID 104) in 9472 ms on 10.0.2.15 (executor driver) (24/40)
+02-21@20:53:26 INFO  (Logging.scala:60)     - Running task 27.0 in stage 2.0 (TID 107)
+02-21@20:53:26 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:905969664+33554432
+02-21@20:53:28 INFO  (Logging.scala:60)     - Finished task 25.0 in stage 2.0 (TID 105). 1016 bytes result sent to driver
+02-21@20:53:28 INFO  (Logging.scala:60)     - Starting task 28.0 in stage 2.0 (TID 108) (10.0.2.15, executor driver, partition 28, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:53:28 INFO  (Logging.scala:60)     - Finished task 25.0 in stage 2.0 (TID 105) in 9300 ms on 10.0.2.15 (executor driver) (25/40)
+02-21@20:53:28 INFO  (Logging.scala:60)     - Running task 28.0 in stage 2.0 (TID 108)
+02-21@20:53:28 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:939524096+33554432
+02-21@20:53:34 INFO  (Logging.scala:60)     - Finished task 26.0 in stage 2.0 (TID 106). 1016 bytes result sent to driver
+02-21@20:53:34 INFO  (Logging.scala:60)     - Starting task 29.0 in stage 2.0 (TID 109) (10.0.2.15, executor driver, partition 29, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:53:34 INFO  (Logging.scala:60)     - Finished task 26.0 in stage 2.0 (TID 106) in 8646 ms on 10.0.2.15 (executor driver) (26/40)
+02-21@20:53:34 INFO  (Logging.scala:60)     - Running task 29.0 in stage 2.0 (TID 109)
+02-21@20:53:34 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:973078528+33554432
+02-21@20:53:34 INFO  (Logging.scala:60)     - Finished task 27.0 in stage 2.0 (TID 107). 1016 bytes result sent to driver
+02-21@20:53:35 INFO  (Logging.scala:60)     - Starting task 30.0 in stage 2.0 (TID 110) (10.0.2.15, executor driver, partition 30, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:53:35 INFO  (Logging.scala:60)     - Finished task 27.0 in stage 2.0 (TID 107) in 8167 ms on 10.0.2.15 (executor driver) (27/40)
+02-21@20:53:35 INFO  (Logging.scala:60)     - Running task 30.0 in stage 2.0 (TID 110)
+02-21@20:53:35 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1006632960+33554432
+02-21@20:53:35 INFO  (Logging.scala:60)     - Finished task 28.0 in stage 2.0 (TID 108). 1016 bytes result sent to driver
+02-21@20:53:35 INFO  (Logging.scala:60)     - Starting task 31.0 in stage 2.0 (TID 111) (10.0.2.15, executor driver, partition 31, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:53:35 INFO  (Logging.scala:60)     - Finished task 28.0 in stage 2.0 (TID 108) in 7365 ms on 10.0.2.15 (executor driver) (28/40)
+02-21@20:53:35 INFO  (Logging.scala:60)     - Running task 31.0 in stage 2.0 (TID 111)
+02-21@20:53:35 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1040187392+33554432
+02-21@20:53:40 INFO  (Logging.scala:60)     - Finished task 29.0 in stage 2.0 (TID 109). 1016 bytes result sent to driver
+02-21@20:53:40 INFO  (Logging.scala:60)     - Starting task 32.0 in stage 2.0 (TID 112) (10.0.2.15, executor driver, partition 32, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:53:40 INFO  (Logging.scala:60)     - Finished task 29.0 in stage 2.0 (TID 109) in 6516 ms on 10.0.2.15 (executor driver) (29/40)
+02-21@20:53:40 INFO  (Logging.scala:60)     - Running task 32.0 in stage 2.0 (TID 112)
+02-21@20:53:40 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1073741824+33554432
+02-21@20:53:42 INFO  (Logging.scala:60)     - Finished task 30.0 in stage 2.0 (TID 110). 1016 bytes result sent to driver
+02-21@20:53:42 INFO  (Logging.scala:60)     - Starting task 33.0 in stage 2.0 (TID 113) (10.0.2.15, executor driver, partition 33, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:53:42 INFO  (Logging.scala:60)     - Finished task 30.0 in stage 2.0 (TID 110) in 7102 ms on 10.0.2.15 (executor driver) (30/40)
+02-21@20:53:42 INFO  (Logging.scala:60)     - Running task 33.0 in stage 2.0 (TID 113)
+02-21@20:53:42 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1107296256+33554432
+02-21@20:53:45 INFO  (Logging.scala:60)     - Finished task 31.0 in stage 2.0 (TID 111). 1016 bytes result sent to driver
+02-21@20:53:45 INFO  (Logging.scala:60)     - Starting task 34.0 in stage 2.0 (TID 114) (10.0.2.15, executor driver, partition 34, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:53:45 INFO  (Logging.scala:60)     - Finished task 31.0 in stage 2.0 (TID 111) in 9380 ms on 10.0.2.15 (executor driver) (31/40)
+02-21@20:53:45 INFO  (Logging.scala:60)     - Running task 34.0 in stage 2.0 (TID 114)
+02-21@20:53:45 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1140850688+33554432
+02-21@20:53:51 INFO  (Logging.scala:60)     - Finished task 32.0 in stage 2.0 (TID 112). 1016 bytes result sent to driver
+02-21@20:53:51 INFO  (Logging.scala:60)     - Starting task 35.0 in stage 2.0 (TID 115) (10.0.2.15, executor driver, partition 35, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:53:51 INFO  (Logging.scala:60)     - Running task 35.0 in stage 2.0 (TID 115)
+02-21@20:53:51 INFO  (Logging.scala:60)     - Finished task 32.0 in stage 2.0 (TID 112) in 10894 ms on 10.0.2.15 (executor driver) (32/40)
+02-21@20:53:51 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1174405120+33554432
+02-21@20:53:53 INFO  (Logging.scala:60)     - Finished task 33.0 in stage 2.0 (TID 113). 1016 bytes result sent to driver
+02-21@20:53:53 INFO  (Logging.scala:60)     - Starting task 36.0 in stage 2.0 (TID 116) (10.0.2.15, executor driver, partition 36, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:53:53 INFO  (Logging.scala:60)     - Running task 36.0 in stage 2.0 (TID 116)
+02-21@20:53:53 INFO  (Logging.scala:60)     - Finished task 33.0 in stage 2.0 (TID 113) in 11154 ms on 10.0.2.15 (executor driver) (33/40)
+02-21@20:53:53 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1207959552+33554432
+02-21@20:53:55 INFO  (Logging.scala:60)     - Finished task 34.0 in stage 2.0 (TID 114). 1016 bytes result sent to driver
+02-21@20:53:55 INFO  (Logging.scala:60)     - Starting task 37.0 in stage 2.0 (TID 117) (10.0.2.15, executor driver, partition 37, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:53:55 INFO  (Logging.scala:60)     - Finished task 34.0 in stage 2.0 (TID 114) in 10336 ms on 10.0.2.15 (executor driver) (34/40)
+02-21@20:53:55 INFO  (Logging.scala:60)     - Running task 37.0 in stage 2.0 (TID 117)
+02-21@20:53:55 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1241513984+33554432
+02-21@20:54:01 INFO  (Logging.scala:60)     - Finished task 35.0 in stage 2.0 (TID 115). 1016 bytes result sent to driver
+02-21@20:54:01 INFO  (Logging.scala:60)     - Starting task 38.0 in stage 2.0 (TID 118) (10.0.2.15, executor driver, partition 38, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:54:01 INFO  (Logging.scala:60)     - Finished task 35.0 in stage 2.0 (TID 115) in 10349 ms on 10.0.2.15 (executor driver) (35/40)
+02-21@20:54:01 INFO  (Logging.scala:60)     - Running task 38.0 in stage 2.0 (TID 118)
+02-21@20:54:01 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1275068416+33554432
+02-21@20:54:03 INFO  (Logging.scala:60)     - Finished task 36.0 in stage 2.0 (TID 116). 1016 bytes result sent to driver
+02-21@20:54:03 INFO  (Logging.scala:60)     - Starting task 39.0 in stage 2.0 (TID 119) (10.0.2.15, executor driver, partition 39, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:54:03 INFO  (Logging.scala:60)     - Finished task 36.0 in stage 2.0 (TID 116) in 9860 ms on 10.0.2.15 (executor driver) (36/40)
+02-21@20:54:03 INFO  (Logging.scala:60)     - Running task 39.0 in stage 2.0 (TID 119)
+02-21@20:54:03 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1308622848+10658977
+02-21@20:54:06 INFO  (Logging.scala:60)     - Finished task 37.0 in stage 2.0 (TID 117). 1016 bytes result sent to driver
+02-21@20:54:06 INFO  (Logging.scala:60)     - Finished task 37.0 in stage 2.0 (TID 117) in 10743 ms on 10.0.2.15 (executor driver) (37/40)
+02-21@20:54:06 INFO  (Logging.scala:60)     - Finished task 39.0 in stage 2.0 (TID 119). 1016 bytes result sent to driver
+02-21@20:54:06 INFO  (Logging.scala:60)     - Finished task 39.0 in stage 2.0 (TID 119) in 3625 ms on 10.0.2.15 (executor driver) (38/40)
+02-21@20:54:09 INFO  (Logging.scala:60)     - Finished task 38.0 in stage 2.0 (TID 118). 1016 bytes result sent to driver
+02-21@20:54:09 INFO  (Logging.scala:60)     - Finished task 38.0 in stage 2.0 (TID 118) in 7274 ms on 10.0.2.15 (executor driver) (39/40)
+02-21@20:58:22 INFO  (Logging.scala:60)     - Finished task 22.0 in stage 2.0 (TID 102). 1016 bytes result sent to driver
+02-21@20:58:22 INFO  (Logging.scala:60)     - Finished task 22.0 in stage 2.0 (TID 102) in 313031 ms on 10.0.2.15 (executor driver) (40/40)
+02-21@20:58:22 INFO  (Logging.scala:60)     - Removed TaskSet 2.0, whose tasks have all completed, from pool 
+02-21@20:58:22 INFO  (Logging.scala:60)     - ResultStage 2 (count at triangle_repRDD.scala:49) finished in 369.136 s
+02-21@20:58:22 INFO  (Logging.scala:60)     - Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+02-21@20:58:22 INFO  (Logging.scala:60)     - Killing all running tasks in stage 2: Stage finished
+02-21@20:58:22 INFO  (Logging.scala:60)     - Job 1 finished: count at triangle_repRDD.scala:49, took 369.144135 s
+02-21@20:58:22 INFO  (triangle_repRDD.scala:50)     - Social Triangles Count found:520311
+02-21@20:58:22 INFO  (Configuration.java:1442)     - mapred.output.dir is deprecated. Instead, use mapreduce.output.fileoutputformat.outputdir
+02-21@20:58:22 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:58:22 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:58:22 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:58:22 INFO  (Logging.scala:60)     - Starting job: runJob at SparkHadoopWriter.scala:83
+02-21@20:58:22 INFO  (Logging.scala:60)     - Got job 2 (runJob at SparkHadoopWriter.scala:83) with 40 output partitions
+02-21@20:58:22 INFO  (Logging.scala:60)     - Final stage: ResultStage 3 (runJob at SparkHadoopWriter.scala:83)
+02-21@20:58:22 INFO  (Logging.scala:60)     - Parents of final stage: List()
+02-21@20:58:22 INFO  (Logging.scala:60)     - Missing parents: List()
+02-21@20:58:22 INFO  (Logging.scala:60)     - Submitting ResultStage 3 (MapPartitionsRDD[10] at saveAsTextFile at triangle_repRDD.scala:51), which has no missing parents
+02-21@20:58:22 INFO  (Logging.scala:60)     - Block broadcast_5 stored as values in memory (estimated size 153.4 KiB, free 430.3 MiB)
+02-21@20:58:22 INFO  (Logging.scala:60)     - Block broadcast_5_piece0 stored as bytes in memory (estimated size 56.6 KiB, free 430.2 MiB)
+02-21@20:58:22 INFO  (Logging.scala:60)     - Added broadcast_5_piece0 in memory on 10.0.2.15:35013 (size: 56.6 KiB, free: 433.7 MiB)
+02-21@20:58:22 INFO  (Logging.scala:60)     - Created broadcast 5 from broadcast at DAGScheduler.scala:1535
+02-21@20:58:22 INFO  (Logging.scala:60)     - Submitting 40 missing tasks from ResultStage 3 (MapPartitionsRDD[10] at saveAsTextFile at triangle_repRDD.scala:51) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+02-21@20:58:22 INFO  (Logging.scala:60)     - Adding task set 3.0 with 40 tasks resource profile 0
+02-21@20:58:22 INFO  (Logging.scala:60)     - Starting task 0.0 in stage 3.0 (TID 120) (10.0.2.15, executor driver, partition 0, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:58:22 INFO  (Logging.scala:60)     - Starting task 1.0 in stage 3.0 (TID 121) (10.0.2.15, executor driver, partition 1, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:58:22 INFO  (Logging.scala:60)     - Starting task 2.0 in stage 3.0 (TID 122) (10.0.2.15, executor driver, partition 2, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:58:22 INFO  (Logging.scala:60)     - Starting task 3.0 in stage 3.0 (TID 123) (10.0.2.15, executor driver, partition 3, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:58:22 INFO  (Logging.scala:60)     - Running task 0.0 in stage 3.0 (TID 120)
+02-21@20:58:22 INFO  (Logging.scala:60)     - Running task 1.0 in stage 3.0 (TID 121)
+02-21@20:58:22 INFO  (Logging.scala:60)     - Running task 2.0 in stage 3.0 (TID 122)
+02-21@20:58:22 INFO  (Logging.scala:60)     - Running task 3.0 in stage 3.0 (TID 123)
+02-21@20:58:22 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:0+33554432
+02-21@20:58:22 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:33554432+33554432
+02-21@20:58:22 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:100663296+33554432
+02-21@20:58:22 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:67108864+33554432
+02-21@20:58:22 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:58:22 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:58:22 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:58:23 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:58:22 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:58:23 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:58:23 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:58:23 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:58:23 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:58:23 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:58:23 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:58:23 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:58:27 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000003_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000003
+02-21@20:58:27 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000003_0: Committed. Elapsed time: 40 ms.
+02-21@20:58:27 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 3.0 (TID 123). 1342 bytes result sent to driver
+02-21@20:58:27 INFO  (Logging.scala:60)     - Starting task 4.0 in stage 3.0 (TID 124) (10.0.2.15, executor driver, partition 4, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:58:27 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 3.0 (TID 123) in 5060 ms on 10.0.2.15 (executor driver) (1/40)
+02-21@20:58:27 INFO  (Logging.scala:60)     - Running task 4.0 in stage 3.0 (TID 124)
+02-21@20:58:27 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:134217728+33554432
+02-21@20:58:27 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:58:27 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:58:27 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:58:28 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000002_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000002
+02-21@20:58:28 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000002_0: Committed. Elapsed time: 51 ms.
+02-21@20:58:28 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 3.0 (TID 122). 1299 bytes result sent to driver
+02-21@20:58:28 INFO  (Logging.scala:60)     - Starting task 5.0 in stage 3.0 (TID 125) (10.0.2.15, executor driver, partition 5, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:58:28 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 3.0 (TID 122) in 6204 ms on 10.0.2.15 (executor driver) (2/40)
+02-21@20:58:28 INFO  (Logging.scala:60)     - Running task 5.0 in stage 3.0 (TID 125)
+02-21@20:58:28 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:167772160+33554432
+02-21@20:58:29 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:58:29 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:58:29 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:58:34 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000001_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000001
+02-21@20:58:34 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000001_0: Committed. Elapsed time: 116 ms.
+02-21@20:58:34 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 3.0 (TID 121). 1299 bytes result sent to driver
+02-21@20:58:34 INFO  (Logging.scala:60)     - Starting task 6.0 in stage 3.0 (TID 126) (10.0.2.15, executor driver, partition 6, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:58:34 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 3.0 (TID 121) in 11327 ms on 10.0.2.15 (executor driver) (3/40)
+02-21@20:58:34 INFO  (Logging.scala:60)     - Running task 6.0 in stage 3.0 (TID 126)
+02-21@20:58:34 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:201326592+33554432
+02-21@20:58:34 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:58:34 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:58:34 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:58:36 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000004_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000004
+02-21@20:58:36 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000004_0: Committed. Elapsed time: 114 ms.
+02-21@20:58:36 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 3.0 (TID 124). 1299 bytes result sent to driver
+02-21@20:58:36 INFO  (Logging.scala:60)     - Starting task 7.0 in stage 3.0 (TID 127) (10.0.2.15, executor driver, partition 7, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:58:36 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 3.0 (TID 124) in 8748 ms on 10.0.2.15 (executor driver) (4/40)
+02-21@20:58:36 INFO  (Logging.scala:60)     - Running task 7.0 in stage 3.0 (TID 127)
+02-21@20:58:36 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:234881024+33554432
+02-21@20:58:36 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:58:36 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:58:36 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:58:37 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000000_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000000
+02-21@20:58:37 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000000_0: Committed. Elapsed time: 186 ms.
+02-21@20:58:37 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 3.0 (TID 120). 1342 bytes result sent to driver
+02-21@20:58:37 INFO  (Logging.scala:60)     - Starting task 8.0 in stage 3.0 (TID 128) (10.0.2.15, executor driver, partition 8, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:58:37 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 3.0 (TID 120) in 15147 ms on 10.0.2.15 (executor driver) (5/40)
+02-21@20:58:37 INFO  (Logging.scala:60)     - Running task 8.0 in stage 3.0 (TID 128)
+02-21@20:58:37 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:268435456+33554432
+02-21@20:58:38 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:58:38 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:58:38 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:58:42 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000005_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000005
+02-21@20:58:42 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000005_0: Committed. Elapsed time: 103 ms.
+02-21@20:58:42 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 3.0 (TID 125). 1299 bytes result sent to driver
+02-21@20:58:42 INFO  (Logging.scala:60)     - Starting task 9.0 in stage 3.0 (TID 129) (10.0.2.15, executor driver, partition 9, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:58:42 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 3.0 (TID 125) in 13247 ms on 10.0.2.15 (executor driver) (6/40)
+02-21@20:58:42 INFO  (Logging.scala:60)     - Running task 9.0 in stage 3.0 (TID 129)
+02-21@20:58:42 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:301989888+33554432
+02-21@20:58:42 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:58:42 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:58:42 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:58:50 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000007_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000007
+02-21@20:58:50 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000007_0: Committed. Elapsed time: 139 ms.
+02-21@20:58:50 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 3.0 (TID 127). 1299 bytes result sent to driver
+02-21@20:58:50 INFO  (Logging.scala:60)     - Starting task 10.0 in stage 3.0 (TID 130) (10.0.2.15, executor driver, partition 10, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:58:50 INFO  (Logging.scala:60)     - Running task 10.0 in stage 3.0 (TID 130)
+02-21@20:58:50 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 3.0 (TID 127) in 14032 ms on 10.0.2.15 (executor driver) (7/40)
+02-21@20:58:50 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:335544320+33554432
+02-21@20:58:50 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:58:50 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:58:50 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:58:51 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000006_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000006
+02-21@20:58:51 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000006_0: Committed. Elapsed time: 108 ms.
+02-21@20:58:51 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 3.0 (TID 126). 1299 bytes result sent to driver
+02-21@20:58:51 INFO  (Logging.scala:60)     - Starting task 11.0 in stage 3.0 (TID 131) (10.0.2.15, executor driver, partition 11, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:58:51 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 3.0 (TID 126) in 16981 ms on 10.0.2.15 (executor driver) (8/40)
+02-21@20:58:51 INFO  (Logging.scala:60)     - Running task 11.0 in stage 3.0 (TID 131)
+02-21@20:58:51 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:369098752+33554432
+02-21@20:58:51 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:58:51 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:58:51 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:58:52 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000008_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000008
+02-21@20:58:52 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000008_0: Committed. Elapsed time: 144 ms.
+02-21@20:58:52 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 3.0 (TID 128). 1299 bytes result sent to driver
+02-21@20:58:52 INFO  (Logging.scala:60)     - Starting task 12.0 in stage 3.0 (TID 132) (10.0.2.15, executor driver, partition 12, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:58:52 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 3.0 (TID 128) in 14758 ms on 10.0.2.15 (executor driver) (9/40)
+02-21@20:58:52 INFO  (Logging.scala:60)     - Running task 12.0 in stage 3.0 (TID 132)
+02-21@20:58:52 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:402653184+33554432
+02-21@20:58:52 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:58:52 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:58:52 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:58:54 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000009_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000009
+02-21@20:58:54 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000009_0: Committed. Elapsed time: 166 ms.
+02-21@20:58:54 INFO  (Logging.scala:60)     - Finished task 9.0 in stage 3.0 (TID 129). 1299 bytes result sent to driver
+02-21@20:58:54 INFO  (Logging.scala:60)     - Starting task 13.0 in stage 3.0 (TID 133) (10.0.2.15, executor driver, partition 13, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:58:54 INFO  (Logging.scala:60)     - Running task 13.0 in stage 3.0 (TID 133)
+02-21@20:58:54 INFO  (Logging.scala:60)     - Finished task 9.0 in stage 3.0 (TID 129) in 12235 ms on 10.0.2.15 (executor driver) (10/40)
+02-21@20:58:54 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:436207616+33554432
+02-21@20:58:54 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:58:54 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:58:54 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:58:58 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000010_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000010
+02-21@20:58:58 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000010_0: Committed. Elapsed time: 35 ms.
+02-21@20:58:58 INFO  (Logging.scala:60)     - Finished task 10.0 in stage 3.0 (TID 130). 1299 bytes result sent to driver
+02-21@20:58:58 INFO  (Logging.scala:60)     - Starting task 14.0 in stage 3.0 (TID 134) (10.0.2.15, executor driver, partition 14, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:58:58 INFO  (Logging.scala:60)     - Running task 14.0 in stage 3.0 (TID 134)
+02-21@20:58:58 INFO  (Logging.scala:60)     - Finished task 10.0 in stage 3.0 (TID 130) in 7507 ms on 10.0.2.15 (executor driver) (11/40)
+02-21@20:58:58 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:469762048+33554432
+02-21@20:58:58 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:58:58 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:58:58 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:59:00 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000011_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000011
+02-21@20:59:00 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000011_0: Committed. Elapsed time: 45 ms.
+02-21@20:59:00 INFO  (Logging.scala:60)     - Finished task 11.0 in stage 3.0 (TID 131). 1299 bytes result sent to driver
+02-21@20:59:00 INFO  (Logging.scala:60)     - Starting task 15.0 in stage 3.0 (TID 135) (10.0.2.15, executor driver, partition 15, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:59:00 INFO  (Logging.scala:60)     - Running task 15.0 in stage 3.0 (TID 135)
+02-21@20:59:00 INFO  (Logging.scala:60)     - Finished task 11.0 in stage 3.0 (TID 131) in 9514 ms on 10.0.2.15 (executor driver) (12/40)
+02-21@20:59:00 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:503316480+33554432
+02-21@20:59:00 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:59:00 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:59:00 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:59:04 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000015_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000015
+02-21@20:59:04 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000015_0: Committed. Elapsed time: 32 ms.
+02-21@20:59:04 INFO  (Logging.scala:60)     - Finished task 15.0 in stage 3.0 (TID 135). 1299 bytes result sent to driver
+02-21@20:59:04 INFO  (Logging.scala:60)     - Starting task 16.0 in stage 3.0 (TID 136) (10.0.2.15, executor driver, partition 16, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:59:04 INFO  (Logging.scala:60)     - Finished task 15.0 in stage 3.0 (TID 135) in 3924 ms on 10.0.2.15 (executor driver) (13/40)
+02-21@20:59:04 INFO  (Logging.scala:60)     - Running task 16.0 in stage 3.0 (TID 136)
+02-21@20:59:04 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:536870912+33554432
+02-21@20:59:04 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:59:04 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:59:04 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:59:09 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000012_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000012
+02-21@20:59:09 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000012_0: Committed. Elapsed time: 39 ms.
+02-21@20:59:09 INFO  (Logging.scala:60)     - Finished task 12.0 in stage 3.0 (TID 132). 1299 bytes result sent to driver
+02-21@20:59:09 INFO  (Logging.scala:60)     - Starting task 17.0 in stage 3.0 (TID 137) (10.0.2.15, executor driver, partition 17, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:59:09 INFO  (Logging.scala:60)     - Finished task 12.0 in stage 3.0 (TID 132) in 17276 ms on 10.0.2.15 (executor driver) (14/40)
+02-21@20:59:09 INFO  (Logging.scala:60)     - Running task 17.0 in stage 3.0 (TID 137)
+02-21@20:59:09 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:570425344+33554432
+02-21@20:59:09 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:59:09 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:59:09 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:59:14 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000016_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000016
+02-21@20:59:14 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000016_0: Committed. Elapsed time: 62 ms.
+02-21@20:59:14 INFO  (Logging.scala:60)     - Finished task 16.0 in stage 3.0 (TID 136). 1299 bytes result sent to driver
+02-21@20:59:14 INFO  (Logging.scala:60)     - Starting task 18.0 in stage 3.0 (TID 138) (10.0.2.15, executor driver, partition 18, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:59:14 INFO  (Logging.scala:60)     - Finished task 16.0 in stage 3.0 (TID 136) in 10294 ms on 10.0.2.15 (executor driver) (15/40)
+02-21@20:59:14 INFO  (Logging.scala:60)     - Running task 18.0 in stage 3.0 (TID 138)
+02-21@20:59:14 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:603979776+33554432
+02-21@20:59:14 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:59:14 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:59:14 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:59:18 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000017_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000017
+02-21@20:59:18 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000017_0: Committed. Elapsed time: 36 ms.
+02-21@20:59:18 INFO  (Logging.scala:60)     - Finished task 17.0 in stage 3.0 (TID 137). 1342 bytes result sent to driver
+02-21@20:59:18 INFO  (Logging.scala:60)     - Starting task 19.0 in stage 3.0 (TID 139) (10.0.2.15, executor driver, partition 19, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:59:18 INFO  (Logging.scala:60)     - Running task 19.0 in stage 3.0 (TID 139)
+02-21@20:59:18 INFO  (Logging.scala:60)     - Finished task 17.0 in stage 3.0 (TID 137) in 8649 ms on 10.0.2.15 (executor driver) (16/40)
+02-21@20:59:18 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:637534208+33554432
+02-21@20:59:18 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:59:18 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:59:18 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:59:20 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000013_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000013
+02-21@20:59:20 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000013_0: Committed. Elapsed time: 76 ms.
+02-21@20:59:20 INFO  (Logging.scala:60)     - Finished task 13.0 in stage 3.0 (TID 133). 1299 bytes result sent to driver
+02-21@20:59:20 INFO  (Logging.scala:60)     - Starting task 20.0 in stage 3.0 (TID 140) (10.0.2.15, executor driver, partition 20, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:59:20 INFO  (Logging.scala:60)     - Running task 20.0 in stage 3.0 (TID 140)
+02-21@20:59:20 INFO  (Logging.scala:60)     - Finished task 13.0 in stage 3.0 (TID 133) in 26175 ms on 10.0.2.15 (executor driver) (17/40)
+02-21@20:59:20 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:671088640+33554432
+02-21@20:59:20 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:59:20 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:59:20 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:59:23 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000014_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000014
+02-21@20:59:23 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000014_0: Committed. Elapsed time: 37 ms.
+02-21@20:59:23 INFO  (Logging.scala:60)     - Finished task 14.0 in stage 3.0 (TID 134). 1299 bytes result sent to driver
+02-21@20:59:23 INFO  (Logging.scala:60)     - Starting task 21.0 in stage 3.0 (TID 141) (10.0.2.15, executor driver, partition 21, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:59:23 INFO  (Logging.scala:60)     - Finished task 14.0 in stage 3.0 (TID 134) in 25536 ms on 10.0.2.15 (executor driver) (18/40)
+02-21@20:59:23 INFO  (Logging.scala:60)     - Running task 21.0 in stage 3.0 (TID 141)
+02-21@20:59:23 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:704643072+33554432
+02-21@20:59:23 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:59:23 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:59:23 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:59:25 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000018_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000018
+02-21@20:59:25 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000018_0: Committed. Elapsed time: 29 ms.
+02-21@20:59:25 INFO  (Logging.scala:60)     - Finished task 18.0 in stage 3.0 (TID 138). 1299 bytes result sent to driver
+02-21@20:59:25 INFO  (Logging.scala:60)     - Starting task 22.0 in stage 3.0 (TID 142) (10.0.2.15, executor driver, partition 22, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:59:25 INFO  (Logging.scala:60)     - Finished task 18.0 in stage 3.0 (TID 138) in 11008 ms on 10.0.2.15 (executor driver) (19/40)
+02-21@20:59:25 INFO  (Logging.scala:60)     - Running task 22.0 in stage 3.0 (TID 142)
+02-21@20:59:25 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:738197504+33554432
+02-21@20:59:26 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:59:26 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:59:26 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:59:33 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000020_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000020
+02-21@20:59:33 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000020_0: Committed. Elapsed time: 96 ms.
+02-21@20:59:33 INFO  (Logging.scala:60)     - Finished task 20.0 in stage 3.0 (TID 140). 1299 bytes result sent to driver
+02-21@20:59:33 INFO  (Logging.scala:60)     - Starting task 23.0 in stage 3.0 (TID 143) (10.0.2.15, executor driver, partition 23, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:59:33 INFO  (Logging.scala:60)     - Finished task 20.0 in stage 3.0 (TID 140) in 13408 ms on 10.0.2.15 (executor driver) (20/40)
+02-21@20:59:33 INFO  (Logging.scala:60)     - Running task 23.0 in stage 3.0 (TID 143)
+02-21@20:59:33 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:771751936+33554432
+02-21@20:59:34 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:59:34 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:59:34 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:59:37 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000021_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000021
+02-21@20:59:37 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000021_0: Committed. Elapsed time: 82 ms.
+02-21@20:59:37 INFO  (Logging.scala:60)     - Finished task 21.0 in stage 3.0 (TID 141). 1299 bytes result sent to driver
+02-21@20:59:37 INFO  (Logging.scala:60)     - Starting task 24.0 in stage 3.0 (TID 144) (10.0.2.15, executor driver, partition 24, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:59:37 INFO  (Logging.scala:60)     - Finished task 21.0 in stage 3.0 (TID 141) in 13447 ms on 10.0.2.15 (executor driver) (21/40)
+02-21@20:59:37 INFO  (Logging.scala:60)     - Running task 24.0 in stage 3.0 (TID 144)
+02-21@20:59:37 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:805306368+33554432
+02-21@20:59:37 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:59:37 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:59:37 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:59:41 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000019_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000019
+02-21@20:59:41 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000019_0: Committed. Elapsed time: 140 ms.
+02-21@20:59:41 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000023_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000023
+02-21@20:59:41 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000023_0: Committed. Elapsed time: 133 ms.
+02-21@20:59:41 INFO  (Logging.scala:60)     - Finished task 19.0 in stage 3.0 (TID 139). 1299 bytes result sent to driver
+02-21@20:59:41 INFO  (Logging.scala:60)     - Starting task 25.0 in stage 3.0 (TID 145) (10.0.2.15, executor driver, partition 25, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:59:41 INFO  (Logging.scala:60)     - Finished task 23.0 in stage 3.0 (TID 143). 1213 bytes result sent to driver
+02-21@20:59:41 INFO  (Logging.scala:60)     - Running task 25.0 in stage 3.0 (TID 145)
+02-21@20:59:41 INFO  (Logging.scala:60)     - Finished task 19.0 in stage 3.0 (TID 139) in 22875 ms on 10.0.2.15 (executor driver) (22/40)
+02-21@20:59:41 INFO  (Logging.scala:60)     - Starting task 26.0 in stage 3.0 (TID 146) (10.0.2.15, executor driver, partition 26, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:59:41 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:838860800+33554432
+02-21@20:59:41 INFO  (Logging.scala:60)     - Finished task 23.0 in stage 3.0 (TID 143) in 7453 ms on 10.0.2.15 (executor driver) (23/40)
+02-21@20:59:41 INFO  (Logging.scala:60)     - Running task 26.0 in stage 3.0 (TID 146)
+02-21@20:59:41 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:872415232+33554432
+02-21@20:59:41 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:59:41 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:59:41 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:59:41 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:59:41 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:59:41 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:59:47 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000024_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000024
+02-21@20:59:47 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000024_0: Committed. Elapsed time: 136 ms.
+02-21@20:59:47 INFO  (Logging.scala:60)     - Finished task 24.0 in stage 3.0 (TID 144). 1213 bytes result sent to driver
+02-21@20:59:47 INFO  (Logging.scala:60)     - Starting task 27.0 in stage 3.0 (TID 147) (10.0.2.15, executor driver, partition 27, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:59:47 INFO  (Logging.scala:60)     - Finished task 24.0 in stage 3.0 (TID 144) in 10420 ms on 10.0.2.15 (executor driver) (24/40)
+02-21@20:59:47 INFO  (Logging.scala:60)     - Running task 27.0 in stage 3.0 (TID 147)
+02-21@20:59:47 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:905969664+33554432
+02-21@20:59:47 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:59:47 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:59:47 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:59:51 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000026_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000026
+02-21@20:59:51 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000026_0: Committed. Elapsed time: 117 ms.
+02-21@20:59:51 INFO  (Logging.scala:60)     - Finished task 26.0 in stage 3.0 (TID 146). 1213 bytes result sent to driver
+02-21@20:59:51 INFO  (Logging.scala:60)     - Starting task 28.0 in stage 3.0 (TID 148) (10.0.2.15, executor driver, partition 28, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:59:51 INFO  (Logging.scala:60)     - Running task 28.0 in stage 3.0 (TID 148)
+02-21@20:59:51 INFO  (Logging.scala:60)     - Finished task 26.0 in stage 3.0 (TID 146) in 10490 ms on 10.0.2.15 (executor driver) (25/40)
+02-21@20:59:51 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:939524096+33554432
+02-21@20:59:52 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:59:52 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:59:52 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:59:52 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000025_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000025
+02-21@20:59:52 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000025_0: Committed. Elapsed time: 116 ms.
+02-21@20:59:52 INFO  (Logging.scala:60)     - Finished task 25.0 in stage 3.0 (TID 145). 1213 bytes result sent to driver
+02-21@20:59:52 INFO  (Logging.scala:60)     - Starting task 29.0 in stage 3.0 (TID 149) (10.0.2.15, executor driver, partition 29, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:59:52 INFO  (Logging.scala:60)     - Finished task 25.0 in stage 3.0 (TID 145) in 10915 ms on 10.0.2.15 (executor driver) (26/40)
+02-21@20:59:52 INFO  (Logging.scala:60)     - Running task 29.0 in stage 3.0 (TID 149)
+02-21@20:59:52 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:973078528+33554432
+02-21@20:59:52 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:59:52 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:59:52 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@20:59:56 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000027_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000027
+02-21@20:59:56 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000027_0: Committed. Elapsed time: 118 ms.
+02-21@20:59:56 INFO  (Logging.scala:60)     - Finished task 27.0 in stage 3.0 (TID 147). 1213 bytes result sent to driver
+02-21@20:59:56 INFO  (Logging.scala:60)     - Starting task 30.0 in stage 3.0 (TID 150) (10.0.2.15, executor driver, partition 30, PROCESS_LOCAL, 7432 bytes) 
+02-21@20:59:56 INFO  (Logging.scala:60)     - Finished task 27.0 in stage 3.0 (TID 147) in 8909 ms on 10.0.2.15 (executor driver) (27/40)
+02-21@20:59:56 INFO  (Logging.scala:60)     - Running task 30.0 in stage 3.0 (TID 150)
+02-21@20:59:56 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1006632960+33554432
+02-21@20:59:56 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@20:59:56 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@20:59:56 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@21:00:00 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000029_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000029
+02-21@21:00:00 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000029_0: Committed. Elapsed time: 129 ms.
+02-21@21:00:00 INFO  (Logging.scala:60)     - Finished task 29.0 in stage 3.0 (TID 149). 1213 bytes result sent to driver
+02-21@21:00:00 INFO  (Logging.scala:60)     - Starting task 31.0 in stage 3.0 (TID 151) (10.0.2.15, executor driver, partition 31, PROCESS_LOCAL, 7432 bytes) 
+02-21@21:00:00 INFO  (Logging.scala:60)     - Running task 31.0 in stage 3.0 (TID 151)
+02-21@21:00:00 INFO  (Logging.scala:60)     - Finished task 29.0 in stage 3.0 (TID 149) in 7718 ms on 10.0.2.15 (executor driver) (28/40)
+02-21@21:00:00 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1040187392+33554432
+02-21@21:00:00 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000028_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000028
+02-21@21:00:00 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000028_0: Committed. Elapsed time: 83 ms.
+02-21@21:00:00 INFO  (Logging.scala:60)     - Finished task 28.0 in stage 3.0 (TID 148). 1213 bytes result sent to driver
+02-21@21:00:00 INFO  (Logging.scala:60)     - Starting task 32.0 in stage 3.0 (TID 152) (10.0.2.15, executor driver, partition 32, PROCESS_LOCAL, 7432 bytes) 
+02-21@21:00:00 INFO  (Logging.scala:60)     - Finished task 28.0 in stage 3.0 (TID 148) in 8197 ms on 10.0.2.15 (executor driver) (29/40)
+02-21@21:00:00 INFO  (Logging.scala:60)     - Running task 32.0 in stage 3.0 (TID 152)
+02-21@21:00:00 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1073741824+33554432
+02-21@21:00:00 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@21:00:00 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@21:00:00 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@21:00:00 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@21:00:00 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@21:00:00 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@21:00:05 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000030_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000030
+02-21@21:00:05 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000030_0: Committed. Elapsed time: 81 ms.
+02-21@21:00:05 INFO  (Logging.scala:60)     - Finished task 30.0 in stage 3.0 (TID 150). 1213 bytes result sent to driver
+02-21@21:00:05 INFO  (Logging.scala:60)     - Starting task 33.0 in stage 3.0 (TID 153) (10.0.2.15, executor driver, partition 33, PROCESS_LOCAL, 7432 bytes) 
+02-21@21:00:05 INFO  (Logging.scala:60)     - Running task 33.0 in stage 3.0 (TID 153)
+02-21@21:00:05 INFO  (Logging.scala:60)     - Finished task 30.0 in stage 3.0 (TID 150) in 8950 ms on 10.0.2.15 (executor driver) (30/40)
+02-21@21:00:05 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1107296256+33554432
+02-21@21:00:05 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@21:00:05 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@21:00:05 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@21:00:12 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000031_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000031
+02-21@21:00:12 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000031_0: Committed. Elapsed time: 132 ms.
+02-21@21:00:12 INFO  (Logging.scala:60)     - Finished task 31.0 in stage 3.0 (TID 151). 1256 bytes result sent to driver
+02-21@21:00:12 INFO  (Logging.scala:60)     - Starting task 34.0 in stage 3.0 (TID 154) (10.0.2.15, executor driver, partition 34, PROCESS_LOCAL, 7432 bytes) 
+02-21@21:00:12 INFO  (Logging.scala:60)     - Finished task 31.0 in stage 3.0 (TID 151) in 12020 ms on 10.0.2.15 (executor driver) (31/40)
+02-21@21:00:12 INFO  (Logging.scala:60)     - Running task 34.0 in stage 3.0 (TID 154)
+02-21@21:00:12 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1140850688+33554432
+02-21@21:00:12 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@21:00:12 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@21:00:12 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@21:00:12 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000032_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000032
+02-21@21:00:12 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000032_0: Committed. Elapsed time: 130 ms.
+02-21@21:00:12 INFO  (Logging.scala:60)     - Finished task 32.0 in stage 3.0 (TID 152). 1213 bytes result sent to driver
+02-21@21:00:12 INFO  (Logging.scala:60)     - Starting task 35.0 in stage 3.0 (TID 155) (10.0.2.15, executor driver, partition 35, PROCESS_LOCAL, 7432 bytes) 
+02-21@21:00:12 INFO  (Logging.scala:60)     - Finished task 32.0 in stage 3.0 (TID 152) in 12758 ms on 10.0.2.15 (executor driver) (32/40)
+02-21@21:00:12 INFO  (Logging.scala:60)     - Running task 35.0 in stage 3.0 (TID 155)
+02-21@21:00:12 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1174405120+33554432
+02-21@21:00:13 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@21:00:13 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@21:00:13 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@21:00:17 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000033_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000033
+02-21@21:00:17 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000033_0: Committed. Elapsed time: 124 ms.
+02-21@21:00:17 INFO  (Logging.scala:60)     - Finished task 33.0 in stage 3.0 (TID 153). 1213 bytes result sent to driver
+02-21@21:00:17 INFO  (Logging.scala:60)     - Starting task 36.0 in stage 3.0 (TID 156) (10.0.2.15, executor driver, partition 36, PROCESS_LOCAL, 7432 bytes) 
+02-21@21:00:17 INFO  (Logging.scala:60)     - Finished task 33.0 in stage 3.0 (TID 153) in 12433 ms on 10.0.2.15 (executor driver) (33/40)
+02-21@21:00:17 INFO  (Logging.scala:60)     - Running task 36.0 in stage 3.0 (TID 156)
+02-21@21:00:17 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1207959552+33554432
+02-21@21:00:17 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@21:00:18 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@21:00:18 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@21:00:23 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000034_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000034
+02-21@21:00:23 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000034_0: Committed. Elapsed time: 136 ms.
+02-21@21:00:23 INFO  (Logging.scala:60)     - Finished task 34.0 in stage 3.0 (TID 154). 1213 bytes result sent to driver
+02-21@21:00:23 INFO  (Logging.scala:60)     - Starting task 37.0 in stage 3.0 (TID 157) (10.0.2.15, executor driver, partition 37, PROCESS_LOCAL, 7432 bytes) 
+02-21@21:00:23 INFO  (Logging.scala:60)     - Running task 37.0 in stage 3.0 (TID 157)
+02-21@21:00:23 INFO  (Logging.scala:60)     - Finished task 34.0 in stage 3.0 (TID 154) in 11633 ms on 10.0.2.15 (executor driver) (34/40)
+02-21@21:00:23 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1241513984+33554432
+02-21@21:00:23 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@21:00:23 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@21:00:23 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@21:00:25 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000035_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000035
+02-21@21:00:25 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000035_0: Committed. Elapsed time: 118 ms.
+02-21@21:00:25 INFO  (Logging.scala:60)     - Finished task 35.0 in stage 3.0 (TID 155). 1213 bytes result sent to driver
+02-21@21:00:25 INFO  (Logging.scala:60)     - Starting task 38.0 in stage 3.0 (TID 158) (10.0.2.15, executor driver, partition 38, PROCESS_LOCAL, 7432 bytes) 
+02-21@21:00:25 INFO  (Logging.scala:60)     - Finished task 35.0 in stage 3.0 (TID 155) in 12178 ms on 10.0.2.15 (executor driver) (35/40)
+02-21@21:00:25 INFO  (Logging.scala:60)     - Running task 38.0 in stage 3.0 (TID 158)
+02-21@21:00:25 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1275068416+33554432
+02-21@21:00:25 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@21:00:25 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@21:00:25 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@21:00:29 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000036_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000036
+02-21@21:00:29 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000036_0: Committed. Elapsed time: 136 ms.
+02-21@21:00:29 INFO  (Logging.scala:60)     - Finished task 36.0 in stage 3.0 (TID 156). 1213 bytes result sent to driver
+02-21@21:00:29 INFO  (Logging.scala:60)     - Starting task 39.0 in stage 3.0 (TID 159) (10.0.2.15, executor driver, partition 39, PROCESS_LOCAL, 7432 bytes) 
+02-21@21:00:29 INFO  (Logging.scala:60)     - Finished task 36.0 in stage 3.0 (TID 156) in 11718 ms on 10.0.2.15 (executor driver) (36/40)
+02-21@21:00:29 INFO  (Logging.scala:60)     - Running task 39.0 in stage 3.0 (TID 159)
+02-21@21:00:29 INFO  (Logging.scala:60)     - Input split: file:/media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv:1308622848+10658977
+02-21@21:00:29 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapred.FileOutputCommitter
+02-21@21:00:29 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-21@21:00:29 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-21@21:00:34 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000039_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000039
+02-21@21:00:34 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000039_0: Committed. Elapsed time: 123 ms.
+02-21@21:00:34 INFO  (Logging.scala:60)     - Finished task 39.0 in stage 3.0 (TID 159). 1213 bytes result sent to driver
+02-21@21:00:34 INFO  (Logging.scala:60)     - Finished task 39.0 in stage 3.0 (TID 159) in 5132 ms on 10.0.2.15 (executor driver) (37/40)
+02-21@21:00:35 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000037_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000037
+02-21@21:00:35 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000037_0: Committed. Elapsed time: 102 ms.
+02-21@21:00:35 INFO  (Logging.scala:60)     - Finished task 37.0 in stage 3.0 (TID 157). 1213 bytes result sent to driver
+02-21@21:00:35 INFO  (Logging.scala:60)     - Finished task 37.0 in stage 3.0 (TID 157) in 12217 ms on 10.0.2.15 (executor driver) (38/40)
+02-21@21:00:37 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000038_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000038
+02-21@21:00:37 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000038_0: Committed. Elapsed time: 37 ms.
+02-21@21:00:37 INFO  (Logging.scala:60)     - Finished task 38.0 in stage 3.0 (TID 158). 1213 bytes result sent to driver
+02-21@21:00:37 INFO  (Logging.scala:60)     - Finished task 38.0 in stage 3.0 (TID 158) in 12179 ms on 10.0.2.15 (executor driver) (39/40)
+02-21@21:04:58 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_20240221205822639348439087161034_0010_m_000022_0' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_repRDD/_temporary/0/task_20240221205822639348439087161034_0010_m_000022
+02-21@21:04:58 INFO  (Logging.scala:60)     - attempt_20240221205822639348439087161034_0010_m_000022_0: Committed. Elapsed time: 46 ms.
+02-21@21:04:58 INFO  (Logging.scala:60)     - Finished task 22.0 in stage 3.0 (TID 142). 1299 bytes result sent to driver
+02-21@21:04:58 INFO  (Logging.scala:60)     - Finished task 22.0 in stage 3.0 (TID 142) in 333061 ms on 10.0.2.15 (executor driver) (40/40)
+02-21@21:04:58 INFO  (Logging.scala:60)     - Removed TaskSet 3.0, whose tasks have all completed, from pool 
+02-21@21:04:58 INFO  (Logging.scala:60)     - ResultStage 3 (runJob at SparkHadoopWriter.scala:83) finished in 396.133 s
+02-21@21:04:58 INFO  (Logging.scala:60)     - Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+02-21@21:04:58 INFO  (Logging.scala:60)     - Killing all running tasks in stage 3: Stage finished
+02-21@21:04:58 INFO  (Logging.scala:60)     - Job 2 finished: runJob at SparkHadoopWriter.scala:83, took 396.147990 s
+02-21@21:04:58 INFO  (Logging.scala:60)     - Start to commit write Job job_20240221205822639348439087161034_0010.
+02-21@21:05:03 INFO  (Logging.scala:60)     - Write Job job_20240221205822639348439087161034_0010 committed. Elapsed time: 4788 ms.
+02-21@21:05:03 INFO  (Logging.scala:60)     - Invoking stop() from shutdown hook
+02-21@21:05:03 INFO  (Logging.scala:60)     - SparkContext is stopping with exitCode 0.
+02-21@21:05:03 INFO  (AbstractConnector.java:383)     - Stopped Spark@5524b72f{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+02-21@21:05:03 INFO  (Logging.scala:60)     - Stopped Spark web UI at http://10.0.2.15:4040
+02-21@21:05:03 INFO  (Logging.scala:60)     - MapOutputTrackerMasterEndpoint stopped!
+02-21@21:05:03 INFO  (Logging.scala:60)     - MemoryStore cleared
+02-21@21:05:03 INFO  (Logging.scala:60)     - BlockManager stopped
+02-21@21:05:03 INFO  (Logging.scala:60)     - BlockManagerMaster stopped
+02-21@21:05:03 INFO  (Logging.scala:60)     - OutputCommitCoordinator stopped!
+02-21@21:05:03 INFO  (Logging.scala:60)     - Successfully stopped SparkContext
+02-21@21:05:03 INFO  (Logging.scala:60)     - Shutdown hook called
+02-21@21:05:03 INFO  (Logging.scala:60)     - Deleting directory /tmp/spark-266497c2-8902-4aee-9186-268d4cae43b7
+02-21@21:05:03 INFO  (Logging.scala:60)     - Deleting directory /tmp/spark-9421b073-3118-45be-a94f-8f16b32e87f6

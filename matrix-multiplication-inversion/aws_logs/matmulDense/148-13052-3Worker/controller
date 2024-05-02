@@ -1,0 +1,40 @@
+2024-04-20T23:17:29.377Z INFO Ensure step 2 jar file command-runner.jar
+2024-04-20T23:17:29.378Z INFO StepRunner: Created Runner for step 2
+INFO startExec 'hadoop jar /var/lib/aws/emr/step-runner/hadoop-jars/command-runner.jar spark-submit --deploy-mode cluster --class matmulDense.matmulDense s3://cs6240-pro/Matrix-Multiplication.jar s3://cs6240-pro/input/mat2/matrix1_148x13052.csv s3://cs6240-pro/input/mat1/matrix1_13052x148.csv s3://cs6240-pro/output/matmul/148&13052&&3Worker/exp3 148 13052 3'
+INFO Environment:
+  PATH=/usr/lib64/qt-3.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/opt/aws/puppet/bin/
+  SECURITY_PROPERTIES=/emr/instance-controller/lib/security.properties
+  HISTCONTROL=ignoredups
+  HISTSIZE=1000
+  HADOOP_ROOT_LOGGER=INFO,DRFA
+  JAVA_HOME=/etc/alternatives/jre
+  AWS_DEFAULT_REGION=us-east-1
+  LANG=en_US.UTF-8
+  MAIL=/var/spool/mail/hadoop
+  LOGNAME=hadoop
+  PWD=/
+  HADOOP_CLIENT_OPTS=-Djava.io.tmpdir=/mnt/var/lib/hadoop/steps/s-08089179CZQGKTF5GN1/tmp
+  _=/etc/alternatives/jre/bin/java
+  LESSOPEN=||/usr/bin/lesspipe.sh %s
+  SHELL=/bin/bash
+  QTINC=/usr/lib64/qt-3.3/include
+  USER=hadoop
+  HADOOP_LOGFILE=syslog
+  HOSTNAME=ip-172-31-46-243
+  QTDIR=/usr/lib64/qt-3.3
+  HADOOP_LOG_DIR=/mnt/var/log/hadoop/steps/s-08089179CZQGKTF5GN1
+  EMR_STEP_ID=s-08089179CZQGKTF5GN1
+  QTLIB=/usr/lib64/qt-3.3/lib
+  HOME=/home/hadoop
+  SHLVL=1
+  HADOOP_IDENT_STRING=hadoop
+INFO redirectOutput to /mnt/var/log/hadoop/steps/s-08089179CZQGKTF5GN1/stdout
+INFO redirectError to /mnt/var/log/hadoop/steps/s-08089179CZQGKTF5GN1/stderr
+INFO Working dir /mnt/var/lib/hadoop/steps/s-08089179CZQGKTF5GN1
+INFO ProcessRunner started child process 29220
+2024-04-20T23:17:29.380Z INFO HadoopJarStepRunner.Runner: startRun() called for s-08089179CZQGKTF5GN1 Child Pid: 29220
+INFO Synchronously wait child process to complete : hadoop jar /var/lib/aws/emr/step-runner/hadoop-...
+INFO waitProcessCompletion ended with exit code 0 : hadoop jar /var/lib/aws/emr/step-runner/hadoop-...
+INFO total process run time: 196 seconds
+2024-04-20T23:20:45.612Z INFO Step created jobs: 
+2024-04-20T23:20:45.612Z INFO Step succeeded with exitCode 0 and took 196 seconds

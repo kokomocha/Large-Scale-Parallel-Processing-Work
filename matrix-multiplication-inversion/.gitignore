@@ -1,0 +1,16 @@
+#input
+input/*
+input/mat1/*
+input/mat2/*
+#output
+output/*
+
+#src
+*.DS_Store
+
+#ide
+.idea/*
+
+#other
+*.class
+*.log

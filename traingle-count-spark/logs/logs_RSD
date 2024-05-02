@@ -1,0 +1,990 @@
+02-20@19:57:45 INFO  (Logging.scala:60)     - Running Spark version 3.4.0
+02-20@19:57:46 WARN  (NativeCodeLoader.java:60)     - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+02-20@19:57:46 INFO  (Logging.scala:60)     - ==============================================================
+02-20@19:57:46 INFO  (Logging.scala:60)     - No custom resources configured for spark.driver.
+02-20@19:57:46 INFO  (Logging.scala:60)     - ==============================================================
+02-20@19:57:46 INFO  (Logging.scala:60)     - Submitted application: dataFrame Aggregation Program
+02-20@19:57:46 INFO  (Logging.scala:60)     - Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+02-20@19:57:46 INFO  (Logging.scala:60)     - Limiting resource is cpu
+02-20@19:57:46 INFO  (Logging.scala:60)     - Added ResourceProfile id: 0
+02-20@19:57:46 INFO  (Logging.scala:60)     - Changing view acls to: vboxuser
+02-20@19:57:46 INFO  (Logging.scala:60)     - Changing modify acls to: vboxuser
+02-20@19:57:46 INFO  (Logging.scala:60)     - Changing view acls groups to: 
+02-20@19:57:46 INFO  (Logging.scala:60)     - Changing modify acls groups to: 
+02-20@19:57:46 INFO  (Logging.scala:60)     - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vboxuser; groups with view permissions: EMPTY; users with modify permissions: vboxuser; groups with modify permissions: EMPTY
+02-20@19:57:46 INFO  (Logging.scala:60)     - Successfully started service 'sparkDriver' on port 41197.
+02-20@19:57:47 INFO  (Logging.scala:60)     - Registering MapOutputTracker
+02-20@19:57:47 INFO  (Logging.scala:60)     - Registering BlockManagerMaster
+02-20@19:57:47 INFO  (Logging.scala:60)     - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+02-20@19:57:47 INFO  (Logging.scala:60)     - BlockManagerMasterEndpoint up
+02-20@19:57:47 INFO  (Logging.scala:60)     - Registering BlockManagerMasterHeartbeat
+02-20@19:57:47 INFO  (Logging.scala:60)     - Created local directory at /tmp/blockmgr-cf4079cf-6d80-4371-b73c-b2ac8259068a
+02-20@19:57:47 INFO  (Logging.scala:60)     - MemoryStore started with capacity 434.4 MiB
+02-20@19:57:47 INFO  (Logging.scala:60)     - Registering OutputCommitCoordinator
+02-20@19:57:47 INFO  (     Log.java:170)     - Logging initialized @5345ms to org.sparkproject.jetty.util.log.Slf4jLog
+02-20@19:57:47 INFO  (Logging.scala:60)     - Start Jetty 0.0.0.0:4040 for SparkUI
+02-20@19:57:47 INFO  (  Server.java:375)     - jetty-9.4.50.v20221201; built: 2022-12-01T22:07:03.915Z; git: da9a0b30691a45daf90a9f17b5defa2f1434f882; jvm 11.0.21+9-post-Ubuntu-0ubuntu122.04
+02-20@19:57:47 INFO  (  Server.java:415)     - Started @5590ms
+02-20@19:57:47 INFO  (AbstractConnector.java:333)     - Started ServerConnector@72725ee1{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+02-20@19:57:47 INFO  (Logging.scala:60)     - Successfully started service 'SparkUI' on port 4040.
+02-20@19:57:47 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@7b7683d4{/,null,AVAILABLE,@Spark}
+02-20@19:57:47 INFO  (Logging.scala:60)     - Added JAR file:/media/sf_K_DRIVE/hw-3-kokomocha/spark-RSD.jar at spark://10.0.2.15:41197/jars/spark-RSD.jar with timestamp 1708477065940
+02-20@19:57:48 INFO  (Logging.scala:60)     - Starting executor ID driver on host 10.0.2.15
+02-20@19:57:48 INFO  (Logging.scala:60)     - Starting executor with user classpath (userClassPathFirst = false): ''
+02-20@19:57:48 INFO  (Logging.scala:60)     - Fetching spark://10.0.2.15:41197/jars/spark-RSD.jar with timestamp 1708477065940
+02-20@19:57:48 INFO  (TransportClientFactory.java:306)     - Successfully created connection to /10.0.2.15:41197 after 56 ms (0 ms spent in bootstraps)
+02-20@19:57:48 INFO  (Logging.scala:60)     - Fetching spark://10.0.2.15:41197/jars/spark-RSD.jar to /tmp/spark-7b1e21c5-34cf-4452-bfeb-b076bddf02e7/userFiles-3f1b6978-99e6-4242-a1ae-43b323ff8afd/fetchFileTemp1708284742169387829.tmp
+02-20@19:57:48 INFO  (Logging.scala:60)     - Adding file:/tmp/spark-7b1e21c5-34cf-4452-bfeb-b076bddf02e7/userFiles-3f1b6978-99e6-4242-a1ae-43b323ff8afd/spark-RSD.jar to class loader
+02-20@19:57:48 INFO  (Logging.scala:60)     - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 38385.
+02-20@19:57:48 INFO  (NettyBlockTransferService.scala:83)     - Server created on 10.0.2.15:38385
+02-20@19:57:48 INFO  (Logging.scala:60)     - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+02-20@19:57:48 INFO  (Logging.scala:60)     - Registering BlockManager BlockManagerId(driver, 10.0.2.15, 38385, None)
+02-20@19:57:48 INFO  (Logging.scala:60)     - Registering block manager 10.0.2.15:38385 with 434.4 MiB RAM, BlockManagerId(driver, 10.0.2.15, 38385, None)
+02-20@19:57:48 INFO  (Logging.scala:60)     - Registered BlockManager BlockManagerId(driver, 10.0.2.15, 38385, None)
+02-20@19:57:48 INFO  (Logging.scala:60)     - Initialized BlockManager: BlockManagerId(driver, 10.0.2.15, 38385, None)
+02-20@19:57:48 INFO  (ContextHandler.java:1159)     - Stopped o.s.j.s.ServletContextHandler@7b7683d4{/,null,STOPPED,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@57545c3f{/jobs,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@36baa049{/jobs/json,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@15f35bc3{/jobs/job,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@608b1fd2{/jobs/job/json,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@591a4f8e{/stages,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@6ba060f3{/stages/json,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@411a5965{/stages/stage,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@5377414a{/stages/stage/json,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@17aa8a11{/stages/pool,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@18a25bbd{/stages/pool/json,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@1ee27d73{/storage,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@542f6803{/storage/json,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@5807efad{/storage/rdd,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@7ce85af2{/storage/rdd/json,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@56f730b2{/environment,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@7930ffa9{/environment/json,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@717d7587{/executors,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@40230eb9{/executors/json,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@41b13f3d{/executors/threadDump,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@2489e84a{/executors/threadDump/json,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@62b93086{/static,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@421def93{/,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@2b2954e1{/api,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@109f8c7e{/jobs/job/kill,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@16a5eb6d{/stages/stage/kill,null,AVAILABLE,@Spark}
+02-20@19:57:48 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@1a47a1e8{/metrics/json,null,AVAILABLE,@Spark}
+02-20@19:57:49 INFO  (Logging.scala:60)     - Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+02-20@19:57:49 INFO  (Logging.scala:60)     - Warehouse path is 'file:/media/sf_K_DRIVE/hw-3-kokomocha/spark-warehouse'.
+02-20@19:57:49 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@2fb25f4c{/SQL,null,AVAILABLE,@Spark}
+02-20@19:57:49 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@342e690b{/SQL/json,null,AVAILABLE,@Spark}
+02-20@19:57:49 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@781711b7{/SQL/execution,null,AVAILABLE,@Spark}
+02-20@19:57:49 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@642ee49c{/SQL/execution/json,null,AVAILABLE,@Spark}
+02-20@19:57:49 INFO  (ContextHandler.java:921)     - Started o.s.j.s.ServletContextHandler@58a2d9f9{/static/sql,null,AVAILABLE,@Spark}
+02-20@19:57:50 INFO  (Logging.scala:60)     - It took 59 ms to list leaf files for 1 paths.
+02-20@19:57:53 INFO  (Logging.scala:60)     - Pushed Filters: IsNotNull(midNode),IsNotNull(outNode),LessThanOrEqual(midNode,10000),LessThanOrEqual(outNode,10000)
+02-20@19:57:53 INFO  (Logging.scala:60)     - Post-Scan Filters: isnotnull(midNode#0),isnotnull(outNode#1),(midNode#0 <= 10000),(outNode#1 <= 10000)
+02-20@19:57:53 INFO  (Logging.scala:60)     - Pushed Filters: IsNotNull(midNode),IsNotNull(outNode),LessThanOrEqual(midNode,10000),LessThanOrEqual(outNode,10000)
+02-20@19:57:53 INFO  (Logging.scala:60)     - Post-Scan Filters: isnotnull(midNode#11),isnotnull(outNode#12),(midNode#11 <= 10000),(outNode#12 <= 10000)
+02-20@19:57:53 INFO  (Logging.scala:60)     - Pushed Filters: IsNotNull(midNode),IsNotNull(outNode),LessThanOrEqual(midNode,10000),LessThanOrEqual(outNode,10000)
+02-20@19:57:53 INFO  (Logging.scala:60)     - Post-Scan Filters: isnotnull(midNode#24),isnotnull(outNode#25),(midNode#24 <= 10000),(outNode#25 <= 10000)
+02-20@19:57:54 INFO  (Logging.scala:60)     - Code generated in 235.262509 ms
+02-20@19:57:54 INFO  (Logging.scala:60)     - Block broadcast_0 stored as values in memory (estimated size 300.5 KiB, free 434.1 MiB)
+02-20@19:57:54 INFO  (Logging.scala:60)     - Block broadcast_0_piece0 stored as bytes in memory (estimated size 53.2 KiB, free 434.1 MiB)
+02-20@19:57:54 INFO  (Logging.scala:60)     - Added broadcast_0_piece0 in memory on 10.0.2.15:38385 (size: 53.2 KiB, free: 434.3 MiB)
+02-20@19:57:54 INFO  (Logging.scala:60)     - Created broadcast 0 from count at triangle_RSD.scala:42
+02-20@19:57:54 INFO  (Logging.scala:60)     - Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+02-20@19:57:54 INFO  (Logging.scala:60)     - Registering RDD 3 (count at triangle_RSD.scala:42) as input to shuffle 0
+02-20@19:57:54 INFO  (Logging.scala:60)     - Got map stage job 0 (count at triangle_RSD.scala:42) with 10 output partitions
+02-20@19:57:54 INFO  (Logging.scala:60)     - Code generated in 15.81964 ms
+02-20@19:57:54 INFO  (Logging.scala:60)     - Final stage: ShuffleMapStage 0 (count at triangle_RSD.scala:42)
+02-20@19:57:54 INFO  (Logging.scala:60)     - Parents of final stage: List()
+02-20@19:57:54 INFO  (Logging.scala:60)     - Missing parents: List()
+02-20@19:57:54 INFO  (Logging.scala:60)     - Block broadcast_1 stored as values in memory (estimated size 300.5 KiB, free 433.8 MiB)
+02-20@19:57:54 INFO  (Logging.scala:60)     - Submitting ShuffleMapStage 0 (MapPartitionsRDD[3] at count at triangle_RSD.scala:42), which has no missing parents
+02-20@19:57:54 INFO  (Logging.scala:60)     - Block broadcast_1_piece0 stored as bytes in memory (estimated size 53.2 KiB, free 433.7 MiB)
+02-20@19:57:54 INFO  (Logging.scala:60)     - Added broadcast_1_piece0 in memory on 10.0.2.15:38385 (size: 53.2 KiB, free: 434.3 MiB)
+02-20@19:57:54 INFO  (Logging.scala:60)     - Created broadcast 1 from count at triangle_RSD.scala:42
+02-20@19:57:54 INFO  (Logging.scala:60)     - Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+02-20@19:57:54 INFO  (Logging.scala:60)     - Code generated in 14.092855 ms
+02-20@19:57:54 INFO  (Logging.scala:60)     - Block broadcast_2 stored as values in memory (estimated size 300.5 KiB, free 433.4 MiB)
+02-20@19:57:54 INFO  (Logging.scala:60)     - Block broadcast_2_piece0 stored as bytes in memory (estimated size 53.2 KiB, free 433.4 MiB)
+02-20@19:57:54 INFO  (Logging.scala:60)     - Added broadcast_2_piece0 in memory on 10.0.2.15:38385 (size: 53.2 KiB, free: 434.2 MiB)
+02-20@19:57:54 INFO  (Logging.scala:60)     - Created broadcast 2 from count at triangle_RSD.scala:42
+02-20@19:57:54 INFO  (Logging.scala:60)     - Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+02-20@19:57:54 INFO  (Logging.scala:60)     - Block broadcast_3 stored as values in memory (estimated size 16.8 KiB, free 433.3 MiB)
+02-20@19:57:54 INFO  (Logging.scala:60)     - Block broadcast_3_piece0 stored as bytes in memory (estimated size 8.4 KiB, free 433.3 MiB)
+02-20@19:57:54 INFO  (Logging.scala:60)     - Added broadcast_3_piece0 in memory on 10.0.2.15:38385 (size: 8.4 KiB, free: 434.2 MiB)
+02-20@19:57:54 INFO  (Logging.scala:60)     - Created broadcast 3 from broadcast at DAGScheduler.scala:1535
+02-20@19:57:54 INFO  (Logging.scala:60)     - Submitting 10 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[3] at count at triangle_RSD.scala:42) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9))
+02-20@19:57:54 INFO  (Logging.scala:60)     - Adding task set 0.0 with 10 tasks resource profile 0
+02-20@19:57:55 INFO  (Logging.scala:60)     - Registering RDD 7 (count at triangle_RSD.scala:42) as input to shuffle 1
+02-20@19:57:55 INFO  (Logging.scala:60)     - Got map stage job 1 (count at triangle_RSD.scala:42) with 10 output partitions
+02-20@19:57:55 INFO  (Logging.scala:60)     - Final stage: ShuffleMapStage 1 (count at triangle_RSD.scala:42)
+02-20@19:57:55 INFO  (Logging.scala:60)     - Parents of final stage: List()
+02-20@19:57:55 INFO  (Logging.scala:60)     - Missing parents: List()
+02-20@19:57:55 INFO  (Logging.scala:60)     - Submitting ShuffleMapStage 1 (MapPartitionsRDD[7] at count at triangle_RSD.scala:42), which has no missing parents
+02-20@19:57:55 INFO  (Logging.scala:60)     - Block broadcast_4 stored as values in memory (estimated size 16.5 KiB, free 433.3 MiB)
+02-20@19:57:55 INFO  (Logging.scala:60)     - Starting task 0.0 in stage 0.0 (TID 0) (10.0.2.15, executor driver, partition 0, PROCESS_LOCAL, 7924 bytes) 
+02-20@19:57:55 INFO  (Logging.scala:60)     - Block broadcast_4_piece0 stored as bytes in memory (estimated size 8.3 KiB, free 433.3 MiB)
+02-20@19:57:55 INFO  (Logging.scala:60)     - Added broadcast_4_piece0 in memory on 10.0.2.15:38385 (size: 8.3 KiB, free: 434.2 MiB)
+02-20@19:57:55 INFO  (Logging.scala:60)     - Created broadcast 4 from broadcast at DAGScheduler.scala:1535
+02-20@19:57:55 INFO  (Logging.scala:60)     - Starting task 1.0 in stage 0.0 (TID 1) (10.0.2.15, executor driver, partition 1, PROCESS_LOCAL, 7924 bytes) 
+02-20@19:57:55 INFO  (Logging.scala:60)     - Starting task 2.0 in stage 0.0 (TID 2) (10.0.2.15, executor driver, partition 2, PROCESS_LOCAL, 7924 bytes) 
+02-20@19:57:55 INFO  (Logging.scala:60)     - Submitting 10 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[7] at count at triangle_RSD.scala:42) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9))
+02-20@19:57:55 INFO  (Logging.scala:60)     - Adding task set 1.0 with 10 tasks resource profile 0
+02-20@19:57:55 INFO  (Logging.scala:60)     - Starting task 3.0 in stage 0.0 (TID 3) (10.0.2.15, executor driver, partition 3, PROCESS_LOCAL, 7924 bytes) 
+02-20@19:57:55 INFO  (Logging.scala:60)     - Registering RDD 11 (count at triangle_RSD.scala:42) as input to shuffle 2
+02-20@19:57:55 INFO  (Logging.scala:60)     - Got map stage job 2 (count at triangle_RSD.scala:42) with 10 output partitions
+02-20@19:57:55 INFO  (Logging.scala:60)     - Final stage: ShuffleMapStage 2 (count at triangle_RSD.scala:42)
+02-20@19:57:55 INFO  (Logging.scala:60)     - Parents of final stage: List()
+02-20@19:57:55 INFO  (Logging.scala:60)     - Missing parents: List()
+02-20@19:57:55 INFO  (Logging.scala:60)     - Submitting ShuffleMapStage 2 (MapPartitionsRDD[11] at count at triangle_RSD.scala:42), which has no missing parents
+02-20@19:57:55 INFO  (Logging.scala:60)     - Running task 3.0 in stage 0.0 (TID 3)
+02-20@19:57:55 INFO  (Logging.scala:60)     - Running task 0.0 in stage 0.0 (TID 0)
+02-20@19:57:55 INFO  (Logging.scala:60)     - Running task 2.0 in stage 0.0 (TID 2)
+02-20@19:57:55 INFO  (Logging.scala:60)     - Running task 1.0 in stage 0.0 (TID 1)
+02-20@19:57:55 INFO  (Logging.scala:60)     - Block broadcast_5 stored as values in memory (estimated size 16.8 KiB, free 433.3 MiB)
+02-20@19:57:55 INFO  (Logging.scala:60)     - Block broadcast_5_piece0 stored as bytes in memory (estimated size 8.4 KiB, free 433.3 MiB)
+02-20@19:57:55 INFO  (Logging.scala:60)     - Added broadcast_5_piece0 in memory on 10.0.2.15:38385 (size: 8.4 KiB, free: 434.2 MiB)
+02-20@19:57:55 INFO  (Logging.scala:60)     - Created broadcast 5 from broadcast at DAGScheduler.scala:1535
+02-20@19:57:55 INFO  (Logging.scala:60)     - Submitting 10 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[11] at count at triangle_RSD.scala:42) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9))
+02-20@19:57:55 INFO  (Logging.scala:60)     - Adding task set 2.0 with 10 tasks resource profile 0
+02-20@19:57:55 INFO  (Logging.scala:60)     - Code generated in 19.480286 ms
+02-20@19:57:55 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 268435456-402653184, partition values: [empty row]
+02-20@19:57:55 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 402653184-536870912, partition values: [empty row]
+02-20@19:57:55 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 134217728-268435456, partition values: [empty row]
+02-20@19:57:55 INFO  (Logging.scala:60)     - Code generated in 9.054594 ms
+02-20@19:57:55 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 0-134217728, partition values: [empty row]
+02-20@19:57:55 INFO  (Logging.scala:60)     - Code generated in 14.521499 ms
+02-20@19:57:55 INFO  (Logging.scala:60)     - Code generated in 13.309077 ms
+02-20@19:58:58 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 0.0 (TID 2). 2128 bytes result sent to driver
+02-20@19:58:58 INFO  (Logging.scala:60)     - Starting task 4.0 in stage 0.0 (TID 4) (10.0.2.15, executor driver, partition 4, PROCESS_LOCAL, 7924 bytes) 
+02-20@19:58:58 INFO  (Logging.scala:60)     - Running task 4.0 in stage 0.0 (TID 4)
+02-20@19:58:58 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 0.0 (TID 2) in 63352 ms on 10.0.2.15 (executor driver) (1/10)
+02-20@19:58:58 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 536870912-671088640, partition values: [empty row]
+02-20@19:58:59 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 0.0 (TID 1). 2128 bytes result sent to driver
+02-20@19:58:59 INFO  (Logging.scala:60)     - Starting task 5.0 in stage 0.0 (TID 5) (10.0.2.15, executor driver, partition 5, PROCESS_LOCAL, 7924 bytes) 
+02-20@19:58:59 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 0.0 (TID 1) in 63979 ms on 10.0.2.15 (executor driver) (2/10)
+02-20@19:58:59 INFO  (Logging.scala:60)     - Running task 5.0 in stage 0.0 (TID 5)
+02-20@19:58:59 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 671088640-805306368, partition values: [empty row]
+02-20@19:58:59 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 0.0 (TID 0). 2128 bytes result sent to driver
+02-20@19:58:59 INFO  (Logging.scala:60)     - Starting task 6.0 in stage 0.0 (TID 6) (10.0.2.15, executor driver, partition 6, PROCESS_LOCAL, 7924 bytes) 
+02-20@19:58:59 INFO  (Logging.scala:60)     - Running task 6.0 in stage 0.0 (TID 6)
+02-20@19:58:59 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 805306368-939524096, partition values: [empty row]
+02-20@19:58:59 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 0.0 (TID 0) in 64184 ms on 10.0.2.15 (executor driver) (3/10)
+02-20@19:58:59 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 0.0 (TID 3). 2128 bytes result sent to driver
+02-20@19:58:59 INFO  (Logging.scala:60)     - Starting task 7.0 in stage 0.0 (TID 7) (10.0.2.15, executor driver, partition 7, PROCESS_LOCAL, 7924 bytes) 
+02-20@19:58:59 INFO  (Logging.scala:60)     - Running task 7.0 in stage 0.0 (TID 7)
+02-20@19:58:59 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 939524096-1073741824, partition values: [empty row]
+02-20@19:58:59 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 0.0 (TID 3) in 64362 ms on 10.0.2.15 (executor driver) (4/10)
+02-20@19:59:58 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 0.0 (TID 7). 1913 bytes result sent to driver
+02-20@19:59:58 INFO  (Logging.scala:60)     - Starting task 8.0 in stage 0.0 (TID 8) (10.0.2.15, executor driver, partition 8, PROCESS_LOCAL, 7924 bytes) 
+02-20@19:59:58 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 0.0 (TID 7) in 59510 ms on 10.0.2.15 (executor driver) (5/10)
+02-20@19:59:58 INFO  (Logging.scala:60)     - Running task 8.0 in stage 0.0 (TID 8)
+02-20@19:59:59 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 1073741824-1207959552, partition values: [empty row]
+02-20@19:59:59 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 0.0 (TID 4). 2085 bytes result sent to driver
+02-20@19:59:59 INFO  (Logging.scala:60)     - Starting task 9.0 in stage 0.0 (TID 9) (10.0.2.15, executor driver, partition 9, PROCESS_LOCAL, 7924 bytes) 
+02-20@19:59:59 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 0.0 (TID 4) in 60827 ms on 10.0.2.15 (executor driver) (6/10)
+02-20@19:59:59 INFO  (Logging.scala:60)     - Running task 9.0 in stage 0.0 (TID 9)
+02-20@19:59:59 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 1207959552-1319281825, partition values: [empty row]
+02-20@19:59:59 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 0.0 (TID 6). 1913 bytes result sent to driver
+02-20@19:59:59 INFO  (Logging.scala:60)     - Starting task 0.0 in stage 1.0 (TID 10) (10.0.2.15, executor driver, partition 0, PROCESS_LOCAL, 7924 bytes) 
+02-20@19:59:59 INFO  (Logging.scala:60)     - Running task 0.0 in stage 1.0 (TID 10)
+02-20@19:59:59 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 0.0 (TID 6) in 60764 ms on 10.0.2.15 (executor driver) (7/10)
+02-20@20:00:00 INFO  (Logging.scala:60)     - Code generated in 13.347449 ms
+02-20@20:00:00 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 0-134217728, partition values: [empty row]
+02-20@20:00:00 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 0.0 (TID 5). 2085 bytes result sent to driver
+02-20@20:00:00 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 0.0 (TID 5) in 61431 ms on 10.0.2.15 (executor driver) (8/10)
+02-20@20:00:00 INFO  (Logging.scala:60)     - Starting task 1.0 in stage 1.0 (TID 11) (10.0.2.15, executor driver, partition 1, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:00:00 INFO  (Logging.scala:60)     - Running task 1.0 in stage 1.0 (TID 11)
+02-20@20:00:00 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 134217728-268435456, partition values: [empty row]
+02-20@20:00:27 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 1.0 (TID 10). 2085 bytes result sent to driver
+02-20@20:00:27 INFO  (Logging.scala:60)     - Starting task 2.0 in stage 1.0 (TID 12) (10.0.2.15, executor driver, partition 2, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:00:27 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 1.0 (TID 10) in 27667 ms on 10.0.2.15 (executor driver) (1/10)
+02-20@20:00:27 INFO  (Logging.scala:60)     - Running task 2.0 in stage 1.0 (TID 12)
+02-20@20:00:27 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 268435456-402653184, partition values: [empty row]
+02-20@20:00:27 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 1.0 (TID 11). 2085 bytes result sent to driver
+02-20@20:00:27 INFO  (Logging.scala:60)     - Starting task 3.0 in stage 1.0 (TID 13) (10.0.2.15, executor driver, partition 3, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:00:27 INFO  (Logging.scala:60)     - Running task 3.0 in stage 1.0 (TID 13)
+02-20@20:00:27 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 1.0 (TID 11) in 27261 ms on 10.0.2.15 (executor driver) (2/10)
+02-20@20:00:27 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 402653184-536870912, partition values: [empty row]
+02-20@20:00:44 INFO  (Logging.scala:60)     - Finished task 9.0 in stage 0.0 (TID 9). 1913 bytes result sent to driver
+02-20@20:00:44 INFO  (Logging.scala:60)     - Starting task 4.0 in stage 1.0 (TID 14) (10.0.2.15, executor driver, partition 4, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:00:44 INFO  (Logging.scala:60)     - Running task 4.0 in stage 1.0 (TID 14)
+02-20@20:00:44 INFO  (Logging.scala:60)     - Finished task 9.0 in stage 0.0 (TID 9) in 45226 ms on 10.0.2.15 (executor driver) (9/10)
+02-20@20:00:44 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 536870912-671088640, partition values: [empty row]
+02-20@20:00:52 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 0.0 (TID 8). 1913 bytes result sent to driver
+02-20@20:00:52 INFO  (Logging.scala:60)     - Starting task 5.0 in stage 1.0 (TID 15) (10.0.2.15, executor driver, partition 5, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:00:52 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 0.0 (TID 8) in 53942 ms on 10.0.2.15 (executor driver) (10/10)
+02-20@20:00:52 INFO  (Logging.scala:60)     - Running task 5.0 in stage 1.0 (TID 15)
+02-20@20:00:52 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 671088640-805306368, partition values: [empty row]
+02-20@20:00:52 INFO  (Logging.scala:60)     - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+02-20@20:00:52 INFO  (Logging.scala:60)     - ShuffleMapStage 0 (count at triangle_RSD.scala:42) finished in 178.246 s
+02-20@20:00:52 INFO  (Logging.scala:60)     - looking for newly runnable stages
+02-20@20:00:52 INFO  (Logging.scala:60)     - running: Set(ShuffleMapStage 1, ShuffleMapStage 2)
+02-20@20:00:52 INFO  (Logging.scala:60)     - waiting: Set()
+02-20@20:00:53 INFO  (Logging.scala:60)     - failed: Set()
+02-20@20:00:53 INFO  (Logging.scala:60)     - For shuffle(0), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+02-20@20:00:53 INFO  (Logging.scala:60)     - Starting job: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264
+02-20@20:00:53 INFO  (Logging.scala:60)     - Got job 3 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) with 1 output partitions
+02-20@20:00:53 INFO  (Logging.scala:60)     - Final stage: ResultStage 4 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264)
+02-20@20:00:53 INFO  (Logging.scala:60)     - Parents of final stage: List(ShuffleMapStage 3)
+02-20@20:00:53 INFO  (Logging.scala:60)     - Missing parents: List()
+02-20@20:00:53 INFO  (Logging.scala:60)     - Submitting ResultStage 4 (MapPartitionsRDD[13] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264), which has no missing parents
+02-20@20:00:53 INFO  (Logging.scala:60)     - Block broadcast_6 stored as values in memory (estimated size 8.2 KiB, free 433.3 MiB)
+02-20@20:00:53 INFO  (Logging.scala:60)     - Block broadcast_6_piece0 stored as bytes in memory (estimated size 4.2 KiB, free 433.3 MiB)
+02-20@20:00:53 INFO  (Logging.scala:60)     - Added broadcast_6_piece0 in memory on 10.0.2.15:38385 (size: 4.2 KiB, free: 434.2 MiB)
+02-20@20:00:53 INFO  (Logging.scala:60)     - Created broadcast 6 from broadcast at DAGScheduler.scala:1535
+02-20@20:00:53 INFO  (Logging.scala:60)     - Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[13] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) (first 15 tasks are for partitions Vector(0))
+02-20@20:00:53 INFO  (Logging.scala:60)     - Adding task set 4.0 with 1 tasks resource profile 0
+02-20@20:00:54 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 1.0 (TID 12). 2085 bytes result sent to driver
+02-20@20:00:54 INFO  (Logging.scala:60)     - Starting task 6.0 in stage 1.0 (TID 16) (10.0.2.15, executor driver, partition 6, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:00:54 INFO  (Logging.scala:60)     - Running task 6.0 in stage 1.0 (TID 16)
+02-20@20:00:54 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 1.0 (TID 12) in 26553 ms on 10.0.2.15 (executor driver) (3/10)
+02-20@20:00:54 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 805306368-939524096, partition values: [empty row]
+02-20@20:00:57 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 1.0 (TID 13). 2085 bytes result sent to driver
+02-20@20:00:57 INFO  (Logging.scala:60)     - Starting task 7.0 in stage 1.0 (TID 17) (10.0.2.15, executor driver, partition 7, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:00:57 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 1.0 (TID 13) in 29309 ms on 10.0.2.15 (executor driver) (4/10)
+02-20@20:00:57 INFO  (Logging.scala:60)     - Running task 7.0 in stage 1.0 (TID 17)
+02-20@20:00:57 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 939524096-1073741824, partition values: [empty row]
+02-20@20:01:28 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 1.0 (TID 14). 2085 bytes result sent to driver
+02-20@20:01:28 INFO  (Logging.scala:60)     - Starting task 8.0 in stage 1.0 (TID 18) (10.0.2.15, executor driver, partition 8, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:01:28 INFO  (Logging.scala:60)     - Running task 8.0 in stage 1.0 (TID 18)
+02-20@20:01:28 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 1.0 (TID 14) in 44089 ms on 10.0.2.15 (executor driver) (5/10)
+02-20@20:01:28 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 1073741824-1207959552, partition values: [empty row]
+02-20@20:01:39 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 1.0 (TID 15). 2085 bytes result sent to driver
+02-20@20:01:39 INFO  (Logging.scala:60)     - Starting task 9.0 in stage 1.0 (TID 19) (10.0.2.15, executor driver, partition 9, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:01:39 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 1.0 (TID 15) in 46416 ms on 10.0.2.15 (executor driver) (6/10)
+02-20@20:01:39 INFO  (Logging.scala:60)     - Running task 9.0 in stage 1.0 (TID 19)
+02-20@20:01:39 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 1207959552-1319281825, partition values: [empty row]
+02-20@20:01:40 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 1.0 (TID 16). 1913 bytes result sent to driver
+02-20@20:01:40 INFO  (Logging.scala:60)     - Starting task 0.0 in stage 2.0 (TID 20) (10.0.2.15, executor driver, partition 0, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:01:40 INFO  (Logging.scala:60)     - Running task 0.0 in stage 2.0 (TID 20)
+02-20@20:01:40 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 1.0 (TID 16) in 46348 ms on 10.0.2.15 (executor driver) (7/10)
+02-20@20:01:40 INFO  (Logging.scala:60)     - Code generated in 26.067919 ms
+02-20@20:01:40 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 0-134217728, partition values: [empty row]
+02-20@20:01:45 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 1.0 (TID 17). 1956 bytes result sent to driver
+02-20@20:01:45 INFO  (Logging.scala:60)     - Starting task 1.0 in stage 2.0 (TID 21) (10.0.2.15, executor driver, partition 1, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:01:45 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 1.0 (TID 17) in 48127 ms on 10.0.2.15 (executor driver) (8/10)
+02-20@20:01:45 INFO  (Logging.scala:60)     - Running task 1.0 in stage 2.0 (TID 21)
+02-20@20:01:45 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 134217728-268435456, partition values: [empty row]
+02-20@20:01:46 INFO  (Logging.scala:60)     - Removed broadcast_3_piece0 on 10.0.2.15:38385 in memory (size: 8.4 KiB, free: 434.2 MiB)
+02-20@20:02:10 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 2.0 (TID 20). 2085 bytes result sent to driver
+02-20@20:02:10 INFO  (Logging.scala:60)     - Starting task 2.0 in stage 2.0 (TID 22) (10.0.2.15, executor driver, partition 2, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:02:10 INFO  (Logging.scala:60)     - Running task 2.0 in stage 2.0 (TID 22)
+02-20@20:02:10 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 2.0 (TID 20) in 29483 ms on 10.0.2.15 (executor driver) (1/10)
+02-20@20:02:10 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 268435456-402653184, partition values: [empty row]
+02-20@20:02:10 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 2.0 (TID 21). 2085 bytes result sent to driver
+02-20@20:02:10 INFO  (Logging.scala:60)     - Starting task 3.0 in stage 2.0 (TID 23) (10.0.2.15, executor driver, partition 3, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:02:10 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 2.0 (TID 21) in 25068 ms on 10.0.2.15 (executor driver) (2/10)
+02-20@20:02:10 INFO  (Logging.scala:60)     - Running task 3.0 in stage 2.0 (TID 23)
+02-20@20:02:10 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 402653184-536870912, partition values: [empty row]
+02-20@20:02:22 INFO  (Logging.scala:60)     - Finished task 9.0 in stage 1.0 (TID 19). 1913 bytes result sent to driver
+02-20@20:02:22 INFO  (Logging.scala:60)     - Starting task 4.0 in stage 2.0 (TID 24) (10.0.2.15, executor driver, partition 4, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:02:22 INFO  (Logging.scala:60)     - Finished task 9.0 in stage 1.0 (TID 19) in 43048 ms on 10.0.2.15 (executor driver) (9/10)
+02-20@20:02:22 INFO  (Logging.scala:60)     - Running task 4.0 in stage 2.0 (TID 24)
+02-20@20:02:22 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 536870912-671088640, partition values: [empty row]
+02-20@20:02:22 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 1.0 (TID 18). 1913 bytes result sent to driver
+02-20@20:02:22 INFO  (Logging.scala:60)     - Starting task 5.0 in stage 2.0 (TID 25) (10.0.2.15, executor driver, partition 5, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:02:22 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 1.0 (TID 18) in 54243 ms on 10.0.2.15 (executor driver) (10/10)
+02-20@20:02:22 INFO  (Logging.scala:60)     - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+02-20@20:02:22 INFO  (Logging.scala:60)     - Running task 5.0 in stage 2.0 (TID 25)
+02-20@20:02:22 INFO  (Logging.scala:60)     - ShuffleMapStage 1 (count at triangle_RSD.scala:42) finished in 267.771 s
+02-20@20:02:22 INFO  (Logging.scala:60)     - looking for newly runnable stages
+02-20@20:02:22 INFO  (Logging.scala:60)     - running: Set(ShuffleMapStage 2, ResultStage 4)
+02-20@20:02:22 INFO  (Logging.scala:60)     - waiting: Set()
+02-20@20:02:22 INFO  (Logging.scala:60)     - failed: Set()
+02-20@20:02:22 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 671088640-805306368, partition values: [empty row]
+02-20@20:02:38 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 2.0 (TID 22). 2085 bytes result sent to driver
+02-20@20:02:38 INFO  (Logging.scala:60)     - Starting task 6.0 in stage 2.0 (TID 26) (10.0.2.15, executor driver, partition 6, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:02:38 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 2.0 (TID 22) in 28433 ms on 10.0.2.15 (executor driver) (3/10)
+02-20@20:02:38 INFO  (Logging.scala:60)     - Running task 6.0 in stage 2.0 (TID 26)
+02-20@20:02:38 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 805306368-939524096, partition values: [empty row]
+02-20@20:02:38 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 2.0 (TID 23). 2085 bytes result sent to driver
+02-20@20:02:38 INFO  (Logging.scala:60)     - Starting task 7.0 in stage 2.0 (TID 27) (10.0.2.15, executor driver, partition 7, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:02:38 INFO  (Logging.scala:60)     - Running task 7.0 in stage 2.0 (TID 27)
+02-20@20:02:38 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 2.0 (TID 23) in 28480 ms on 10.0.2.15 (executor driver) (4/10)
+02-20@20:02:38 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 939524096-1073741824, partition values: [empty row]
+02-20@20:03:12 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 2.0 (TID 24). 2085 bytes result sent to driver
+02-20@20:03:12 INFO  (Logging.scala:60)     - Starting task 8.0 in stage 2.0 (TID 28) (10.0.2.15, executor driver, partition 8, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:03:12 INFO  (Logging.scala:60)     - Running task 8.0 in stage 2.0 (TID 28)
+02-20@20:03:12 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 2.0 (TID 24) in 50062 ms on 10.0.2.15 (executor driver) (5/10)
+02-20@20:03:12 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 1073741824-1207959552, partition values: [empty row]
+02-20@20:03:13 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 2.0 (TID 25). 2085 bytes result sent to driver
+02-20@20:03:13 INFO  (Logging.scala:60)     - Starting task 9.0 in stage 2.0 (TID 29) (10.0.2.15, executor driver, partition 9, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:03:13 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 2.0 (TID 25) in 50956 ms on 10.0.2.15 (executor driver) (6/10)
+02-20@20:03:13 INFO  (Logging.scala:60)     - Running task 9.0 in stage 2.0 (TID 29)
+02-20@20:03:13 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 1207959552-1319281825, partition values: [empty row]
+02-20@20:03:30 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 2.0 (TID 26). 1913 bytes result sent to driver
+02-20@20:03:30 INFO  (Logging.scala:60)     - Starting task 0.0 in stage 4.0 (TID 30) (10.0.2.15, executor driver, partition 0, NODE_LOCAL, 7379 bytes) 
+02-20@20:03:30 INFO  (Logging.scala:60)     - Running task 0.0 in stage 4.0 (TID 30)
+02-20@20:03:30 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 2.0 (TID 26) in 51594 ms on 10.0.2.15 (executor driver) (7/10)
+02-20@20:03:30 INFO  (Logging.scala:60)     - Getting 6 (1004.8 KiB) non-empty blocks including 6 (1004.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:03:30 INFO  (Logging.scala:60)     - Started 0 remote fetches in 17 ms
+02-20@20:03:30 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 4.0 (TID 30). 848850 bytes result sent to driver
+02-20@20:03:30 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 4.0 (TID 30) in 498 ms on 10.0.2.15 (executor driver) (1/1)
+02-20@20:03:30 INFO  (Logging.scala:60)     - Removed TaskSet 4.0, whose tasks have all completed, from pool 
+02-20@20:03:30 INFO  (Logging.scala:60)     - ResultStage 4 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) finished in 157.220 s
+02-20@20:03:30 INFO  (Logging.scala:60)     - Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+02-20@20:03:30 INFO  (Logging.scala:60)     - Killing all running tasks in stage 4: Stage finished
+02-20@20:03:30 INFO  (Logging.scala:60)     - Job 3 finished: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264, took 157.255908 s
+02-20@20:03:30 INFO  (Logging.scala:60)     - Code generated in 40.205233 ms
+02-20@20:03:30 INFO  (Logging.scala:60)     - Block broadcast_7 stored as values in memory (estimated size 4.1 MiB, free 429.2 MiB)
+02-20@20:03:30 INFO  (Logging.scala:60)     - Block broadcast_7_piece0 stored as bytes in memory (estimated size 1257.5 KiB, free 428.0 MiB)
+02-20@20:03:30 INFO  (Logging.scala:60)     - Added broadcast_7_piece0 in memory on 10.0.2.15:38385 (size: 1257.5 KiB, free: 433.0 MiB)
+02-20@20:03:30 INFO  (Logging.scala:60)     - Created broadcast 7 from $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264
+02-20@20:03:30 INFO  (Logging.scala:60)     - For shuffle(1), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+02-20@20:03:30 INFO  (Logging.scala:60)     - Code generated in 17.291818 ms
+02-20@20:03:30 INFO  (Logging.scala:60)     - Registering RDD 16 (count at triangle_RSD.scala:42) as input to shuffle 3
+02-20@20:03:30 INFO  (Logging.scala:60)     - Got map stage job 4 (count at triangle_RSD.scala:42) with 1 output partitions
+02-20@20:03:30 INFO  (Logging.scala:60)     - Final stage: ShuffleMapStage 6 (count at triangle_RSD.scala:42)
+02-20@20:03:30 INFO  (Logging.scala:60)     - Parents of final stage: List(ShuffleMapStage 5)
+02-20@20:03:30 INFO  (Logging.scala:60)     - Missing parents: List()
+02-20@20:03:30 INFO  (Logging.scala:60)     - Submitting ShuffleMapStage 6 (MapPartitionsRDD[16] at count at triangle_RSD.scala:42), which has no missing parents
+02-20@20:03:31 INFO  (Logging.scala:60)     - Removed broadcast_4_piece0 on 10.0.2.15:38385 in memory (size: 8.3 KiB, free: 433.0 MiB)
+02-20@20:03:31 INFO  (Logging.scala:60)     - Block broadcast_8 stored as values in memory (estimated size 14.9 KiB, free 428.0 MiB)
+02-20@20:03:31 INFO  (Logging.scala:60)     - Block broadcast_8_piece0 stored as bytes in memory (estimated size 7.5 KiB, free 428.0 MiB)
+02-20@20:03:31 INFO  (Logging.scala:60)     - Added broadcast_8_piece0 in memory on 10.0.2.15:38385 (size: 7.5 KiB, free: 433.0 MiB)
+02-20@20:03:31 INFO  (Logging.scala:60)     - Removed broadcast_6_piece0 on 10.0.2.15:38385 in memory (size: 4.2 KiB, free: 433.0 MiB)
+02-20@20:03:31 INFO  (Logging.scala:60)     - Created broadcast 8 from broadcast at DAGScheduler.scala:1535
+02-20@20:03:31 INFO  (Logging.scala:60)     - Submitting 1 missing tasks from ShuffleMapStage 6 (MapPartitionsRDD[16] at count at triangle_RSD.scala:42) (first 15 tasks are for partitions Vector(0))
+02-20@20:03:31 INFO  (Logging.scala:60)     - Adding task set 6.0 with 1 tasks resource profile 0
+02-20@20:03:31 INFO  (Logging.scala:60)     - Starting task 0.0 in stage 6.0 (TID 31) (10.0.2.15, executor driver, partition 0, NODE_LOCAL, 7368 bytes) 
+02-20@20:03:31 INFO  (Logging.scala:60)     - Running task 0.0 in stage 6.0 (TID 31)
+02-20@20:03:31 INFO  (Logging.scala:60)     - Getting 6 (901.3 KiB) non-empty blocks including 6 (901.3 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:03:31 INFO  (Logging.scala:60)     - Started 0 remote fetches in 3 ms
+02-20@20:03:31 INFO  (Logging.scala:60)     - Code generated in 19.856118 ms
+02-20@20:03:31 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 2.0 (TID 27). 1913 bytes result sent to driver
+02-20@20:03:31 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 2.0 (TID 27) in 52774 ms on 10.0.2.15 (executor driver) (8/10)
+02-20@20:03:52 INFO  (Logging.scala:60)     - Finished task 9.0 in stage 2.0 (TID 29). 1913 bytes result sent to driver
+02-20@20:03:52 INFO  (Logging.scala:60)     - Finished task 9.0 in stage 2.0 (TID 29) in 38776 ms on 10.0.2.15 (executor driver) (9/10)
+02-20@20:03:52 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 6.0 (TID 31). 4339 bytes result sent to driver
+02-20@20:03:52 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 6.0 (TID 31) in 21796 ms on 10.0.2.15 (executor driver) (1/1)
+02-20@20:03:52 INFO  (Logging.scala:60)     - Removed TaskSet 6.0, whose tasks have all completed, from pool 
+02-20@20:03:52 INFO  (Logging.scala:60)     - ShuffleMapStage 6 (count at triangle_RSD.scala:42) finished in 21.913 s
+02-20@20:03:52 INFO  (Logging.scala:60)     - looking for newly runnable stages
+02-20@20:03:52 INFO  (Logging.scala:60)     - running: Set(ShuffleMapStage 2)
+02-20@20:03:52 INFO  (Logging.scala:60)     - waiting: Set()
+02-20@20:03:52 INFO  (Logging.scala:60)     - failed: Set()
+02-20@20:03:53 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 2.0 (TID 28). 1913 bytes result sent to driver
+02-20@20:03:53 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 2.0 (TID 28) in 41297 ms on 10.0.2.15 (executor driver) (10/10)
+02-20@20:03:53 INFO  (Logging.scala:60)     - Removed TaskSet 2.0, whose tasks have all completed, from pool 
+02-20@20:03:53 INFO  (Logging.scala:60)     - ShuffleMapStage 2 (count at triangle_RSD.scala:42) finished in 358.525 s
+02-20@20:03:53 INFO  (Logging.scala:60)     - looking for newly runnable stages
+02-20@20:03:53 INFO  (Logging.scala:60)     - running: Set()
+02-20@20:03:53 INFO  (Logging.scala:60)     - waiting: Set()
+02-20@20:03:53 INFO  (Logging.scala:60)     - failed: Set()
+02-20@20:03:53 INFO  (Logging.scala:60)     - For shuffle(2), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+02-20@20:03:53 INFO  (Logging.scala:60)     - Starting job: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264
+02-20@20:03:53 INFO  (Logging.scala:60)     - Got job 5 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) with 1 output partitions
+02-20@20:03:53 INFO  (Logging.scala:60)     - Final stage: ResultStage 8 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264)
+02-20@20:03:53 INFO  (Logging.scala:60)     - Parents of final stage: List(ShuffleMapStage 7)
+02-20@20:03:53 INFO  (Logging.scala:60)     - Missing parents: List()
+02-20@20:03:53 INFO  (Logging.scala:60)     - Submitting ResultStage 8 (MapPartitionsRDD[18] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264), which has no missing parents
+02-20@20:03:53 INFO  (Logging.scala:60)     - Block broadcast_9 stored as values in memory (estimated size 8.2 KiB, free 428.0 MiB)
+02-20@20:03:53 INFO  (Logging.scala:60)     - Block broadcast_9_piece0 stored as bytes in memory (estimated size 4.2 KiB, free 428.0 MiB)
+02-20@20:03:53 INFO  (Logging.scala:60)     - Added broadcast_9_piece0 in memory on 10.0.2.15:38385 (size: 4.2 KiB, free: 433.0 MiB)
+02-20@20:03:53 INFO  (Logging.scala:60)     - Created broadcast 9 from broadcast at DAGScheduler.scala:1535
+02-20@20:03:53 INFO  (Logging.scala:60)     - Submitting 1 missing tasks from ResultStage 8 (MapPartitionsRDD[18] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) (first 15 tasks are for partitions Vector(0))
+02-20@20:03:53 INFO  (Logging.scala:60)     - Adding task set 8.0 with 1 tasks resource profile 0
+02-20@20:03:53 INFO  (Logging.scala:60)     - Starting task 0.0 in stage 8.0 (TID 32) (10.0.2.15, executor driver, partition 0, NODE_LOCAL, 7379 bytes) 
+02-20@20:03:53 INFO  (Logging.scala:60)     - Running task 0.0 in stage 8.0 (TID 32)
+02-20@20:03:53 INFO  (Logging.scala:60)     - Getting 6 (1304.6 KiB) non-empty blocks including 6 (1304.6 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:03:53 INFO  (Logging.scala:60)     - Started 0 remote fetches in 6 ms
+02-20@20:03:53 INFO  (Logging.scala:60)     - Block taskresult_32 stored as bytes in memory (estimated size 1041.2 KiB, free 427.0 MiB)
+02-20@20:03:53 INFO  (Logging.scala:60)     - Added taskresult_32 in memory on 10.0.2.15:38385 (size: 1041.2 KiB, free: 432.0 MiB)
+02-20@20:03:53 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 8.0 (TID 32). 1066163 bytes result sent via BlockManager)
+02-20@20:03:53 INFO  (TransportClientFactory.java:306)     - Successfully created connection to /10.0.2.15:38385 after 4 ms (0 ms spent in bootstraps)
+02-20@20:03:54 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 8.0 (TID 32) in 265 ms on 10.0.2.15 (executor driver) (1/1)
+02-20@20:03:54 INFO  (Logging.scala:60)     - Removed TaskSet 8.0, whose tasks have all completed, from pool 
+02-20@20:03:54 INFO  (Logging.scala:60)     - Removed taskresult_32 on 10.0.2.15:38385 in memory (size: 1041.2 KiB, free: 433.0 MiB)
+02-20@20:03:54 INFO  (Logging.scala:60)     - ResultStage 8 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) finished in 0.292 s
+02-20@20:03:54 INFO  (Logging.scala:60)     - Job 5 is finished. Cancelling potential speculative or zombie tasks for this job
+02-20@20:03:54 INFO  (Logging.scala:60)     - Killing all running tasks in stage 8: Stage finished
+02-20@20:03:54 INFO  (Logging.scala:60)     - Job 5 finished: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264, took 0.306786 s
+02-20@20:03:54 INFO  (Logging.scala:60)     - Code generated in 11.579101 ms
+02-20@20:03:54 INFO  (Logging.scala:60)     - Block broadcast_10 stored as values in memory (estimated size 8.0 MiB, free 420.0 MiB)
+02-20@20:03:54 INFO  (Logging.scala:60)     - Block broadcast_10_piece0 stored as bytes in memory (estimated size 2.5 MiB, free 417.5 MiB)
+02-20@20:03:54 INFO  (Logging.scala:60)     - Added broadcast_10_piece0 in memory on 10.0.2.15:38385 (size: 2.5 MiB, free: 430.5 MiB)
+02-20@20:03:54 INFO  (Logging.scala:60)     - Created broadcast 10 from $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264
+02-20@20:03:54 INFO  (Logging.scala:60)     - For shuffle(3), advisory target size: 67108864, actual target size 67108864, minimum partition size: 1048576
+02-20@20:03:54 INFO  (Logging.scala:60)     - Code generated in 12.477366 ms
+02-20@20:03:54 INFO  (Logging.scala:60)     - Registering RDD 21 (count at triangle_RSD.scala:42) as input to shuffle 4
+02-20@20:03:54 INFO  (Logging.scala:60)     - Got map stage job 6 (count at triangle_RSD.scala:42) with 9 output partitions
+02-20@20:03:54 INFO  (Logging.scala:60)     - Final stage: ShuffleMapStage 11 (count at triangle_RSD.scala:42)
+02-20@20:03:54 INFO  (Logging.scala:60)     - Parents of final stage: List(ShuffleMapStage 10)
+02-20@20:03:54 INFO  (Logging.scala:60)     - Missing parents: List()
+02-20@20:03:54 INFO  (Logging.scala:60)     - Submitting ShuffleMapStage 11 (MapPartitionsRDD[21] at count at triangle_RSD.scala:42), which has no missing parents
+02-20@20:03:54 INFO  (Logging.scala:60)     - Block broadcast_11 stored as values in memory (estimated size 16.0 KiB, free 417.5 MiB)
+02-20@20:03:54 INFO  (Logging.scala:60)     - Block broadcast_11_piece0 stored as bytes in memory (estimated size 7.8 KiB, free 417.5 MiB)
+02-20@20:03:54 INFO  (Logging.scala:60)     - Added broadcast_11_piece0 in memory on 10.0.2.15:38385 (size: 7.8 KiB, free: 430.5 MiB)
+02-20@20:03:54 INFO  (Logging.scala:60)     - Created broadcast 11 from broadcast at DAGScheduler.scala:1535
+02-20@20:03:54 INFO  (Logging.scala:60)     - Submitting 9 missing tasks from ShuffleMapStage 11 (MapPartitionsRDD[21] at count at triangle_RSD.scala:42) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8))
+02-20@20:03:54 INFO  (Logging.scala:60)     - Adding task set 11.0 with 9 tasks resource profile 0
+02-20@20:03:54 INFO  (Logging.scala:60)     - Starting task 0.0 in stage 11.0 (TID 33) (10.0.2.15, executor driver, partition 0, NODE_LOCAL, 7371 bytes) 
+02-20@20:03:54 INFO  (Logging.scala:60)     - Starting task 1.0 in stage 11.0 (TID 34) (10.0.2.15, executor driver, partition 1, NODE_LOCAL, 7371 bytes) 
+02-20@20:03:54 INFO  (Logging.scala:60)     - Starting task 2.0 in stage 11.0 (TID 35) (10.0.2.15, executor driver, partition 2, NODE_LOCAL, 7371 bytes) 
+02-20@20:03:54 INFO  (Logging.scala:60)     - Starting task 3.0 in stage 11.0 (TID 36) (10.0.2.15, executor driver, partition 3, NODE_LOCAL, 7371 bytes) 
+02-20@20:03:54 INFO  (Logging.scala:60)     - Running task 0.0 in stage 11.0 (TID 33)
+02-20@20:03:54 INFO  (Logging.scala:60)     - Running task 1.0 in stage 11.0 (TID 34)
+02-20@20:03:54 INFO  (Logging.scala:60)     - Running task 3.0 in stage 11.0 (TID 36)
+02-20@20:03:54 INFO  (Logging.scala:60)     - Running task 2.0 in stage 11.0 (TID 35)
+02-20@20:03:54 INFO  (Logging.scala:60)     - Getting 1 (62.9 MiB) non-empty blocks including 1 (62.9 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:03:54 INFO  (Logging.scala:60)     - Started 0 remote fetches in 2 ms
+02-20@20:03:54 INFO  (Logging.scala:60)     - Getting 1 (60.1 MiB) non-empty blocks including 1 (60.1 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:03:54 INFO  (Logging.scala:60)     - Getting 1 (62.9 MiB) non-empty blocks including 1 (62.9 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:03:54 INFO  (Logging.scala:60)     - Started 0 remote fetches in 9 ms
+02-20@20:03:54 INFO  (Logging.scala:60)     - Getting 1 (60.1 MiB) non-empty blocks including 1 (60.1 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:03:54 INFO  (Logging.scala:60)     - Started 0 remote fetches in 1 ms
+02-20@20:03:54 INFO  (Logging.scala:60)     - Started 0 remote fetches in 8 ms
+02-20@20:03:55 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 11.0 (TID 36). 4235 bytes result sent to driver
+02-20@20:03:55 INFO  (Logging.scala:60)     - Starting task 4.0 in stage 11.0 (TID 37) (10.0.2.15, executor driver, partition 4, NODE_LOCAL, 7371 bytes) 
+02-20@20:03:55 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 11.0 (TID 36) in 1306 ms on 10.0.2.15 (executor driver) (1/9)
+02-20@20:03:55 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 11.0 (TID 34). 4235 bytes result sent to driver
+02-20@20:03:55 INFO  (Logging.scala:60)     - Starting task 5.0 in stage 11.0 (TID 38) (10.0.2.15, executor driver, partition 5, NODE_LOCAL, 7371 bytes) 
+02-20@20:03:55 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 11.0 (TID 34) in 1317 ms on 10.0.2.15 (executor driver) (2/9)
+02-20@20:03:55 INFO  (Logging.scala:60)     - Running task 4.0 in stage 11.0 (TID 37)
+02-20@20:03:55 INFO  (Logging.scala:60)     - Running task 5.0 in stage 11.0 (TID 38)
+02-20@20:03:55 INFO  (Logging.scala:60)     - Getting 1 (60.1 MiB) non-empty blocks including 1 (60.1 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:03:55 INFO  (Logging.scala:60)     - Started 0 remote fetches in 1 ms
+02-20@20:03:55 INFO  (Logging.scala:60)     - Getting 1 (60.1 MiB) non-empty blocks including 1 (60.1 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:03:55 INFO  (Logging.scala:60)     - Started 0 remote fetches in 1 ms
+02-20@20:03:55 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 11.0 (TID 35). 4235 bytes result sent to driver
+02-20@20:03:55 INFO  (Logging.scala:60)     - Starting task 6.0 in stage 11.0 (TID 39) (10.0.2.15, executor driver, partition 6, NODE_LOCAL, 7371 bytes) 
+02-20@20:03:55 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 11.0 (TID 35) in 1360 ms on 10.0.2.15 (executor driver) (3/9)
+02-20@20:03:55 INFO  (Logging.scala:60)     - Running task 6.0 in stage 11.0 (TID 39)
+02-20@20:03:55 INFO  (Logging.scala:60)     - Getting 1 (60.1 MiB) non-empty blocks including 1 (60.1 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:03:55 INFO  (Logging.scala:60)     - Started 0 remote fetches in 3 ms
+02-20@20:03:55 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 11.0 (TID 33). 4235 bytes result sent to driver
+02-20@20:03:55 INFO  (Logging.scala:60)     - Starting task 7.0 in stage 11.0 (TID 40) (10.0.2.15, executor driver, partition 7, NODE_LOCAL, 7371 bytes) 
+02-20@20:03:55 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 11.0 (TID 33) in 1437 ms on 10.0.2.15 (executor driver) (4/9)
+02-20@20:03:55 INFO  (Logging.scala:60)     - Running task 7.0 in stage 11.0 (TID 40)
+02-20@20:03:55 INFO  (Logging.scala:60)     - Getting 1 (60.1 MiB) non-empty blocks including 1 (60.1 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:03:55 INFO  (Logging.scala:60)     - Started 0 remote fetches in 1 ms
+02-20@20:03:56 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 11.0 (TID 37). 4235 bytes result sent to driver
+02-20@20:03:56 INFO  (Logging.scala:60)     - Starting task 8.0 in stage 11.0 (TID 41) (10.0.2.15, executor driver, partition 8, NODE_LOCAL, 7371 bytes) 
+02-20@20:03:56 INFO  (Logging.scala:60)     - Running task 8.0 in stage 11.0 (TID 41)
+02-20@20:03:56 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 11.0 (TID 37) in 1281 ms on 10.0.2.15 (executor driver) (5/9)
+02-20@20:03:56 INFO  (Logging.scala:60)     - Getting 1 (60.1 MiB) non-empty blocks including 1 (60.1 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:03:56 INFO  (Logging.scala:60)     - Started 0 remote fetches in 0 ms
+02-20@20:03:57 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 11.0 (TID 39). 4235 bytes result sent to driver
+02-20@20:03:57 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 11.0 (TID 38). 4235 bytes result sent to driver
+02-20@20:03:57 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 11.0 (TID 39) in 1346 ms on 10.0.2.15 (executor driver) (6/9)
+02-20@20:03:57 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 11.0 (TID 38) in 1409 ms on 10.0.2.15 (executor driver) (7/9)
+02-20@20:03:57 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 11.0 (TID 40). 4235 bytes result sent to driver
+02-20@20:03:57 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 11.0 (TID 40) in 1357 ms on 10.0.2.15 (executor driver) (8/9)
+02-20@20:03:57 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 11.0 (TID 41). 4235 bytes result sent to driver
+02-20@20:03:58 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 11.0 (TID 41) in 1201 ms on 10.0.2.15 (executor driver) (9/9)
+02-20@20:03:58 INFO  (Logging.scala:60)     - Removed TaskSet 11.0, whose tasks have all completed, from pool 
+02-20@20:03:58 INFO  (Logging.scala:60)     - ShuffleMapStage 11 (count at triangle_RSD.scala:42) finished in 3.840 s
+02-20@20:03:58 INFO  (Logging.scala:60)     - looking for newly runnable stages
+02-20@20:03:58 INFO  (Logging.scala:60)     - running: Set()
+02-20@20:03:58 INFO  (Logging.scala:60)     - waiting: Set()
+02-20@20:03:58 INFO  (Logging.scala:60)     - failed: Set()
+02-20@20:03:58 INFO  (Logging.scala:60)     - Code generated in 18.746179 ms
+02-20@20:03:58 INFO  (Logging.scala:60)     - Starting job: count at triangle_RSD.scala:42
+02-20@20:03:58 INFO  (Logging.scala:60)     - Got job 7 (count at triangle_RSD.scala:42) with 1 output partitions
+02-20@20:03:58 INFO  (Logging.scala:60)     - Final stage: ResultStage 15 (count at triangle_RSD.scala:42)
+02-20@20:03:58 INFO  (Logging.scala:60)     - Parents of final stage: List(ShuffleMapStage 14)
+02-20@20:03:58 INFO  (Logging.scala:60)     - Missing parents: List()
+02-20@20:03:58 INFO  (Logging.scala:60)     - Submitting ResultStage 15 (MapPartitionsRDD[24] at count at triangle_RSD.scala:42), which has no missing parents
+02-20@20:03:58 INFO  (Logging.scala:60)     - Block broadcast_12 stored as values in memory (estimated size 12.1 KiB, free 417.5 MiB)
+02-20@20:03:58 INFO  (Logging.scala:60)     - Block broadcast_12_piece0 stored as bytes in memory (estimated size 5.8 KiB, free 417.5 MiB)
+02-20@20:03:58 INFO  (Logging.scala:60)     - Added broadcast_12_piece0 in memory on 10.0.2.15:38385 (size: 5.8 KiB, free: 430.5 MiB)
+02-20@20:03:58 INFO  (Logging.scala:60)     - Created broadcast 12 from broadcast at DAGScheduler.scala:1535
+02-20@20:03:58 INFO  (Logging.scala:60)     - Submitting 1 missing tasks from ResultStage 15 (MapPartitionsRDD[24] at count at triangle_RSD.scala:42) (first 15 tasks are for partitions Vector(0))
+02-20@20:03:58 INFO  (Logging.scala:60)     - Adding task set 15.0 with 1 tasks resource profile 0
+02-20@20:03:58 INFO  (Logging.scala:60)     - Starting task 0.0 in stage 15.0 (TID 42) (10.0.2.15, executor driver, partition 0, NODE_LOCAL, 7363 bytes) 
+02-20@20:03:58 INFO  (Logging.scala:60)     - Running task 0.0 in stage 15.0 (TID 42)
+02-20@20:03:58 INFO  (Logging.scala:60)     - Getting 9 (540.0 B) non-empty blocks including 9 (540.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:03:58 INFO  (Logging.scala:60)     - Started 0 remote fetches in 6 ms
+02-20@20:03:59 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 15.0 (TID 42). 4038 bytes result sent to driver
+02-20@20:03:59 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 15.0 (TID 42) in 360 ms on 10.0.2.15 (executor driver) (1/1)
+02-20@20:03:59 INFO  (Logging.scala:60)     - Removed TaskSet 15.0, whose tasks have all completed, from pool 
+02-20@20:03:59 INFO  (Logging.scala:60)     - Removed broadcast_11_piece0 on 10.0.2.15:38385 in memory (size: 7.8 KiB, free: 430.5 MiB)
+02-20@20:03:59 INFO  (Logging.scala:60)     - ResultStage 15 (count at triangle_RSD.scala:42) finished in 0.537 s
+02-20@20:03:59 INFO  (Logging.scala:60)     - Job 7 is finished. Cancelling potential speculative or zombie tasks for this job
+02-20@20:03:59 INFO  (Logging.scala:60)     - Killing all running tasks in stage 15: Stage finished
+02-20@20:03:59 INFO  (Logging.scala:60)     - Job 7 finished: count at triangle_RSD.scala:42, took 0.717075 s
+02-20@20:03:59 INFO  (triangle_RSD.scala:43)     - Social Triangles Count found:520311
+02-20@20:03:59 INFO  (Logging.scala:60)     - Removed broadcast_9_piece0 on 10.0.2.15:38385 in memory (size: 4.2 KiB, free: 430.5 MiB)
+02-20@20:03:59 INFO  (Logging.scala:60)     - Removed broadcast_8_piece0 on 10.0.2.15:38385 in memory (size: 7.5 KiB, free: 430.5 MiB)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Removed broadcast_5_piece0 on 10.0.2.15:38385 in memory (size: 8.4 KiB, free: 430.5 MiB)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Pushed Filters: IsNotNull(midNode),IsNotNull(outNode),LessThanOrEqual(midNode,10000),LessThanOrEqual(outNode,10000)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Post-Scan Filters: isnotnull(midNode#0),isnotnull(outNode#1),(midNode#0 <= 10000),(outNode#1 <= 10000)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Pushed Filters: IsNotNull(midNode),IsNotNull(outNode),LessThanOrEqual(midNode,10000),LessThanOrEqual(outNode,10000)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Post-Scan Filters: isnotnull(midNode#11),isnotnull(outNode#12),(midNode#11 <= 10000),(outNode#12 <= 10000)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Pushed Filters: IsNotNull(midNode),IsNotNull(outNode),LessThanOrEqual(midNode,10000),LessThanOrEqual(outNode,10000)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Post-Scan Filters: isnotnull(midNode#24),isnotnull(outNode#25),(midNode#24 <= 10000),(outNode#25 <= 10000)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Block broadcast_13 stored as values in memory (estimated size 300.5 KiB, free 417.3 MiB)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Block broadcast_13_piece0 stored as bytes in memory (estimated size 53.2 KiB, free 417.2 MiB)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Added broadcast_13_piece0 in memory on 10.0.2.15:38385 (size: 53.2 KiB, free: 430.5 MiB)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Created broadcast 13 from save at triangle_RSD.scala:44
+02-20@20:04:00 INFO  (Logging.scala:60)     - Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+02-20@20:04:00 INFO  (Logging.scala:60)     - Registering RDD 28 (save at triangle_RSD.scala:44) as input to shuffle 5
+02-20@20:04:00 INFO  (Logging.scala:60)     - Got map stage job 8 (save at triangle_RSD.scala:44) with 10 output partitions
+02-20@20:04:00 INFO  (Logging.scala:60)     - Final stage: ShuffleMapStage 16 (save at triangle_RSD.scala:44)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Parents of final stage: List()
+02-20@20:04:00 INFO  (Logging.scala:60)     - Missing parents: List()
+02-20@20:04:00 INFO  (Logging.scala:60)     - Block broadcast_14 stored as values in memory (estimated size 300.5 KiB, free 416.9 MiB)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Submitting ShuffleMapStage 16 (MapPartitionsRDD[28] at save at triangle_RSD.scala:44), which has no missing parents
+02-20@20:04:00 INFO  (Logging.scala:60)     - Block broadcast_15 stored as values in memory (estimated size 16.8 KiB, free 416.9 MiB)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Block broadcast_15_piece0 stored as bytes in memory (estimated size 8.4 KiB, free 416.9 MiB)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Block broadcast_14_piece0 stored as bytes in memory (estimated size 53.2 KiB, free 416.9 MiB)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Added broadcast_15_piece0 in memory on 10.0.2.15:38385 (size: 8.4 KiB, free: 430.5 MiB)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Added broadcast_14_piece0 in memory on 10.0.2.15:38385 (size: 53.2 KiB, free: 430.4 MiB)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Created broadcast 15 from broadcast at DAGScheduler.scala:1535
+02-20@20:04:00 INFO  (Logging.scala:60)     - Submitting 10 missing tasks from ShuffleMapStage 16 (MapPartitionsRDD[28] at save at triangle_RSD.scala:44) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9))
+02-20@20:04:00 INFO  (Logging.scala:60)     - Adding task set 16.0 with 10 tasks resource profile 0
+02-20@20:04:00 INFO  (Logging.scala:60)     - Created broadcast 14 from save at triangle_RSD.scala:44
+02-20@20:04:00 INFO  (Logging.scala:60)     - Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+02-20@20:04:00 INFO  (Logging.scala:60)     - Starting task 0.0 in stage 16.0 (TID 43) (10.0.2.15, executor driver, partition 0, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:04:00 INFO  (Logging.scala:60)     - Starting task 1.0 in stage 16.0 (TID 44) (10.0.2.15, executor driver, partition 1, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:04:00 INFO  (Logging.scala:60)     - Starting task 2.0 in stage 16.0 (TID 45) (10.0.2.15, executor driver, partition 2, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:04:00 INFO  (Logging.scala:60)     - Starting task 3.0 in stage 16.0 (TID 46) (10.0.2.15, executor driver, partition 3, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:04:00 INFO  (Logging.scala:60)     - Running task 2.0 in stage 16.0 (TID 45)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Registering RDD 32 (save at triangle_RSD.scala:44) as input to shuffle 6
+02-20@20:04:00 INFO  (Logging.scala:60)     - Running task 1.0 in stage 16.0 (TID 44)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Got map stage job 9 (save at triangle_RSD.scala:44) with 10 output partitions
+02-20@20:04:00 INFO  (Logging.scala:60)     - Final stage: ShuffleMapStage 17 (save at triangle_RSD.scala:44)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Parents of final stage: List()
+02-20@20:04:00 INFO  (Logging.scala:60)     - Running task 0.0 in stage 16.0 (TID 43)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Running task 3.0 in stage 16.0 (TID 46)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Block broadcast_16 stored as values in memory (estimated size 300.5 KiB, free 416.6 MiB)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Missing parents: List()
+02-20@20:04:00 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 268435456-402653184, partition values: [empty row]
+02-20@20:04:00 INFO  (Logging.scala:60)     - Submitting ShuffleMapStage 17 (MapPartitionsRDD[32] at save at triangle_RSD.scala:44), which has no missing parents
+02-20@20:04:00 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 134217728-268435456, partition values: [empty row]
+02-20@20:04:00 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 0-134217728, partition values: [empty row]
+02-20@20:04:00 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 402653184-536870912, partition values: [empty row]
+02-20@20:04:00 INFO  (Logging.scala:60)     - Block broadcast_17 stored as values in memory (estimated size 16.5 KiB, free 416.6 MiB)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Block broadcast_16_piece0 stored as bytes in memory (estimated size 53.2 KiB, free 416.5 MiB)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Block broadcast_17_piece0 stored as bytes in memory (estimated size 8.3 KiB, free 416.5 MiB)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Added broadcast_16_piece0 in memory on 10.0.2.15:38385 (size: 53.2 KiB, free: 430.4 MiB)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Added broadcast_17_piece0 in memory on 10.0.2.15:38385 (size: 8.3 KiB, free: 430.4 MiB)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Created broadcast 16 from save at triangle_RSD.scala:44
+02-20@20:04:00 INFO  (Logging.scala:60)     - Created broadcast 17 from broadcast at DAGScheduler.scala:1535
+02-20@20:04:00 INFO  (Logging.scala:60)     - Planning scan with bin packing, max size: 134217728 bytes, open cost is considered as scanning 4194304 bytes.
+02-20@20:04:00 INFO  (Logging.scala:60)     - Submitting 10 missing tasks from ShuffleMapStage 17 (MapPartitionsRDD[32] at save at triangle_RSD.scala:44) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9))
+02-20@20:04:00 INFO  (Logging.scala:60)     - Adding task set 17.0 with 10 tasks resource profile 0
+02-20@20:04:00 INFO  (Logging.scala:60)     - Registering RDD 36 (save at triangle_RSD.scala:44) as input to shuffle 7
+02-20@20:04:00 INFO  (Logging.scala:60)     - Got map stage job 10 (save at triangle_RSD.scala:44) with 10 output partitions
+02-20@20:04:00 INFO  (Logging.scala:60)     - Final stage: ShuffleMapStage 18 (save at triangle_RSD.scala:44)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Parents of final stage: List()
+02-20@20:04:00 INFO  (Logging.scala:60)     - Missing parents: List()
+02-20@20:04:00 INFO  (Logging.scala:60)     - Submitting ShuffleMapStage 18 (MapPartitionsRDD[36] at save at triangle_RSD.scala:44), which has no missing parents
+02-20@20:04:00 INFO  (Logging.scala:60)     - Block broadcast_18 stored as values in memory (estimated size 16.8 KiB, free 416.5 MiB)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Block broadcast_18_piece0 stored as bytes in memory (estimated size 8.4 KiB, free 416.5 MiB)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Added broadcast_18_piece0 in memory on 10.0.2.15:38385 (size: 8.4 KiB, free: 430.4 MiB)
+02-20@20:04:00 INFO  (Logging.scala:60)     - Created broadcast 18 from broadcast at DAGScheduler.scala:1535
+02-20@20:04:00 INFO  (Logging.scala:60)     - Submitting 10 missing tasks from ShuffleMapStage 18 (MapPartitionsRDD[36] at save at triangle_RSD.scala:44) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9))
+02-20@20:04:00 INFO  (Logging.scala:60)     - Adding task set 18.0 with 10 tasks resource profile 0
+02-20@20:04:01 INFO  (Logging.scala:60)     - Removed broadcast_12_piece0 on 10.0.2.15:38385 in memory (size: 5.8 KiB, free: 430.4 MiB)
+02-20@20:05:00 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 16.0 (TID 45). 2085 bytes result sent to driver
+02-20@20:05:00 INFO  (Logging.scala:60)     - Starting task 4.0 in stage 16.0 (TID 47) (10.0.2.15, executor driver, partition 4, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:05:00 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 16.0 (TID 45) in 59752 ms on 10.0.2.15 (executor driver) (1/10)
+02-20@20:05:00 INFO  (Logging.scala:60)     - Running task 4.0 in stage 16.0 (TID 47)
+02-20@20:05:00 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 536870912-671088640, partition values: [empty row]
+02-20@20:05:00 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 16.0 (TID 44). 2085 bytes result sent to driver
+02-20@20:05:00 INFO  (Logging.scala:60)     - Starting task 5.0 in stage 16.0 (TID 48) (10.0.2.15, executor driver, partition 5, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:05:00 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 16.0 (TID 44) in 59951 ms on 10.0.2.15 (executor driver) (2/10)
+02-20@20:05:00 INFO  (Logging.scala:60)     - Running task 5.0 in stage 16.0 (TID 48)
+02-20@20:05:00 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 671088640-805306368, partition values: [empty row]
+02-20@20:05:00 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 16.0 (TID 46). 2085 bytes result sent to driver
+02-20@20:05:00 INFO  (Logging.scala:60)     - Starting task 6.0 in stage 16.0 (TID 49) (10.0.2.15, executor driver, partition 6, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:05:00 INFO  (Logging.scala:60)     - Running task 6.0 in stage 16.0 (TID 49)
+02-20@20:05:00 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 16.0 (TID 46) in 59993 ms on 10.0.2.15 (executor driver) (3/10)
+02-20@20:05:00 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 805306368-939524096, partition values: [empty row]
+02-20@20:05:00 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 16.0 (TID 43). 2085 bytes result sent to driver
+02-20@20:05:00 INFO  (Logging.scala:60)     - Starting task 7.0 in stage 16.0 (TID 50) (10.0.2.15, executor driver, partition 7, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:05:00 INFO  (Logging.scala:60)     - Running task 7.0 in stage 16.0 (TID 50)
+02-20@20:05:00 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 16.0 (TID 43) in 60210 ms on 10.0.2.15 (executor driver) (4/10)
+02-20@20:05:00 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 939524096-1073741824, partition values: [empty row]
+02-20@20:06:00 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 16.0 (TID 50). 1913 bytes result sent to driver
+02-20@20:06:00 INFO  (Logging.scala:60)     - Starting task 8.0 in stage 16.0 (TID 51) (10.0.2.15, executor driver, partition 8, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:06:00 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 16.0 (TID 50) in 59558 ms on 10.0.2.15 (executor driver) (5/10)
+02-20@20:06:00 INFO  (Logging.scala:60)     - Running task 8.0 in stage 16.0 (TID 51)
+02-20@20:06:00 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 1073741824-1207959552, partition values: [empty row]
+02-20@20:06:00 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 16.0 (TID 49). 1913 bytes result sent to driver
+02-20@20:06:00 INFO  (Logging.scala:60)     - Starting task 9.0 in stage 16.0 (TID 52) (10.0.2.15, executor driver, partition 9, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:06:00 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 16.0 (TID 49) in 59966 ms on 10.0.2.15 (executor driver) (6/10)
+02-20@20:06:00 INFO  (Logging.scala:60)     - Running task 9.0 in stage 16.0 (TID 52)
+02-20@20:06:00 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 1207959552-1319281825, partition values: [empty row]
+02-20@20:06:00 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 16.0 (TID 48). 2085 bytes result sent to driver
+02-20@20:06:00 INFO  (Logging.scala:60)     - Starting task 0.0 in stage 17.0 (TID 53) (10.0.2.15, executor driver, partition 0, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:06:00 INFO  (Logging.scala:60)     - Running task 0.0 in stage 17.0 (TID 53)
+02-20@20:06:00 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 16.0 (TID 48) in 60628 ms on 10.0.2.15 (executor driver) (7/10)
+02-20@20:06:00 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 0-134217728, partition values: [empty row]
+02-20@20:06:01 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 16.0 (TID 47). 2085 bytes result sent to driver
+02-20@20:06:01 INFO  (Logging.scala:60)     - Starting task 1.0 in stage 17.0 (TID 54) (10.0.2.15, executor driver, partition 1, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:06:01 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 16.0 (TID 47) in 61180 ms on 10.0.2.15 (executor driver) (8/10)
+02-20@20:06:01 INFO  (Logging.scala:60)     - Running task 1.0 in stage 17.0 (TID 54)
+02-20@20:06:01 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 134217728-268435456, partition values: [empty row]
+02-20@20:06:53 INFO  (Logging.scala:60)     - Finished task 9.0 in stage 16.0 (TID 52). 1913 bytes result sent to driver
+02-20@20:06:53 INFO  (Logging.scala:60)     - Starting task 2.0 in stage 17.0 (TID 55) (10.0.2.15, executor driver, partition 2, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:06:53 INFO  (Logging.scala:60)     - Finished task 9.0 in stage 16.0 (TID 52) in 53682 ms on 10.0.2.15 (executor driver) (9/10)
+02-20@20:06:53 INFO  (Logging.scala:60)     - Running task 2.0 in stage 17.0 (TID 55)
+02-20@20:06:53 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 268435456-402653184, partition values: [empty row]
+02-20@20:07:04 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 16.0 (TID 51). 1913 bytes result sent to driver
+02-20@20:07:04 INFO  (Logging.scala:60)     - Starting task 3.0 in stage 17.0 (TID 56) (10.0.2.15, executor driver, partition 3, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:07:04 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 16.0 (TID 51) in 64509 ms on 10.0.2.15 (executor driver) (10/10)
+02-20@20:07:04 INFO  (Logging.scala:60)     - Removed TaskSet 16.0, whose tasks have all completed, from pool 
+02-20@20:07:04 INFO  (Logging.scala:60)     - Running task 3.0 in stage 17.0 (TID 56)
+02-20@20:07:04 INFO  (Logging.scala:60)     - ShuffleMapStage 16 (save at triangle_RSD.scala:44) finished in 184.294 s
+02-20@20:07:04 INFO  (Logging.scala:60)     - looking for newly runnable stages
+02-20@20:07:04 INFO  (Logging.scala:60)     - running: Set(ShuffleMapStage 17, ShuffleMapStage 18)
+02-20@20:07:04 INFO  (Logging.scala:60)     - waiting: Set()
+02-20@20:07:04 INFO  (Logging.scala:60)     - failed: Set()
+02-20@20:07:04 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 402653184-536870912, partition values: [empty row]
+02-20@20:07:04 INFO  (Logging.scala:60)     - For shuffle(5), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+02-20@20:07:04 INFO  (Logging.scala:60)     - Starting job: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264
+02-20@20:07:04 INFO  (Logging.scala:60)     - Got job 11 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) with 1 output partitions
+02-20@20:07:04 INFO  (Logging.scala:60)     - Final stage: ResultStage 20 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264)
+02-20@20:07:04 INFO  (Logging.scala:60)     - Parents of final stage: List(ShuffleMapStage 19)
+02-20@20:07:04 INFO  (Logging.scala:60)     - Missing parents: List()
+02-20@20:07:04 INFO  (Logging.scala:60)     - Submitting ResultStage 20 (MapPartitionsRDD[38] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264), which has no missing parents
+02-20@20:07:04 INFO  (Logging.scala:60)     - Block broadcast_19 stored as values in memory (estimated size 8.2 KiB, free 416.5 MiB)
+02-20@20:07:04 INFO  (Logging.scala:60)     - Block broadcast_19_piece0 stored as bytes in memory (estimated size 4.2 KiB, free 416.5 MiB)
+02-20@20:07:04 INFO  (Logging.scala:60)     - Added broadcast_19_piece0 in memory on 10.0.2.15:38385 (size: 4.2 KiB, free: 430.4 MiB)
+02-20@20:07:04 INFO  (Logging.scala:60)     - Created broadcast 19 from broadcast at DAGScheduler.scala:1535
+02-20@20:07:04 INFO  (Logging.scala:60)     - Submitting 1 missing tasks from ResultStage 20 (MapPartitionsRDD[38] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) (first 15 tasks are for partitions Vector(0))
+02-20@20:07:04 INFO  (Logging.scala:60)     - Adding task set 20.0 with 1 tasks resource profile 0
+02-20@20:07:05 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 17.0 (TID 54). 2085 bytes result sent to driver
+02-20@20:07:05 INFO  (Logging.scala:60)     - Starting task 4.0 in stage 17.0 (TID 57) (10.0.2.15, executor driver, partition 4, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:07:05 INFO  (Logging.scala:60)     - Running task 4.0 in stage 17.0 (TID 57)
+02-20@20:07:05 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 17.0 (TID 54) in 64676 ms on 10.0.2.15 (executor driver) (1/10)
+02-20@20:07:05 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 536870912-671088640, partition values: [empty row]
+02-20@20:07:06 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 17.0 (TID 53). 2085 bytes result sent to driver
+02-20@20:07:06 INFO  (Logging.scala:60)     - Starting task 5.0 in stage 17.0 (TID 58) (10.0.2.15, executor driver, partition 5, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:07:06 INFO  (Logging.scala:60)     - Running task 5.0 in stage 17.0 (TID 58)
+02-20@20:07:06 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 17.0 (TID 53) in 65403 ms on 10.0.2.15 (executor driver) (2/10)
+02-20@20:07:06 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 671088640-805306368, partition values: [empty row]
+02-20@20:08:10 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 17.0 (TID 55). 2085 bytes result sent to driver
+02-20@20:08:10 INFO  (Logging.scala:60)     - Starting task 6.0 in stage 17.0 (TID 59) (10.0.2.15, executor driver, partition 6, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:08:10 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 17.0 (TID 55) in 76243 ms on 10.0.2.15 (executor driver) (3/10)
+02-20@20:08:10 INFO  (Logging.scala:60)     - Running task 6.0 in stage 17.0 (TID 59)
+02-20@20:08:10 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 805306368-939524096, partition values: [empty row]
+02-20@20:08:24 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 17.0 (TID 56). 2085 bytes result sent to driver
+02-20@20:08:24 INFO  (Logging.scala:60)     - Starting task 7.0 in stage 17.0 (TID 60) (10.0.2.15, executor driver, partition 7, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:08:24 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 17.0 (TID 56) in 79422 ms on 10.0.2.15 (executor driver) (4/10)
+02-20@20:08:24 INFO  (Logging.scala:60)     - Running task 7.0 in stage 17.0 (TID 60)
+02-20@20:08:24 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 939524096-1073741824, partition values: [empty row]
+02-20@20:08:24 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 17.0 (TID 57). 2085 bytes result sent to driver
+02-20@20:08:24 INFO  (Logging.scala:60)     - Starting task 8.0 in stage 17.0 (TID 61) (10.0.2.15, executor driver, partition 8, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:08:24 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 17.0 (TID 57) in 78461 ms on 10.0.2.15 (executor driver) (5/10)
+02-20@20:08:24 INFO  (Logging.scala:60)     - Running task 8.0 in stage 17.0 (TID 61)
+02-20@20:08:24 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 1073741824-1207959552, partition values: [empty row]
+02-20@20:08:25 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 17.0 (TID 58). 2085 bytes result sent to driver
+02-20@20:08:25 INFO  (Logging.scala:60)     - Starting task 9.0 in stage 17.0 (TID 62) (10.0.2.15, executor driver, partition 9, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:08:25 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 17.0 (TID 58) in 79445 ms on 10.0.2.15 (executor driver) (6/10)
+02-20@20:08:25 INFO  (Logging.scala:60)     - Running task 9.0 in stage 17.0 (TID 62)
+02-20@20:08:25 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 1207959552-1319281825, partition values: [empty row]
+02-20@20:09:28 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 17.0 (TID 59). 1913 bytes result sent to driver
+02-20@20:09:28 INFO  (Logging.scala:60)     - Starting task 0.0 in stage 18.0 (TID 63) (10.0.2.15, executor driver, partition 0, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:09:28 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 17.0 (TID 59) in 78696 ms on 10.0.2.15 (executor driver) (7/10)
+02-20@20:09:28 INFO  (Logging.scala:60)     - Running task 0.0 in stage 18.0 (TID 63)
+02-20@20:09:28 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 0-134217728, partition values: [empty row]
+02-20@20:09:30 INFO  (Logging.scala:60)     - Finished task 9.0 in stage 17.0 (TID 62). 1913 bytes result sent to driver
+02-20@20:09:30 INFO  (Logging.scala:60)     - Starting task 1.0 in stage 18.0 (TID 64) (10.0.2.15, executor driver, partition 1, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:09:30 INFO  (Logging.scala:60)     - Running task 1.0 in stage 18.0 (TID 64)
+02-20@20:09:30 INFO  (Logging.scala:60)     - Finished task 9.0 in stage 17.0 (TID 62) in 64703 ms on 10.0.2.15 (executor driver) (8/10)
+02-20@20:09:30 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 134217728-268435456, partition values: [empty row]
+02-20@20:09:40 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 17.0 (TID 61). 1913 bytes result sent to driver
+02-20@20:09:40 INFO  (Logging.scala:60)     - Starting task 2.0 in stage 18.0 (TID 65) (10.0.2.15, executor driver, partition 2, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:09:40 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 17.0 (TID 61) in 75781 ms on 10.0.2.15 (executor driver) (9/10)
+02-20@20:09:40 INFO  (Logging.scala:60)     - Running task 2.0 in stage 18.0 (TID 65)
+02-20@20:09:40 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 268435456-402653184, partition values: [empty row]
+02-20@20:09:40 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 17.0 (TID 60). 1913 bytes result sent to driver
+02-20@20:09:40 INFO  (Logging.scala:60)     - Starting task 3.0 in stage 18.0 (TID 66) (10.0.2.15, executor driver, partition 3, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:09:40 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 17.0 (TID 60) in 76499 ms on 10.0.2.15 (executor driver) (10/10)
+02-20@20:09:40 INFO  (Logging.scala:60)     - Removed TaskSet 17.0, whose tasks have all completed, from pool 
+02-20@20:09:40 INFO  (Logging.scala:60)     - ShuffleMapStage 17 (save at triangle_RSD.scala:44) finished in 339.995 s
+02-20@20:09:40 INFO  (Logging.scala:60)     - looking for newly runnable stages
+02-20@20:09:40 INFO  (Logging.scala:60)     - running: Set(ResultStage 20, ShuffleMapStage 18)
+02-20@20:09:40 INFO  (Logging.scala:60)     - waiting: Set()
+02-20@20:09:40 INFO  (Logging.scala:60)     - failed: Set()
+02-20@20:09:40 INFO  (Logging.scala:60)     - Running task 3.0 in stage 18.0 (TID 66)
+02-20@20:09:40 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 402653184-536870912, partition values: [empty row]
+02-20@20:10:00 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 18.0 (TID 64). 2085 bytes result sent to driver
+02-20@20:10:00 INFO  (Logging.scala:60)     - Starting task 4.0 in stage 18.0 (TID 67) (10.0.2.15, executor driver, partition 4, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:10:00 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 18.0 (TID 64) in 30255 ms on 10.0.2.15 (executor driver) (1/10)
+02-20@20:10:00 INFO  (Logging.scala:60)     - Running task 4.0 in stage 18.0 (TID 67)
+02-20@20:10:00 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 536870912-671088640, partition values: [empty row]
+02-20@20:10:35 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 18.0 (TID 63). 2085 bytes result sent to driver
+02-20@20:10:35 INFO  (Logging.scala:60)     - Starting task 5.0 in stage 18.0 (TID 68) (10.0.2.15, executor driver, partition 5, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:10:35 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 18.0 (TID 63) in 66762 ms on 10.0.2.15 (executor driver) (2/10)
+02-20@20:10:35 INFO  (Logging.scala:60)     - Running task 5.0 in stage 18.0 (TID 68)
+02-20@20:10:35 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 671088640-805306368, partition values: [empty row]
+02-20@20:10:35 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 18.0 (TID 65). 2085 bytes result sent to driver
+02-20@20:10:35 INFO  (Logging.scala:60)     - Starting task 6.0 in stage 18.0 (TID 69) (10.0.2.15, executor driver, partition 6, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:10:35 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 18.0 (TID 65) in 55745 ms on 10.0.2.15 (executor driver) (3/10)
+02-20@20:10:35 INFO  (Logging.scala:60)     - Running task 6.0 in stage 18.0 (TID 69)
+02-20@20:10:35 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 805306368-939524096, partition values: [empty row]
+02-20@20:10:48 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 18.0 (TID 66). 2085 bytes result sent to driver
+02-20@20:10:48 INFO  (Logging.scala:60)     - Starting task 7.0 in stage 18.0 (TID 70) (10.0.2.15, executor driver, partition 7, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:10:48 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 18.0 (TID 66) in 67614 ms on 10.0.2.15 (executor driver) (4/10)
+02-20@20:10:48 INFO  (Logging.scala:60)     - Running task 7.0 in stage 18.0 (TID 70)
+02-20@20:10:48 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 939524096-1073741824, partition values: [empty row]
+02-20@20:11:05 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 18.0 (TID 67). 2085 bytes result sent to driver
+02-20@20:11:05 INFO  (Logging.scala:60)     - Starting task 8.0 in stage 18.0 (TID 71) (10.0.2.15, executor driver, partition 8, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:11:05 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 18.0 (TID 67) in 65265 ms on 10.0.2.15 (executor driver) (5/10)
+02-20@20:11:05 INFO  (Logging.scala:60)     - Running task 8.0 in stage 18.0 (TID 71)
+02-20@20:11:05 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 1073741824-1207959552, partition values: [empty row]
+02-20@20:11:38 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 18.0 (TID 68). 2085 bytes result sent to driver
+02-20@20:11:38 INFO  (Logging.scala:60)     - Starting task 9.0 in stage 18.0 (TID 72) (10.0.2.15, executor driver, partition 9, PROCESS_LOCAL, 7924 bytes) 
+02-20@20:11:38 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 18.0 (TID 68) in 62841 ms on 10.0.2.15 (executor driver) (6/10)
+02-20@20:11:38 INFO  (Logging.scala:60)     - Running task 9.0 in stage 18.0 (TID 72)
+02-20@20:11:38 INFO  (Logging.scala:60)     - Reading File path: file:///media/sf_K_DRIVE/hw-3-kokomocha/input/edges.csv, range: 1207959552-1319281825, partition values: [empty row]
+02-20@20:11:39 INFO  (Logging.scala:60)     - Removed broadcast_17_piece0 on 10.0.2.15:38385 in memory (size: 8.3 KiB, free: 430.4 MiB)
+02-20@20:11:39 INFO  (Logging.scala:60)     - Removed broadcast_7_piece0 on 10.0.2.15:38385 in memory (size: 1257.5 KiB, free: 431.6 MiB)
+02-20@20:11:39 INFO  (Logging.scala:60)     - Removed broadcast_15_piece0 on 10.0.2.15:38385 in memory (size: 8.4 KiB, free: 431.6 MiB)
+02-20@20:11:39 INFO  (Logging.scala:60)     - Removed broadcast_10_piece0 on 10.0.2.15:38385 in memory (size: 2.5 MiB, free: 434.1 MiB)
+02-20@20:11:39 INFO  (Logging.scala:60)     - Removed broadcast_0_piece0 on 10.0.2.15:38385 in memory (size: 53.2 KiB, free: 434.1 MiB)
+02-20@20:11:39 INFO  (Logging.scala:60)     - Removed broadcast_2_piece0 on 10.0.2.15:38385 in memory (size: 53.2 KiB, free: 434.2 MiB)
+02-20@20:11:39 INFO  (Logging.scala:60)     - Removed broadcast_1_piece0 on 10.0.2.15:38385 in memory (size: 53.2 KiB, free: 434.2 MiB)
+02-20@20:11:49 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 18.0 (TID 69). 1913 bytes result sent to driver
+02-20@20:11:49 INFO  (Logging.scala:60)     - Starting task 0.0 in stage 20.0 (TID 73) (10.0.2.15, executor driver, partition 0, NODE_LOCAL, 7379 bytes) 
+02-20@20:11:49 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 18.0 (TID 69) in 74086 ms on 10.0.2.15 (executor driver) (7/10)
+02-20@20:11:49 INFO  (Logging.scala:60)     - Running task 0.0 in stage 20.0 (TID 73)
+02-20@20:11:50 INFO  (Logging.scala:60)     - Getting 6 (1004.8 KiB) non-empty blocks including 6 (1004.8 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:11:50 INFO  (Logging.scala:60)     - Started 0 remote fetches in 4 ms
+02-20@20:11:50 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 20.0 (TID 73). 848764 bytes result sent to driver
+02-20@20:11:50 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 20.0 (TID 73) in 198 ms on 10.0.2.15 (executor driver) (1/1)
+02-20@20:11:50 INFO  (Logging.scala:60)     - Removed TaskSet 20.0, whose tasks have all completed, from pool 
+02-20@20:11:50 INFO  (Logging.scala:60)     - ResultStage 20 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) finished in 285.347 s
+02-20@20:11:50 INFO  (Logging.scala:60)     - Job 11 is finished. Cancelling potential speculative or zombie tasks for this job
+02-20@20:11:50 INFO  (Logging.scala:60)     - Killing all running tasks in stage 20: Stage finished
+02-20@20:11:50 INFO  (Logging.scala:60)     - Job 11 finished: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264, took 285.428249 s
+02-20@20:11:50 INFO  (Logging.scala:60)     - Block broadcast_20 stored as values in memory (estimated size 4.1 MiB, free 429.3 MiB)
+02-20@20:11:50 INFO  (Logging.scala:60)     - Block broadcast_20_piece0 stored as bytes in memory (estimated size 1257.5 KiB, free 428.0 MiB)
+02-20@20:11:50 INFO  (Logging.scala:60)     - Added broadcast_20_piece0 in memory on 10.0.2.15:38385 (size: 1257.5 KiB, free: 433.0 MiB)
+02-20@20:11:50 INFO  (Logging.scala:60)     - Created broadcast 20 from $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264
+02-20@20:11:50 INFO  (Logging.scala:60)     - For shuffle(6), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+02-20@20:11:50 INFO  (Logging.scala:60)     - Code generated in 14.80193 ms
+02-20@20:11:50 INFO  (Logging.scala:60)     - Registering RDD 41 (save at triangle_RSD.scala:44) as input to shuffle 8
+02-20@20:11:50 INFO  (Logging.scala:60)     - Got map stage job 12 (save at triangle_RSD.scala:44) with 1 output partitions
+02-20@20:11:50 INFO  (Logging.scala:60)     - Final stage: ShuffleMapStage 22 (save at triangle_RSD.scala:44)
+02-20@20:11:50 INFO  (Logging.scala:60)     - Parents of final stage: List(ShuffleMapStage 21)
+02-20@20:11:50 INFO  (Logging.scala:60)     - Missing parents: List()
+02-20@20:11:50 INFO  (Logging.scala:60)     - Submitting ShuffleMapStage 22 (MapPartitionsRDD[41] at save at triangle_RSD.scala:44), which has no missing parents
+02-20@20:11:50 INFO  (Logging.scala:60)     - Block broadcast_21 stored as values in memory (estimated size 15.3 KiB, free 428.0 MiB)
+02-20@20:11:50 INFO  (Logging.scala:60)     - Block broadcast_21_piece0 stored as bytes in memory (estimated size 7.6 KiB, free 428.0 MiB)
+02-20@20:11:50 INFO  (Logging.scala:60)     - Added broadcast_21_piece0 in memory on 10.0.2.15:38385 (size: 7.6 KiB, free: 433.0 MiB)
+02-20@20:11:50 INFO  (Logging.scala:60)     - Created broadcast 21 from broadcast at DAGScheduler.scala:1535
+02-20@20:11:50 INFO  (Logging.scala:60)     - Submitting 1 missing tasks from ShuffleMapStage 22 (MapPartitionsRDD[41] at save at triangle_RSD.scala:44) (first 15 tasks are for partitions Vector(0))
+02-20@20:11:50 INFO  (Logging.scala:60)     - Adding task set 22.0 with 1 tasks resource profile 0
+02-20@20:11:50 INFO  (Logging.scala:60)     - Starting task 0.0 in stage 22.0 (TID 74) (10.0.2.15, executor driver, partition 0, NODE_LOCAL, 7368 bytes) 
+02-20@20:11:50 INFO  (Logging.scala:60)     - Running task 0.0 in stage 22.0 (TID 74)
+02-20@20:11:50 INFO  (Logging.scala:60)     - Getting 6 (901.3 KiB) non-empty blocks including 6 (901.3 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:11:50 INFO  (Logging.scala:60)     - Started 0 remote fetches in 7 ms
+02-20@20:11:50 INFO  (Logging.scala:60)     - Code generated in 14.47292 ms
+02-20@20:11:59 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 18.0 (TID 70). 1913 bytes result sent to driver
+02-20@20:11:59 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 18.0 (TID 70) in 71505 ms on 10.0.2.15 (executor driver) (8/10)
+02-20@20:12:23 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 22.0 (TID 74). 4339 bytes result sent to driver
+02-20@20:12:23 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 22.0 (TID 74) in 33099 ms on 10.0.2.15 (executor driver) (1/1)
+02-20@20:12:23 INFO  (Logging.scala:60)     - Removed TaskSet 22.0, whose tasks have all completed, from pool 
+02-20@20:12:23 INFO  (Logging.scala:60)     - ShuffleMapStage 22 (save at triangle_RSD.scala:44) finished in 33.176 s
+02-20@20:12:23 INFO  (Logging.scala:60)     - looking for newly runnable stages
+02-20@20:12:23 INFO  (Logging.scala:60)     - running: Set(ShuffleMapStage 18)
+02-20@20:12:23 INFO  (Logging.scala:60)     - waiting: Set()
+02-20@20:12:23 INFO  (Logging.scala:60)     - failed: Set()
+02-20@20:12:26 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 18.0 (TID 71). 1913 bytes result sent to driver
+02-20@20:12:26 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 18.0 (TID 71) in 80590 ms on 10.0.2.15 (executor driver) (9/10)
+02-20@20:12:36 INFO  (Logging.scala:60)     - Finished task 9.0 in stage 18.0 (TID 72). 1913 bytes result sent to driver
+02-20@20:12:36 INFO  (Logging.scala:60)     - Finished task 9.0 in stage 18.0 (TID 72) in 57943 ms on 10.0.2.15 (executor driver) (10/10)
+02-20@20:12:36 INFO  (Logging.scala:60)     - Removed TaskSet 18.0, whose tasks have all completed, from pool 
+02-20@20:12:36 INFO  (Logging.scala:60)     - ShuffleMapStage 18 (save at triangle_RSD.scala:44) finished in 515.807 s
+02-20@20:12:36 INFO  (Logging.scala:60)     - looking for newly runnable stages
+02-20@20:12:36 INFO  (Logging.scala:60)     - running: Set()
+02-20@20:12:36 INFO  (Logging.scala:60)     - waiting: Set()
+02-20@20:12:36 INFO  (Logging.scala:60)     - failed: Set()
+02-20@20:12:36 INFO  (Logging.scala:60)     - For shuffle(7), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+02-20@20:12:36 INFO  (Logging.scala:60)     - Starting job: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264
+02-20@20:12:36 INFO  (Logging.scala:60)     - Got job 13 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) with 1 output partitions
+02-20@20:12:36 INFO  (Logging.scala:60)     - Final stage: ResultStage 24 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264)
+02-20@20:12:36 INFO  (Logging.scala:60)     - Parents of final stage: List(ShuffleMapStage 23)
+02-20@20:12:36 INFO  (Logging.scala:60)     - Missing parents: List()
+02-20@20:12:36 INFO  (Logging.scala:60)     - Submitting ResultStage 24 (MapPartitionsRDD[43] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264), which has no missing parents
+02-20@20:12:36 INFO  (Logging.scala:60)     - Block broadcast_22 stored as values in memory (estimated size 8.2 KiB, free 428.0 MiB)
+02-20@20:12:36 INFO  (Logging.scala:60)     - Block broadcast_22_piece0 stored as bytes in memory (estimated size 4.2 KiB, free 428.0 MiB)
+02-20@20:12:36 INFO  (Logging.scala:60)     - Added broadcast_22_piece0 in memory on 10.0.2.15:38385 (size: 4.2 KiB, free: 433.0 MiB)
+02-20@20:12:36 INFO  (Logging.scala:60)     - Created broadcast 22 from broadcast at DAGScheduler.scala:1535
+02-20@20:12:36 INFO  (Logging.scala:60)     - Submitting 1 missing tasks from ResultStage 24 (MapPartitionsRDD[43] at $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) (first 15 tasks are for partitions Vector(0))
+02-20@20:12:36 INFO  (Logging.scala:60)     - Adding task set 24.0 with 1 tasks resource profile 0
+02-20@20:12:36 INFO  (Logging.scala:60)     - Starting task 0.0 in stage 24.0 (TID 75) (10.0.2.15, executor driver, partition 0, NODE_LOCAL, 7379 bytes) 
+02-20@20:12:36 INFO  (Logging.scala:60)     - Running task 0.0 in stage 24.0 (TID 75)
+02-20@20:12:36 INFO  (Logging.scala:60)     - Getting 6 (1304.6 KiB) non-empty blocks including 6 (1304.6 KiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:12:36 INFO  (Logging.scala:60)     - Started 0 remote fetches in 4 ms
+02-20@20:12:36 INFO  (Logging.scala:60)     - Block taskresult_75 stored as bytes in memory (estimated size 1041.2 KiB, free 427.0 MiB)
+02-20@20:12:36 INFO  (Logging.scala:60)     - Added taskresult_75 in memory on 10.0.2.15:38385 (size: 1041.2 KiB, free: 432.0 MiB)
+02-20@20:12:36 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 24.0 (TID 75). 1066206 bytes result sent via BlockManager)
+02-20@20:12:36 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 24.0 (TID 75) in 188 ms on 10.0.2.15 (executor driver) (1/1)
+02-20@20:12:36 INFO  (Logging.scala:60)     - Removed TaskSet 24.0, whose tasks have all completed, from pool 
+02-20@20:12:36 INFO  (Logging.scala:60)     - ResultStage 24 ($anonfun$withThreadLocalCaptured$1 at FutureTask.java:264) finished in 0.225 s
+02-20@20:12:36 INFO  (Logging.scala:60)     - Job 13 is finished. Cancelling potential speculative or zombie tasks for this job
+02-20@20:12:36 INFO  (Logging.scala:60)     - Removed taskresult_75 on 10.0.2.15:38385 in memory (size: 1041.2 KiB, free: 433.0 MiB)
+02-20@20:12:36 INFO  (Logging.scala:60)     - Killing all running tasks in stage 24: Stage finished
+02-20@20:12:36 INFO  (Logging.scala:60)     - Job 13 finished: $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264, took 0.254722 s
+02-20@20:12:36 INFO  (Logging.scala:60)     - Block broadcast_23 stored as values in memory (estimated size 8.0 MiB, free 420.0 MiB)
+02-20@20:12:36 INFO  (Logging.scala:60)     - Block broadcast_23_piece0 stored as bytes in memory (estimated size 2.5 MiB, free 417.5 MiB)
+02-20@20:12:36 INFO  (Logging.scala:60)     - Added broadcast_23_piece0 in memory on 10.0.2.15:38385 (size: 2.5 MiB, free: 430.5 MiB)
+02-20@20:12:36 INFO  (Logging.scala:60)     - Created broadcast 23 from $anonfun$withThreadLocalCaptured$1 at FutureTask.java:264
+02-20@20:12:36 INFO  (Logging.scala:60)     - Removed broadcast_22_piece0 on 10.0.2.15:38385 in memory (size: 4.2 KiB, free: 430.5 MiB)
+02-20@20:12:36 INFO  (Logging.scala:60)     - For shuffle(8), advisory target size: 67108864, actual target size 67108864, minimum partition size: 1048576
+02-20@20:12:37 INFO  (Logging.scala:60)     - Removed broadcast_18_piece0 on 10.0.2.15:38385 in memory (size: 8.4 KiB, free: 430.5 MiB)
+02-20@20:12:37 INFO  (Logging.scala:60)     - Removed broadcast_19_piece0 on 10.0.2.15:38385 in memory (size: 4.2 KiB, free: 430.5 MiB)
+02-20@20:12:37 INFO  (PathOutputCommitterFactory.java:174)     - No output committer factory defined, defaulting to FileOutputCommitterFactory
+02-20@20:12:37 INFO  (Logging.scala:60)     - Removed broadcast_21_piece0 on 10.0.2.15:38385 in memory (size: 7.6 KiB, free: 430.6 MiB)
+02-20@20:12:37 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-20@20:12:37 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-20@20:12:37 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+02-20@20:12:37 INFO  (Logging.scala:60)     - Code generated in 8.405055 ms
+02-20@20:12:37 INFO  (Logging.scala:60)     - Starting job: save at triangle_RSD.scala:44
+02-20@20:12:37 INFO  (Logging.scala:60)     - Got job 14 (save at triangle_RSD.scala:44) with 10 output partitions
+02-20@20:12:37 INFO  (Logging.scala:60)     - Final stage: ResultStage 27 (save at triangle_RSD.scala:44)
+02-20@20:12:37 INFO  (Logging.scala:60)     - Parents of final stage: List(ShuffleMapStage 26)
+02-20@20:12:37 INFO  (Logging.scala:60)     - Missing parents: List()
+02-20@20:12:37 INFO  (Logging.scala:60)     - Submitting ResultStage 27 (MapPartitionsRDD[46] at save at triangle_RSD.scala:44), which has no missing parents
+02-20@20:12:37 INFO  (Logging.scala:60)     - Block broadcast_24 stored as values in memory (estimated size 313.8 KiB, free 417.3 MiB)
+02-20@20:12:37 INFO  (Logging.scala:60)     - Block broadcast_24_piece0 stored as bytes in memory (estimated size 116.2 KiB, free 417.2 MiB)
+02-20@20:12:37 INFO  (Logging.scala:60)     - Added broadcast_24_piece0 in memory on 10.0.2.15:38385 (size: 116.2 KiB, free: 430.4 MiB)
+02-20@20:12:37 INFO  (Logging.scala:60)     - Created broadcast 24 from broadcast at DAGScheduler.scala:1535
+02-20@20:12:37 INFO  (Logging.scala:60)     - Submitting 10 missing tasks from ResultStage 27 (MapPartitionsRDD[46] at save at triangle_RSD.scala:44) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9))
+02-20@20:12:37 INFO  (Logging.scala:60)     - Adding task set 27.0 with 10 tasks resource profile 0
+02-20@20:12:37 INFO  (Logging.scala:60)     - Starting task 0.0 in stage 27.0 (TID 76) (10.0.2.15, executor driver, partition 0, NODE_LOCAL, 7382 bytes) 
+02-20@20:12:37 INFO  (Logging.scala:60)     - Starting task 1.0 in stage 27.0 (TID 77) (10.0.2.15, executor driver, partition 1, NODE_LOCAL, 7382 bytes) 
+02-20@20:12:37 INFO  (Logging.scala:60)     - Starting task 2.0 in stage 27.0 (TID 78) (10.0.2.15, executor driver, partition 2, NODE_LOCAL, 7382 bytes) 
+02-20@20:12:37 INFO  (Logging.scala:60)     - Starting task 3.0 in stage 27.0 (TID 79) (10.0.2.15, executor driver, partition 3, NODE_LOCAL, 7382 bytes) 
+02-20@20:12:37 INFO  (Logging.scala:60)     - Running task 0.0 in stage 27.0 (TID 76)
+02-20@20:12:37 INFO  (Logging.scala:60)     - Running task 2.0 in stage 27.0 (TID 78)
+02-20@20:12:37 INFO  (Logging.scala:60)     - Running task 3.0 in stage 27.0 (TID 79)
+02-20@20:12:37 INFO  (Logging.scala:60)     - Running task 1.0 in stage 27.0 (TID 77)
+02-20@20:12:37 INFO  (Logging.scala:60)     - Getting 1 (59.9 MiB) non-empty blocks including 1 (59.9 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:12:37 INFO  (Logging.scala:60)     - Started 0 remote fetches in 5 ms
+02-20@20:12:37 INFO  (Logging.scala:60)     - Getting 1 (60.1 MiB) non-empty blocks including 1 (60.1 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:12:37 INFO  (Logging.scala:60)     - Started 0 remote fetches in 9 ms
+02-20@20:12:37 INFO  (Logging.scala:60)     - Getting 1 (60.1 MiB) non-empty blocks including 1 (60.1 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:12:37 INFO  (PathOutputCommitterFactory.java:174)     - No output committer factory defined, defaulting to FileOutputCommitterFactory
+02-20@20:12:37 INFO  (Logging.scala:60)     - Getting 1 (60.1 MiB) non-empty blocks including 1 (60.1 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:12:37 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-20@20:12:37 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-20@20:12:37 INFO  (Logging.scala:60)     - Started 0 remote fetches in 26 ms
+02-20@20:12:37 INFO  (PathOutputCommitterFactory.java:174)     - No output committer factory defined, defaulting to FileOutputCommitterFactory
+02-20@20:12:37 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+02-20@20:12:37 INFO  (Logging.scala:60)     - Started 0 remote fetches in 34 ms
+02-20@20:12:37 INFO  (PathOutputCommitterFactory.java:174)     - No output committer factory defined, defaulting to FileOutputCommitterFactory
+02-20@20:12:37 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-20@20:12:37 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-20@20:12:37 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-20@20:12:37 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-20@20:12:37 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+02-20@20:12:37 INFO  (PathOutputCommitterFactory.java:174)     - No output committer factory defined, defaulting to FileOutputCommitterFactory
+02-20@20:12:37 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-20@20:12:37 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-20@20:12:37 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+02-20@20:12:37 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+02-20@20:12:44 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_202402202012378964944906434672283_0027_m_000002_78' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_RSD/_temporary/0/task_202402202012378964944906434672283_0027_m_000002
+02-20@20:12:44 INFO  (Logging.scala:60)     - attempt_202402202012378964944906434672283_0027_m_000002_78: Committed. Elapsed time: 185 ms.
+02-20@20:12:44 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 27.0 (TID 78). 4975 bytes result sent to driver
+02-20@20:12:44 INFO  (Logging.scala:60)     - Starting task 4.0 in stage 27.0 (TID 80) (10.0.2.15, executor driver, partition 4, NODE_LOCAL, 7382 bytes) 
+02-20@20:12:44 INFO  (Logging.scala:60)     - Finished task 2.0 in stage 27.0 (TID 78) in 7258 ms on 10.0.2.15 (executor driver) (1/10)
+02-20@20:12:44 INFO  (Logging.scala:60)     - Running task 4.0 in stage 27.0 (TID 80)
+02-20@20:12:44 INFO  (Logging.scala:60)     - Getting 1 (59.3 MiB) non-empty blocks including 1 (59.3 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:12:44 INFO  (Logging.scala:60)     - Started 0 remote fetches in 3 ms
+02-20@20:12:44 INFO  (PathOutputCommitterFactory.java:174)     - No output committer factory defined, defaulting to FileOutputCommitterFactory
+02-20@20:12:44 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-20@20:12:44 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-20@20:12:45 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+02-20@20:12:45 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_202402202012378964944906434672283_0027_m_000003_79' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_RSD/_temporary/0/task_202402202012378964944906434672283_0027_m_000003
+02-20@20:12:45 INFO  (Logging.scala:60)     - attempt_202402202012378964944906434672283_0027_m_000003_79: Committed. Elapsed time: 319 ms.
+02-20@20:12:45 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 27.0 (TID 79). 4932 bytes result sent to driver
+02-20@20:12:45 INFO  (Logging.scala:60)     - Starting task 5.0 in stage 27.0 (TID 81) (10.0.2.15, executor driver, partition 5, NODE_LOCAL, 7382 bytes) 
+02-20@20:12:45 INFO  (Logging.scala:60)     - Finished task 3.0 in stage 27.0 (TID 79) in 7942 ms on 10.0.2.15 (executor driver) (2/10)
+02-20@20:12:45 INFO  (Logging.scala:60)     - Running task 5.0 in stage 27.0 (TID 81)
+02-20@20:12:45 INFO  (Logging.scala:60)     - Getting 1 (60.1 MiB) non-empty blocks including 1 (60.1 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:12:45 INFO  (Logging.scala:60)     - Started 0 remote fetches in 24 ms
+02-20@20:12:45 INFO  (PathOutputCommitterFactory.java:174)     - No output committer factory defined, defaulting to FileOutputCommitterFactory
+02-20@20:12:45 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-20@20:12:45 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-20@20:12:45 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+02-20@20:12:45 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_202402202012378964944906434672283_0027_m_000001_77' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_RSD/_temporary/0/task_202402202012378964944906434672283_0027_m_000001
+02-20@20:12:45 INFO  (Logging.scala:60)     - attempt_202402202012378964944906434672283_0027_m_000001_77: Committed. Elapsed time: 230 ms.
+02-20@20:12:45 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 27.0 (TID 77). 4932 bytes result sent to driver
+02-20@20:12:46 INFO  (Logging.scala:60)     - Starting task 6.0 in stage 27.0 (TID 82) (10.0.2.15, executor driver, partition 6, NODE_LOCAL, 7382 bytes) 
+02-20@20:12:46 INFO  (Logging.scala:60)     - Running task 6.0 in stage 27.0 (TID 82)
+02-20@20:12:46 INFO  (Logging.scala:60)     - Finished task 1.0 in stage 27.0 (TID 77) in 8502 ms on 10.0.2.15 (executor driver) (3/10)
+02-20@20:12:46 INFO  (Logging.scala:60)     - Getting 1 (59.6 MiB) non-empty blocks including 1 (59.6 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:12:46 INFO  (Logging.scala:60)     - Started 0 remote fetches in 4 ms
+02-20@20:12:46 INFO  (PathOutputCommitterFactory.java:174)     - No output committer factory defined, defaulting to FileOutputCommitterFactory
+02-20@20:12:46 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-20@20:12:46 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-20@20:12:46 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+02-20@20:12:47 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_202402202012378964944906434672283_0027_m_000000_76' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_RSD/_temporary/0/task_202402202012378964944906434672283_0027_m_000000
+02-20@20:12:47 INFO  (Logging.scala:60)     - attempt_202402202012378964944906434672283_0027_m_000000_76: Committed. Elapsed time: 221 ms.
+02-20@20:12:47 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 27.0 (TID 76). 4975 bytes result sent to driver
+02-20@20:12:47 INFO  (Logging.scala:60)     - Starting task 7.0 in stage 27.0 (TID 83) (10.0.2.15, executor driver, partition 7, NODE_LOCAL, 7382 bytes) 
+02-20@20:12:47 INFO  (Logging.scala:60)     - Finished task 0.0 in stage 27.0 (TID 76) in 9865 ms on 10.0.2.15 (executor driver) (4/10)
+02-20@20:12:47 INFO  (Logging.scala:60)     - Running task 7.0 in stage 27.0 (TID 83)
+02-20@20:12:47 INFO  (Logging.scala:60)     - Getting 1 (60.1 MiB) non-empty blocks including 1 (60.1 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:12:47 INFO  (Logging.scala:60)     - Started 0 remote fetches in 9 ms
+02-20@20:12:47 INFO  (PathOutputCommitterFactory.java:174)     - No output committer factory defined, defaulting to FileOutputCommitterFactory
+02-20@20:12:47 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-20@20:12:47 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-20@20:12:47 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+02-20@20:12:52 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_202402202012378964944906434672283_0027_m_000004_80' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_RSD/_temporary/0/task_202402202012378964944906434672283_0027_m_000004
+02-20@20:12:52 INFO  (Logging.scala:60)     - attempt_202402202012378964944906434672283_0027_m_000004_80: Committed. Elapsed time: 233 ms.
+02-20@20:12:52 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 27.0 (TID 80). 4975 bytes result sent to driver
+02-20@20:12:52 INFO  (Logging.scala:60)     - Starting task 8.0 in stage 27.0 (TID 84) (10.0.2.15, executor driver, partition 8, NODE_LOCAL, 7382 bytes) 
+02-20@20:12:52 INFO  (Logging.scala:60)     - Finished task 4.0 in stage 27.0 (TID 80) in 7354 ms on 10.0.2.15 (executor driver) (5/10)
+02-20@20:12:52 INFO  (Logging.scala:60)     - Running task 8.0 in stage 27.0 (TID 84)
+02-20@20:12:52 INFO  (Logging.scala:60)     - Getting 1 (60.1 MiB) non-empty blocks including 1 (60.1 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:12:52 INFO  (Logging.scala:60)     - Started 0 remote fetches in 28 ms
+02-20@20:12:52 INFO  (PathOutputCommitterFactory.java:174)     - No output committer factory defined, defaulting to FileOutputCommitterFactory
+02-20@20:12:52 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-20@20:12:52 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-20@20:12:52 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+02-20@20:12:53 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_202402202012378964944906434672283_0027_m_000005_81' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_RSD/_temporary/0/task_202402202012378964944906434672283_0027_m_000005
+02-20@20:12:53 INFO  (Logging.scala:60)     - attempt_202402202012378964944906434672283_0027_m_000005_81: Committed. Elapsed time: 260 ms.
+02-20@20:12:53 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 27.0 (TID 81). 4975 bytes result sent to driver
+02-20@20:12:53 INFO  (Logging.scala:60)     - Starting task 9.0 in stage 27.0 (TID 85) (10.0.2.15, executor driver, partition 9, NODE_LOCAL, 7382 bytes) 
+02-20@20:12:53 INFO  (Logging.scala:60)     - Finished task 5.0 in stage 27.0 (TID 81) in 8418 ms on 10.0.2.15 (executor driver) (6/10)
+02-20@20:12:53 INFO  (Logging.scala:60)     - Running task 9.0 in stage 27.0 (TID 85)
+02-20@20:12:53 INFO  (Logging.scala:60)     - Getting 1 (60.1 MiB) non-empty blocks including 1 (60.1 MiB) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+02-20@20:12:53 INFO  (Logging.scala:60)     - Started 0 remote fetches in 1 ms
+02-20@20:12:53 INFO  (PathOutputCommitterFactory.java:174)     - No output committer factory defined, defaulting to FileOutputCommitterFactory
+02-20@20:12:53 INFO  (FileOutputCommitter.java:142)     - File Output Committer Algorithm version is 1
+02-20@20:12:54 INFO  (FileOutputCommitter.java:157)     - FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+02-20@20:12:54 INFO  (Logging.scala:60)     - Using output committer class org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+02-20@20:12:54 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_202402202012378964944906434672283_0027_m_000006_82' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_RSD/_temporary/0/task_202402202012378964944906434672283_0027_m_000006
+02-20@20:12:54 INFO  (Logging.scala:60)     - attempt_202402202012378964944906434672283_0027_m_000006_82: Committed. Elapsed time: 189 ms.
+02-20@20:12:54 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 27.0 (TID 82). 4975 bytes result sent to driver
+02-20@20:12:54 INFO  (Logging.scala:60)     - Finished task 6.0 in stage 27.0 (TID 82) in 8599 ms on 10.0.2.15 (executor driver) (7/10)
+02-20@20:12:54 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_202402202012378964944906434672283_0027_m_000007_83' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_RSD/_temporary/0/task_202402202012378964944906434672283_0027_m_000007
+02-20@20:12:54 INFO  (Logging.scala:60)     - attempt_202402202012378964944906434672283_0027_m_000007_83: Committed. Elapsed time: 147 ms.
+02-20@20:12:54 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 27.0 (TID 83). 4975 bytes result sent to driver
+02-20@20:12:54 INFO  (Logging.scala:60)     - Finished task 7.0 in stage 27.0 (TID 83) in 7439 ms on 10.0.2.15 (executor driver) (8/10)
+02-20@20:12:56 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_202402202012378964944906434672283_0027_m_000008_84' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_RSD/_temporary/0/task_202402202012378964944906434672283_0027_m_000008
+02-20@20:12:56 INFO  (Logging.scala:60)     - attempt_202402202012378964944906434672283_0027_m_000008_84: Committed. Elapsed time: 110 ms.
+02-20@20:12:56 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 27.0 (TID 84). 4932 bytes result sent to driver
+02-20@20:12:56 INFO  (Logging.scala:60)     - Finished task 8.0 in stage 27.0 (TID 84) in 4626 ms on 10.0.2.15 (executor driver) (9/10)
+02-20@20:12:57 INFO  (FileOutputCommitter.java:604)     - Saved output of task 'attempt_202402202012378964944906434672283_0027_m_000009_85' to file:/media/sf_K_DRIVE/hw-3-kokomocha/output/output_RSD/_temporary/0/task_202402202012378964944906434672283_0027_m_000009
+02-20@20:12:57 INFO  (Logging.scala:60)     - attempt_202402202012378964944906434672283_0027_m_000009_85: Committed. Elapsed time: 91 ms.
+02-20@20:12:57 INFO  (Logging.scala:60)     - Finished task 9.0 in stage 27.0 (TID 85). 4975 bytes result sent to driver
+02-20@20:12:57 INFO  (Logging.scala:60)     - Finished task 9.0 in stage 27.0 (TID 85) in 3508 ms on 10.0.2.15 (executor driver) (10/10)
+02-20@20:12:57 INFO  (Logging.scala:60)     - Removed TaskSet 27.0, whose tasks have all completed, from pool 
+02-20@20:12:57 INFO  (Logging.scala:60)     - ResultStage 27 (save at triangle_RSD.scala:44) finished in 19.975 s
+02-20@20:12:57 INFO  (Logging.scala:60)     - Job 14 is finished. Cancelling potential speculative or zombie tasks for this job
+02-20@20:12:57 INFO  (Logging.scala:60)     - Killing all running tasks in stage 27: Stage finished
+02-20@20:12:57 INFO  (Logging.scala:60)     - Job 14 finished: save at triangle_RSD.scala:44, took 20.003250 s
+02-20@20:12:57 INFO  (Logging.scala:60)     - Start to commit write Job 95b8f796-3479-402e-bde5-1ac1e438ea5c.
+02-20@20:12:59 INFO  (Logging.scala:60)     - Write Job 95b8f796-3479-402e-bde5-1ac1e438ea5c committed. Elapsed time: 2439 ms.
+02-20@20:12:59 INFO  (Logging.scala:60)     - Finished processing stats for write job 95b8f796-3479-402e-bde5-1ac1e438ea5c.
+02-20@20:12:59 INFO  (Logging.scala:60)     - Invoking stop() from shutdown hook
+02-20@20:12:59 INFO  (Logging.scala:60)     - SparkContext is stopping with exitCode 0.
+02-20@20:12:59 INFO  (AbstractConnector.java:383)     - Stopped Spark@72725ee1{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+02-20@20:13:00 INFO  (Logging.scala:60)     - Stopped Spark web UI at http://10.0.2.15:4040
+02-20@20:13:00 INFO  (Logging.scala:60)     - MapOutputTrackerMasterEndpoint stopped!
+02-20@20:13:00 INFO  (Logging.scala:60)     - MemoryStore cleared
+02-20@20:13:00 INFO  (Logging.scala:60)     - BlockManager stopped
+02-20@20:13:00 INFO  (Logging.scala:60)     - BlockManagerMaster stopped
+02-20@20:13:00 INFO  (Logging.scala:60)     - OutputCommitCoordinator stopped!
+02-20@20:13:00 INFO  (Logging.scala:60)     - Successfully stopped SparkContext
+02-20@20:13:00 INFO  (Logging.scala:60)     - Shutdown hook called
+02-20@20:13:00 INFO  (Logging.scala:60)     - Deleting directory /tmp/spark-d2cd5b44-a788-4691-8f80-0e3a574aac19
+02-20@20:13:00 INFO  (Logging.scala:60)     - Deleting directory /tmp/spark-7b1e21c5-34cf-4452-bfeb-b076bddf02e7

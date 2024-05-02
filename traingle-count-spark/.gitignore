@@ -1,0 +1,13 @@
+#input
+input/*
+
+#output
+##specific large output file 1126.75 MB
+output/output_repRDD/part-00022
+
+#ide
+.idea/*
+
+#other
+*.class
+*.log

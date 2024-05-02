@@ -1,0 +1,13 @@
+#input
+input/*
+
+#output
+output/*
+
+
+#ide
+.idea/*
+
+#other
+*.class
+*.log
